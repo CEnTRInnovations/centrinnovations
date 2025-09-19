@@ -1,0 +1,28 @@
+.background-img {
+    color: none;
+    fill: none;
+}
+
+h1,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Lato, sans-serif;
+    font-weight: bold;
+}
+
+/* Remove overlay on hero background */
+.hero.background-container[data-bs-overlay="dark"]::before {
+    background: none !important; /* Remove overlay background */
+    content: none !important; /* Remove pseudo-element if used */
+    pointer-events: none !important;
+}
+
+/* Alternatively, disable any dark overlay filter */
+.hero.background-container.section-cover {
+    background-color: transparent !important;
+    filter: none !important;
+}

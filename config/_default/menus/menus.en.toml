@@ -1,0 +1,30 @@
+[[main]]
+    name = "About Us"
+    pageRef = "/about/"
+    weight = 10
+
+[[main]]
+    name = "Services"
+    pageRef = "/services/"
+    weight = 30
+
+[[main]]
+    name = "Tools"
+    pageRef = "/tools/"
+    weight = 50
+
+[[main]]
+    name = "Contact"
+    pageRef = "/contact/"
+    weight = 70
+
+[[social]]
+  name = "LinkedIn"
+  pre = "fab linkedin"
+  url = "https://www.linkedin.com/company/centrinnovations/"
+  weight = 10
+[[social]]
+  name = "GitHub"
+  pre = "fab fa-github"
+  url = "https://github.com/CEnTRInnovations"
+  weight = 20

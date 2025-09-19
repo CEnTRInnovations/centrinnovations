@@ -1,0 +1,64 @@
+[style]
+  # Primary brand colors - refined for better harmony
+  primary = "#3F5E78"    # Your preferred denim blue - more sophisticated
+  secondary = "#3B6B35"  # Your preferred forest green - natural and grounded
+  success = "#636b2f"    # Olive green for success - earthy yet positive
+  info = "#6b7894"       # Muted indigo for info - calm and trustworthy
+  warning = "#E18B4E"    # Your burnt orange - warm but not harsh
+  danger = "#A64B42"     # Your rust color - serious but not alarming
+  light = "#F0E5D7"      # Softer cream from your fill palette
+  dark = "#4E342E"       # Your espresso - rich and readable
+
+# Extended palette for UI elements
+[extended_colors]
+  # Neutral tones
+  foreground = "#4A4A4A"     # Your preferred stone grey
+  background = "#F2ECD7"     # Your preferred parchment background
+  surface = "#E8D8C3"        # Soft beige for cards/surfaces
+  border = "#8e8380"         # Muted espresso for subtle borders
+
+  # Accent colors
+  accent_warm = "#bd908b"    # Muted rust for warm accents
+  accent_cool = "#8c99a7"    # Muted denim for cool accents
+  accent_natural = "#8ba086" # Muted forest for natural elements
+
+  # Interactive states
+  hover_primary = "#1E325C"  # Darker indigo for hover states
+  hover_secondary = "#4E342E" # Espresso for secondary hovers
+  active = "#990000"         # Deep red for active states
+
+  # Semantic colors (softer versions)
+  success_light = "#9da183"  # Light olive
+  info_light = "#8c99a7"     # Light denim
+  warning_light = "#f3d1b8"  # Light burnt orange
+  danger_light = "#bd908b"   # Light rust
+  themeFont = "Lato, Lora"
+
+[main]
+  footerBelowFold = true
+
+[navigation]
+    anchor = true
+    color = "primary"
+    fixed = false
+    logo = "/img/centr-nav.png"
+    logo-mode = false
+    logo-align = "start"
+    logo-height = 40
+    overlay = false
+
+    [navigation.search]
+        enabled = true
+        modal = true
+        icon = "fas magnifying-glass"
+
+[favicon]
+    logo = "img/favicon/favicon.png"
+    logoSize = 32
+    logoSizes = [32, 16]
+    LogoApple = "img/favicon/apple-touch-icon.png"
+    logoAppleSize = 180
+    logoAppleSizes = [152, 120, 76, 60]
+    LogoAndroid = "img/favicon/android-chrome.png"
+    logoAndroidSize = 256
+    logoAndroidSizes = [192]
