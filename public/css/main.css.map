@@ -3,7 +3,7 @@
 	"file": "main.css",
 	"sourceRoot": "/Users/jfprice/github/centrinnovations",
 	"sources": [
-		"scss/bundle-1758477086772689000.scss",
+		"scss/bundle-1758479496386819000.scss",
 		"hugo:vars",
 		"../../Library/Caches/hugo_cache/modules/filecache/modules/pkg/mod/github.com/gethinode/hinode@v1.15.2/assets/scss/common/_variables.scss",
 		"../../Library/Caches/hugo_cache/modules/filecache/modules/pkg/mod/github.com/gethinode/hinode@v1.15.2/assets/scss/theme/_variables.scss",
