@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Welcome to My Hugo Site on CEnTRInnovations</title>
-    <link>http://localhost:1313/</link>
+    <link>https://example.org/</link>
     <description>Recent content in Welcome to My Hugo Site on CEnTRInnovations</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Us</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://example.org/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://example.org/about/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Hi, I&amp;rsquo;m Jeremy Price.&lt;/strong&gt; I&amp;rsquo;m the founder of CEnTRInnovations, and I believe in the power of merging smart technology with deep, community-driven insights. My mission is to empower communities and organizations to make informed decisions that lead to real, positive change.&lt;/p&gt;&#xA;&lt;p&gt;I am a passionate innovator, researcher, and technologist dedicated to building solutions that are not just effective, but also ethical and equitable. I work at the intersection of technology and human-centered design, creating tools that are rooted in collaboration and purpose.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Contact</title>
-      <link>http://localhost:1313/contact/</link>
+      <link>https://example.org/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/contact/</guid>
+      <guid>https://example.org/contact/</guid>
       <description>&lt;h1 id=&#34;lets-connect&#34; class=&#34;heading&#34;&gt;Let&amp;rsquo;s Connect!&lt;a href=&#34;#lets-connect&#34; aria-labelledby=&#34;lets-connect&#34;&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;!-- &lt;i class=&#34;fas fa-link anchor&#34;&gt;&lt;/i&gt; --&gt;&#xA;        &lt;svg class=&#34;svg-inline--fa fas fa-link anchor&#34; fill=&#34;currentColor&#34; aria-hidden=&#34;true&#34; role=&#34;img&#34; viewBox=&#34;0 0 640 512&#34;&gt;&lt;use href=&#34;#fas-link&#34;&gt;&lt;/use&gt;&lt;/svg&gt;&amp;nbsp;&#xA;    &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Please fill out the form below and we will get back to you as soon as possible.&lt;/p&gt;&#xA;&lt;iframe src = &#34;https://docs.google.com/forms/d/e/1FAIpQLScgqgB-ktKfRNPP0-27maGxpd74kvT1UCu-wRgtVYODUVxn0w/viewform?usp=sharing&amp;ouid=116711467119723083886&#34; style = &#34;width: 100%; height: 20em;&#34;&gt;&lt;/iframe&gt;</description>
     </item>
     <item>
       <title>Services</title>
-      <link>http://localhost:1313/services/</link>
+      <link>https://example.org/services/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/services/</guid>
+      <guid>https://example.org/services/</guid>
       <description>&lt;p&gt;Our services are designed to help you harness the power of community intelligence. We specialize in providing comprehensive solutions for community engagement, research, and data analysis.&lt;/p&gt;&#xA;&lt;p&gt;We offer a range of services tailored to your specific needs, including:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Custom Technology Solutions: Developing bespoke tools to help you gather, analyze, and visualize data.&lt;/li&gt;&#xA;&lt;li&gt;Strategic Consulting: Partnering with you to design and implement effective community-driven projects.&lt;/li&gt;&#xA;&lt;li&gt;Data Insights &amp;amp; Analysis: Transforming complex data into clear, actionable insights that drive results.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Tools</title>
-      <link>http://localhost:1313/tools/</link>
+      <link>https://example.org/tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tools/</guid>
+      <guid>https://example.org/tools/</guid>
       <description>&lt;p&gt;Our suite of proprietary tools is built to simplify and streamline the process of community engagement and data collection. Each tool is developed with a focus on user experience, ensuring that they are intuitive and accessible to everyone.&lt;/p&gt;&#xA;&lt;p&gt;While we develop our full toolset, you can expect to find:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Interactive Mapping Platforms: To visualize community data and feedback in real-time.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Collaborative Research Tools: To facilitate shared data collection and analysis among stakeholders.&lt;/p&gt;</description>
     </item>
   </channel>
