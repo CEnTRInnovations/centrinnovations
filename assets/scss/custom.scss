@@ -23,6 +23,75 @@ h6 {
 
 /* Alternatively, disable any dark overlay filter */
 .hero.background-container.section-cover {
-    background-color: transparent !important;
+    /* keep layout tweaks but do not force transparent background */
     filter: none !important;
+}
+
+/* Ensure semi-transparent hero backdrops sit on the brand light color */
+/*section.hero.background-container {
+    background-color: #E8D8C3 !important; matches [style.light] in params.toml
+}
+
+If section-cover is present, keep the same light background explicitly
+section.hero.background-container.section-cover {
+    background-color: #E8D8C3 !important;
+}*/
+
+/* Auto-switch hero backdrop by system theme */
+section.hero,
+section.hero.background-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Light mode background (fallback when no data-bs-theme attribute is present) */
+@media (prefers-color-scheme: light) {
+    section.hero,
+    section.hero.background-container {
+        background-color: #E8D8C3; /* base behind semi-transparent areas */
+        background-image: url("/img/hero_bg-light.png") !important;
+    }
+}
+
+/* Dark mode background (fallback when no data-bs-theme attribute is present) */
+@media (prefers-color-scheme: dark) {
+    section.hero,
+    section.hero.background-container {
+        background-color: #4E342E; /* matches [style.dark] in params.toml */
+        background-image: url("/img/hero_bg-dark.png") !important;
+    }
+}
+
+/* Hide the theme-generated backdrop <img> so our CSS background shows */
+section.hero > img.background-img-fluid,
+section.hero.background-container > img.background-img-fluid {
+    display: none !important;
+}
+
+/* Attribute-based theme switching (Bootstrap/Hinode) */
+/* Light theme via data attribute on section or root */
+section.hero[data-bs-theme="light"],
+section.hero.background-container[data-bs-theme="light"],
+:root[data-bs-theme="light"] section.hero,
+:root[data-bs-theme="light"] section.hero.background-container,
+html[data-bs-theme="light"] section.hero,
+html[data-bs-theme="light"] section.hero.background-container,
+body[data-bs-theme="light"] section.hero,
+body[data-bs-theme="light"] section.hero.background-container {
+    background-color: #6b7894 !important;
+    background-image: url("/img/hero_bg-light.png") !important;
+}
+
+/* Dark theme via data attribute on section or root */
+section.hero[data-bs-theme="dark"],
+section.hero.background-container[data-bs-theme="dark"],
+:root[data-bs-theme="dark"] section.hero,
+:root[data-bs-theme="dark"] section.hero.background-container,
+html[data-bs-theme="dark"] section.hero,
+html[data-bs-theme="dark"] section.hero.background-container,
+body[data-bs-theme="dark"] section.hero,
+body[data-bs-theme="dark"] section.hero.background-container {
+    background-color: #4E342E !important;
+    background-image: url("/img/hero_bg-dark.png") !important;
 }

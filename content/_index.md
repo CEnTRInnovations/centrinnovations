@@ -15,9 +15,11 @@ content_blocks:
     illustration:
       image: /img/featured_background.png
     background:
-      backdrop: /img/hero_bg.png
-      color: secondary
-      subtle: true
+      backdrop: /img/hero_bg-light.png
+      #color: secondary
+      style: "background-color: orange !important;"
+      #subtle: false
+    overlay-mode: none
     cover: true
     width: 12
     justify: center
