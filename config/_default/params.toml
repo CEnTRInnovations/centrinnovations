@@ -32,19 +32,19 @@
   info_light = "#8c99a7"     # Light denim
   warning_light = "#f3d1b8"  # Light burnt orange
   danger_light = "#bd908b"   # Light rust
-  themeFont = "Lato, Lora"
+  themeFont = "Lato"
 
 [main]
   footerBelowFold = true
 
 [navigation]
-    anchor = true
+    anchor = false
     color = "primary"
-    fixed = false
+    fixed = true
     logo = "/img/centr-nav.png"
-    logo-mode = false
+    logo-mode = true
     logo-align = "start"
-    logo-height = 40
+    logo-height = 36
     overlay = false
 
     [navigation.search]

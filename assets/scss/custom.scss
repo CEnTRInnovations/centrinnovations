@@ -10,10 +10,86 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Lato, sans-serif;
-    font-weight: bold;
+    font-family: Lato, sans-serif !important;
+    font-weight: bold !important;
 }
 
+.card-title {
+    font-size: 1.5rem !important;
+}
+
+/* Fallback: Theme does not emit the `class` set in content/_index.md elements.
+    Target the first service card explicitly in both mobile and desktop layouts. */
+section.cards .container-fluid.d-sm-none .row > .col:nth-child(1) .card,
+section.cards .container-fluid.d-none.d-sm-block .row > .col:nth-child(1) .card {
+    background-color: #7491AE !important;
+    box-shadow: 0.1em 0.1em 0.5em #4A4A4A !important;
+}
+
+/* Optional: improve contrast for text in the tinted card */
+section.cards .container-fluid .row > .col:nth-child(1) .card .card-title,
+section.cards .container-fluid .row > .col:nth-child(1) .card .card-text {
+    color: #ffffff !important;
+}
+
+/* Make text white in Card 2 */
+section.cards .container-fluid .row > .col:nth-child(2) .card .card-title,
+section.cards .container-fluid .row > .col:nth-child(2) .card .card-text {
+    color: #ffffff !important;
+}
+
+/* Make text white in Card 3 */
+section.cards .container-fluid .row > .col:nth-child(3) .card .card-title,
+section.cards .container-fluid .row > .col:nth-child(3) .card .card-text {
+    color: #ffffff !important;
+}
+
+/* Match circle behind icons to each card's background color */
+section.cards .container-fluid .row > .col:nth-child(1) .card .card-icon .fa-circle {
+    color: #3F5E78 !important;
+}
+section.cards .container-fluid .row > .col:nth-child(2) .card .card-icon .fa-circle {
+    color: #3B6B35 !important;
+}
+section.cards .container-fluid .row > .col:nth-child(3) .card .card-icon .fa-circle {
+    color: #6b7894 !important;
+}
+
+/* Card 2 background */
+section.cards .container-fluid.d-sm-none .row > .col:nth-child(2) .card,
+section.cards .container-fluid.d-none.d-sm-block .row > .col:nth-child(2) .card {
+    background-color: #7BA377 !important;
+    box-shadow: 0.1em 0.1em 0.5em #4A4A4A !important;
+}
+
+/* Card 3 background */
+section.cards .container-fluid.d-sm-none .row > .col:nth-child(3) .card,
+section.cards .container-fluid.d-none.d-sm-block .row > .col:nth-child(3) .card {
+    background-color: #929FB0 !important;
+    box-shadow: 0.1em 0.1em 0.5em #4A4A4A !important;
+}
+
+.navbar {
+    border-bottom: solid 1px #4A4A4A !important;
+    box-shadow: 0 0 1em #4A4A4A !important;
+}
+
+/* Fix brand logo aspect: avoid filling navbar height (h-100) */
+.navbar .navbar-brand img {
+    height: auto !important;      /* don't force to navbar height */
+    max-height: 36px;             /* match your navigation.logo-height */
+    width: auto !important;       /* keep natural aspect ratio */
+    object-fit: contain;          /* ensure no distortion in container */
+}
+
+.hero-image-container {
+    box-shadow: 0.1em 0.1em 0.5em #4A4A4A !important;
+    border-radius: 10px !important;
+}
+
+.hero-image-container img {
+    border-radius: 10px !important;
+}
 /* Remove overlay on hero background */
 .hero.background-container[data-bs-overlay="dark"]::before {
     background: none !important; /* Remove overlay background */
@@ -26,16 +102,6 @@ h6 {
     /* keep layout tweaks but do not force transparent background */
     filter: none !important;
 }
-
-/* Ensure semi-transparent hero backdrops sit on the brand light color */
-/*section.hero.background-container {
-    background-color: #E8D8C3 !important; matches [style.light] in params.toml
-}
-
-If section-cover is present, keep the same light background explicitly
-section.hero.background-container.section-cover {
-    background-color: #E8D8C3 !important;
-}*/
 
 /* Auto-switch hero backdrop by system theme */
 section.hero,
@@ -69,29 +135,46 @@ section.hero.background-container > img.background-img-fluid {
     display: none !important;
 }
 
-/* Attribute-based theme switching (Bootstrap/Hinode) */
-/* Light theme via data attribute on section or root */
-section.hero[data-bs-theme="light"],
-section.hero.background-container[data-bs-theme="light"],
-:root[data-bs-theme="light"] section.hero,
-:root[data-bs-theme="light"] section.hero.background-container,
-html[data-bs-theme="light"] section.hero,
-html[data-bs-theme="light"] section.hero.background-container,
-body[data-bs-theme="light"] section.hero,
-body[data-bs-theme="light"] section.hero.background-container {
-    background-color: #6b7894 !important;
-    background-image: url("/img/hero_bg-light.png") !important;
+/* Equal-height rows: stretch columns globally */
+// .row {
+//     align-items: stretch !important;
+// }
+
+// /* Make Bootstrap row direct children flex so their children (cards) can stretch */
+// .row > * {
+//     display: flex !important;
+//     align-items: stretch !important;
+// }
+
+.card-icon {
+    color: #8e8380 !important; /* e.g., #d43900 for primary red */
 }
 
-/* Dark theme via data attribute on section or root */
-section.hero[data-bs-theme="dark"],
-section.hero.background-container[data-bs-theme="dark"],
-:root[data-bs-theme="dark"] section.hero,
-:root[data-bs-theme="dark"] section.hero.background-container,
-html[data-bs-theme="dark"] section.hero,
-html[data-bs-theme="dark"] section.hero.background-container,
-body[data-bs-theme="dark"] section.hero,
-body[data-bs-theme="dark"] section.hero.background-container {
-    background-color: #4E342E !important;
-    background-image: url("/img/hero_bg-dark.png") !important;
+.card .card-body {
+    flex: 1 1 auto !important; /* fill remaining vertical space */
+}
+
+/* If theme inserts an inner .h-100 wrapper inside .card, make it flex too */
+.card > .h-100,
+.card > .g-0.h-100 {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    min-height: 0; /* avoid overflow clipping when children grow */
+}
+
+@media (min-width: 992px) {
+    .card {
+        min-height: 260px; /* optional baseline height on desktop */
+    }
+}
+
+/* Fallback: any card marked as .h-100 becomes a flex column and stretches */
+.card.h-100 {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+.card.h-100 > .card-body {
+    flex: 1 1 auto !important;
 }

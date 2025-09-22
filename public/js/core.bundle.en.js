@@ -6607,10 +6607,10 @@ function initIndex() {
         id: 1,
         href: "/contact/",
         title: "Contact",
-        description: "Let\u0026rsquo;s Connect! \u0026nbsp; Please fill out the form below and we will get back to you as soon as possible.\n",
+        description: "Let\u0026rsquo;s Connect! Please fill out the form below and we will get back to you as soon as possible.\n",
         
         
-        content: "Let\u0026rsquo;s Connect! \u0026nbsp; Please fill out the form below and we will get back to you as soon as possible."
+        content: "Let\u0026rsquo;s Connect! Please fill out the form below and we will get back to you as soon as possible."
       })
       .add(
       
@@ -6859,7 +6859,7 @@ document.querySelectorAll('.nav-panel .nav-link').forEach(trigger => {
 })
 
 ;
-const fixed = false
+const fixed = true
 const navbar = document.querySelector('.navbar')
 const togglers = document.querySelectorAll('.main-nav-toggler')
 const modeSelectors = document.querySelectorAll('.switch-mode-collapsed')
