@@ -28,9 +28,9 @@ content_blocks:
   - _bookshop_name: cards
     heading:
       title: Our Services
+      align: center
       content: |-
         Whether you're a university research office, community-based nonprofit, foundation program officer, or grassroots organization, we offer services to help you build research partnerships that are truly reciprocal, ethical, and impactful.
-      align: start
     orientation: horizontal
     padding: 4
     justify: evenly

@@ -10,8 +10,12 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Lato, sans-serif !important;
+    font-family: Inter, sans-serif !important;
     font-weight: bold !important;
+}
+
+.display-4 {
+    font-weight: 600 !important;
 }
 
 .card-title {
@@ -84,11 +88,11 @@ section.cards .container-fluid.d-none.d-sm-block .row > .col:nth-child(3) .card 
 
 .hero-image-container {
     box-shadow: 0.1em 0.1em 0.5em #4A4A4A !important;
-    border-radius: 10px !important;
+    border-radius: 15px !important;
 }
 
 .hero-image-container img {
-    border-radius: 10px !important;
+    border-radius: 15px !important;
 }
 /* Remove overlay on hero background */
 .hero.background-container[data-bs-overlay="dark"]::before {
@@ -133,6 +137,19 @@ section.hero.background-container {
 section.hero > img.background-img-fluid,
 section.hero.background-container > img.background-img-fluid {
     display: none !important;
+}
+
+/* Explicit theme control: override by Bootstrap's data-bs-theme attribute */
+[data-bs-theme="light"] section.hero,
+[data-bs-theme="light"] section.hero.background-container {
+    background-color: #E8D8C3 !important;
+    background-image: url("/img/hero_bg-light.png") !important;
+}
+
+[data-bs-theme="dark"] section.hero,
+[data-bs-theme="dark"] section.hero.background-container {
+    background-color: #4E342E !important; /* matches [style.dark] in params.toml */
+    background-image: url("/img/hero_bg-dark.png") !important;
 }
 
 /* Equal-height rows: stretch columns globally */

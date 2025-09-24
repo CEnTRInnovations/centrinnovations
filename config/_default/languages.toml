@@ -1,3 +1,6 @@
 [en.params.social]
-title = "Connect with us"
-caption = "Stay updated with our latest projects and insights"
+    title = "Connect with us"
+    caption = "Stay updated with our latest projects and insights"
+ 
+[en.params.head]
+    tagline = "Smart Technologies. Deeper Insights. Empowered Communities."

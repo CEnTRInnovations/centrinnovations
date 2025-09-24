@@ -9,6 +9,10 @@
   light = "#F0E5D7"      # Softer cream from your fill palette
   dark = "#4E342E"       # Your espresso - rich and readable
 
+  # Typography
+  themeFont = "Inter"
+  themeFontPath = "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
+
 # Extended palette for UI elements
 [extended_colors]
   # Neutral tones
@@ -32,7 +36,6 @@
   info_light = "#8c99a7"     # Light denim
   warning_light = "#f3d1b8"  # Light burnt orange
   danger_light = "#bd908b"   # Light rust
-  themeFont = "Lato"
 
 [main]
   footerBelowFold = true
