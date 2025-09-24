@@ -85,7 +85,7 @@ content_blocks:
       image: /img/cta_topo.png
     order: first
     links:
-      - title: Schedule a Discovery Call
+      - title: Schedule a Discovery Dialogue
         url: 'contact'
         icon: fa compass
         color: success

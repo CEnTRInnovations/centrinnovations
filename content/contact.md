@@ -5,6 +5,6 @@ layout: docs
 
 # Let's Connect!
 
-Please fill out the form below and we will get back to you as soon as possible.
+Please schedule a Discovery Dialogue with us.
 
-<iframe src = "https://docs.google.com/forms/d/e/1FAIpQLScgqgB-ktKfRNPP0-27maGxpd74kvT1UCu-wRgtVYODUVxn0w/viewform?usp=sharing&ouid=116711467119723083886" style = "width: 100%; height: 20em;"></iframe>
+<iframe src='https://outlook.office365.com/owa/calendar/ScheduleaDiscoveryDialogue@indiana.onmicrosoft.com/bookings/?ismsaljsauthenabled' width='100%' height='600px' scrolling='yes' style='border:0'></iframe>

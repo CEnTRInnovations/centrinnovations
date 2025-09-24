@@ -6607,10 +6607,10 @@ function initIndex() {
         id: 1,
         href: "/contact/",
         title: "Contact",
-        description: "Let\u0026rsquo;s Connect! Please fill out the form below and we will get back to you as soon as possible.\n",
+        description: "Let\u0026rsquo;s Connect! Please schedule a Discovery Dialogue with us.\n",
         
         
-        content: "Let\u0026rsquo;s Connect! Please fill out the form below and we will get back to you as soon as possible."
+        content: "Let\u0026rsquo;s Connect! Please schedule a Discovery Dialogue with us."
       })
       .add(
       
