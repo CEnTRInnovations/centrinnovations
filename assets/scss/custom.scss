@@ -95,62 +95,62 @@ section.cards .container-fluid.d-none.d-sm-block .row > .col:nth-child(3) .card 
     border-radius: 15px !important;
 }
 /* Remove overlay on hero background */
-.hero.background-container[data-bs-overlay="dark"]::before {
-    background: none !important; /* Remove overlay background */
-    content: none !important; /* Remove pseudo-element if used */
-    pointer-events: none !important;
-}
+// .hero.background-container[data-bs-overlay="dark"]::before {
+//     background: none !important; /* Remove overlay background */
+//     content: none !important; /* Remove pseudo-element if used */
+//     pointer-events: none !important;
+// }
 
-/* Alternatively, disable any dark overlay filter */
-.hero.background-container.section-cover {
-    /* keep layout tweaks but do not force transparent background */
-    filter: none !important;
-}
+// /* Alternatively, disable any dark overlay filter */
+// .hero.background-container.section-cover {
+//     /* keep layout tweaks but do not force transparent background */
+//     filter: none !important;
+// }
 
-/* Auto-switch hero backdrop by system theme */
-section.hero,
-section.hero.background-container {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+// /* Auto-switch hero backdrop by system theme */
+// section.hero,
+// section.hero.background-container {
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+// }
 
-/* Light mode background (fallback when no data-bs-theme attribute is present) */
-@media (prefers-color-scheme: light) {
-    section.hero,
-    section.hero.background-container {
-        background-color: #E8D8C3; /* base behind semi-transparent areas */
-        background-image: url("/img/hero_bg-light.png") !important;
-    }
-}
+// /* Light mode background (fallback when no data-bs-theme attribute is present) */
+// @media (prefers-color-scheme: light) {
+//     section.hero,
+//     section.hero.background-container {
+//         background-color: #E8D8C3; /* base behind semi-transparent areas */
+//         background-image: url("/img/hero_bg-light.png") !important;
+//     }
+// }
 
-/* Dark mode background (fallback when no data-bs-theme attribute is present) */
-@media (prefers-color-scheme: dark) {
-    section.hero,
-    section.hero.background-container {
-        background-color: #4E342E; /* matches [style.dark] in params.toml */
-        background-image: url("/img/hero_bg-dark.png") !important;
-    }
-}
+// /* Dark mode background (fallback when no data-bs-theme attribute is present) */
+// @media (prefers-color-scheme: dark) {
+//     section.hero,
+//     section.hero.background-container {
+//         background-color: #4E342E; /* matches [style.dark] in params.toml */
+//         background-image: url("/img/hero_bg-dark.png") !important;
+//     }
+// }
 
-/* Hide the theme-generated backdrop <img> so our CSS background shows */
-section.hero > img.background-img-fluid,
-section.hero.background-container > img.background-img-fluid {
-    display: none !important;
-}
+// /* Hide the theme-generated backdrop <img> so our CSS background shows */
+// section.hero > img.background-img-fluid,
+// section.hero.background-container > img.background-img-fluid {
+//     display: none !important;
+// }
 
-/* Explicit theme control: override by Bootstrap's data-bs-theme attribute */
-[data-bs-theme="light"] section.hero,
-[data-bs-theme="light"] section.hero.background-container {
-    background-color: #E8D8C3 !important;
-    background-image: url("/img/hero_bg-light.png") !important;
-}
+// /* Explicit theme control: override by Bootstrap's data-bs-theme attribute */
+// [data-bs-theme="light"] section.hero,
+// [data-bs-theme="light"] section.hero.background-container {
+//     background-color: #E8D8C3 !important;
+//     background-image: url("/img/hero_bg-light.png") !important;
+// }
 
-[data-bs-theme="dark"] section.hero,
-[data-bs-theme="dark"] section.hero.background-container {
-    background-color: #4E342E !important; /* matches [style.dark] in params.toml */
-    background-image: url("/img/hero_bg-dark.png") !important;
-}
+// [data-bs-theme="dark"] section.hero,
+// [data-bs-theme="dark"] section.hero.background-container {
+//     background-color: #4E342E !important; /* matches [style.dark] in params.toml */
+//     background-image: url("/img/hero_bg-dark.png") !important;
+// }
 
 /* Equal-height rows: stretch columns globally */
 // .row {

@@ -43,7 +43,7 @@
 [navigation]
     anchor = false
     color = "primary"
-    fixed = true
+    fixed = false
     logo = "/img/centr-nav.png"
     logo-mode = true
     logo-align = "start"

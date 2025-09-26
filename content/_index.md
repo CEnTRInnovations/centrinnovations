@@ -7,7 +7,7 @@ content_blocks:
     heading:
       #preheading: Smart Technology. Deeper Insights. Empowered Communities.
       # title: '<span style="color: primary;">CEnTR</span>Innovations'
-      preheading: '<img src="/img/centr-title.png" alt="Site Logo" style="max-width: 36vw;">'
+      preheading: '<img src="/img/centr-title.png" alt="Site Logo" style="max-width: 28vw;">'
       content: |-
         **Smart Technology. Deeper Insights. Empowered Communities.**<br /><br />
         CEnTR Innovations is a consulting firm dedicated to advancing community-engaged and transformative research (CEnTR). We partner with universities, nonprofits, philanthropies, and community organizations to build authentic, equitable research relationships that create meaningful change.
@@ -15,7 +15,7 @@ content_blocks:
     illustration:
       image: /img/network_plot.png
     background:
-      backdrop: /img/hero_bg-light.png
+      backdrop: /img/hero_bg-bokeh2.png
     overlay-mode: none
     cover: true
     width: 12

@@ -6859,7 +6859,7 @@ document.querySelectorAll('.nav-panel .nav-link').forEach(trigger => {
 })
 
 ;
-const fixed = true
+const fixed = false
 const navbar = document.querySelector('.navbar')
 const togglers = document.querySelectorAll('.main-nav-toggler')
 const modeSelectors = document.querySelectorAll('.switch-mode-collapsed')
