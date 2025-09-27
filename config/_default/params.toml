@@ -39,6 +39,7 @@
 
 [main]
   footerBelowFold = true
+  endorse = true
 
 [navigation]
     anchor = false
@@ -65,3 +66,10 @@
     LogoAndroid = "img/favicon/android-chrome.png"
     logoAndroidSize = 256
     logoAndroidSizes = [192]
+
+[images]
+    [images.imagekit]
+        host = "imagekit"
+        account = "centrinnovations"
+        container = "home"
+        rewrite = false

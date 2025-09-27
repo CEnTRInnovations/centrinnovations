@@ -27,3 +27,12 @@ title = 'CEnTRInnovations'
     path = "github.com/gethinode/mod-mermaid/v3"
   [[module.imports]]
     path = "github.com/gethinode/mod-utils/v4"
+[params.modules.hinode.csp]
+    frame-src = [
+        "player.cloudinary.com",
+    ]
+    img-src = [
+        "*.imgix.net",
+        "*.imagekit.io",
+        "*.cloudinary.com"
+    ]
