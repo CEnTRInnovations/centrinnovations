@@ -6619,6 +6619,20 @@ function initIndex() {
       
       {
         id: 2,
+        href: "/framework/",
+        title: "Making Community Engaged Research Yours",
+        description: " Layers of analysis.\nEffective community engaged research requires more than good intentions. It needs a framework that connects values, practices, and outcomes in ways leaders can plan around, resource, and evaluate.\nThis three-layer framework provides that structure. It supports both the initiation and sustainability of engaged research across institutions and communities.\nThe Foundation Layer is the ground on which engaged research stands: the values, commitments, and guiding principles. It makes clear what must not be compromised and helps administrators, faculty, and funders align strategy with local priorities from the start.\n",
+        
+        
+        content: "Layers of analysis.\nEffective community engaged research requires more than good intentions. It needs a framework that connects values, practices, and outcomes in ways leaders can plan around, resource, and evaluate.\nThis three-layer framework provides that structure. It supports both the initiation and sustainability of engaged research across institutions and communities.\nThe Foundation Layer is the ground on which engaged research stands: the values, commitments, and guiding principles. It makes clear what must not be compromised and helps administrators, faculty, and funders align strategy with local priorities from the start.\nThe Integration layer holds everything together: the infrastructure that links people, methods, and resources. Like a transit system, it reveals where connections are strong, where bottlenecks occur, and where new pathways are needed. Strategic plans that account for this layer ensure that engagement practices move efficiently across units, organizations, and communities.\nThe Leverage layer is the architecture of influence: the visible structures where decisions are shaped, authority is exercised, and outcomes are recognized. This layer helps leaders and partners see where to direct investments, how to distribute power more equitably, and how to make impacts visible to wider audiences.\nA Note on the Use of Metaphor This framework uses architectural and urban metaphors to make abstract analyses more tangible. These metaphors do not replace the technical analyses but provide accessible imagery for understanding how community engaged research is grounded, connected, and structured.\nSeen together, these three layers create a system view of community engaged research. They provide a way to map current capacity, identify gaps, and set priorities. For universities, this framework sharpens institutional strategy. For community partners, it clarifies how values and commitments become outcomes. For funders, it shows where investments can create the greatest leverage for change."
+      })
+      .add(
+      
+      
+      
+      
+      {
+        id: 3,
         href: "/services/",
         title: "Services",
         description: "Our services are designed to help you harness the power of community intelligence. We specialize in providing comprehensive solutions for community engagement, research, and data analysis.\nWe offer a range of services tailored to your specific needs, including:\nCustom Technology Solutions: Developing bespoke tools to help you gather, analyze, and visualize data. Strategic Consulting: Partnering with you to design and implement effective community-driven projects. Data Insights \u0026amp; Analysis: Transforming complex data into clear, actionable insights that drive results. ",
@@ -6632,7 +6646,7 @@ function initIndex() {
       
       
       {
-        id: 3,
+        id: 4,
         href: "/tools/",
         title: "Tools",
         description: "Our suite of proprietary tools is built to simplify and streamline the process of community engagement and data collection. Each tool is developed with a focus on user experience, ensuring that they are intuitive and accessible to everyone.\nWhile we develop our full toolset, you can expect to find:\nInteractive Mapping Platforms: To visualize community data and feedback in real-time.\nCollaborative Research Tools: To facilitate shared data collection and analysis among stakeholders.\n",

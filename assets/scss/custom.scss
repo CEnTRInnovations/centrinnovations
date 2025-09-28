@@ -1,17 +1,34 @@
+html {
+    font-feature-setting: "dlig tnum ss01 ss02"
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: Inter, sans-serif !important;
     font-weight: bold !important;
+    font-family: "IBM Plex Mono" !important;
+}
+
+.btn {
+    font-family: "IBM Plex Mono" !important;
+    font-weight: normal;
+}
+
+.card-title {
+    font-family: "IBM Plex Mono" !important;
 }
 
 .display-4 {
     font-weight: 600 !important;
+    font-family: "IBM Plex Mono" !important;
 }
 
+.fs-3 {
+    font-family: "IBM Plex Mono" !important;
+}
 .card-title {
     font-size: 1.5rem !important;
 }
@@ -96,74 +113,6 @@ section.cards .container-fluid.d-none.d-sm-block .row > .col:nth-child(3) .card 
 #our-services {
     margin-top: 2rem !important; /* space below hero */
 }
-/* Remove overlay on hero background */
-// .hero.background-container[data-bs-overlay="dark"]::before {
-//     background: none !important; /* Remove overlay background */
-//     content: none !important; /* Remove pseudo-element if used */
-//     pointer-events: none !important;
-// }
-
-// /* Alternatively, disable any dark overlay filter */
-// .hero.background-container.section-cover {
-//     /* keep layout tweaks but do not force transparent background */
-//     filter: none !important;
-// }
-
-// /* Auto-switch hero backdrop by system theme */
-// section.hero,
-// section.hero.background-container {
-//     background-size: cover;
-//     background-position: center;
-//     background-repeat: no-repeat;
-// }
-
-// /* Light mode background (fallback when no data-bs-theme attribute is present) */
-// @media (prefers-color-scheme: light) {
-//     section.hero,
-//     section.hero.background-container {
-//         background-color: #E8D8C3; /* base behind semi-transparent areas */
-//         background-image: url("/img/hero_bg-light.png") !important;
-//     }
-// }
-
-// /* Dark mode background (fallback when no data-bs-theme attribute is present) */
-// @media (prefers-color-scheme: dark) {
-//     section.hero,
-//     section.hero.background-container {
-//         background-color: #4E342E; /* matches [style.dark] in params.toml */
-//         background-image: url("/img/hero_bg-dark.png") !important;
-//     }
-// }
-
-// /* Hide the theme-generated backdrop <img> so our CSS background shows */
-// section.hero > img.background-img-fluid,
-// section.hero.background-container > img.background-img-fluid {
-//     display: none !important;
-// }
-
-// /* Explicit theme control: override by Bootstrap's data-bs-theme attribute */
-// [data-bs-theme="light"] section.hero,
-// [data-bs-theme="light"] section.hero.background-container {
-//     background-color: #E8D8C3 !important;
-//     background-image: url("/img/hero_bg-light.png") !important;
-// }
-
-// [data-bs-theme="dark"] section.hero,
-// [data-bs-theme="dark"] section.hero.background-container {
-//     background-color: #4E342E !important; /* matches [style.dark] in params.toml */
-//     background-image: url("/img/hero_bg-dark.png") !important;
-// }
-
-/* Equal-height rows: stretch columns globally */
-// .row {
-//     align-items: stretch !important;
-// }
-
-// /* Make Bootstrap row direct children flex so their children (cards) can stretch */
-// .row > * {
-//     display: flex !important;
-//     align-items: stretch !important;
-// }
 
 .card-icon {
     color: #8e8380 !important; /* e.g., #d43900 for primary red */
@@ -196,4 +145,55 @@ section.cards .container-fluid.d-none.d-sm-block .row > .col:nth-child(3) .card 
 }
 .card.h-100 > .card-body {
     flex: 1 1 auto !important;
+}
+
+/* Ensure hero background image stretches to fill container space */
+.hero {
+    position: relative;
+    min-height: 100vh; /* Ensure full viewport height */
+    overflow: hidden;
+}
+
+.hero .background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero .background-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Alternative approach for backdrop images */
+.hero[style*="background-image"] {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+}
+
+.floatright {
+	float: right !important;
+    margin-left: 3rem;
+    border: solid 2px #8e8380;
+}
+
+.alert {
+    font-size: 0.9rem;
+    //margin: 1rem 0 1rem 0;
+}
+
+figcaption {
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: "IBM Plex Mono";
+    color: #4E342E;
+    padding: 5px 5px 0 5px;
+    margin-bottom: 0px !important;
 }

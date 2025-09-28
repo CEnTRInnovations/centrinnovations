@@ -9,14 +9,19 @@
     weight = 30
 
 [[main]]
+    name = "Framework"
+    pageRef = "/framework/"
+    weight = 50
+
+[[main]]
     name = "Tools"
     pageRef = "/tools/"
-    weight = 50
+    weight = 70
 
 [[main]]
     name = "Contact"
     pageRef = "/contact/"
-    weight = 70
+    weight = 90
 
 [[social]]
   name = "LinkedIn"

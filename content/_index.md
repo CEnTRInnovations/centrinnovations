@@ -5,8 +5,6 @@ description: "Welcome to the CEnTRInnovations website"
 content_blocks:
   - _bookshop_name: hero
     heading:
-      #preheading: Smart Technology. Deeper Insights. Empowered Communities.
-      # title: '<span style="color: primary;">CEnTR</span>Innovations'
       preheading: '{{< image src="https://ik.imagekit.io/centrinnovations/centr-title.png" wrapper="w-80" >}}'
       content: |-
         **Smart Technology. Deeper Insights. Empowered Communities.**<br /><br />
@@ -15,7 +13,7 @@ content_blocks:
     illustration:
       image: /img/network_plot.png
     background:
-      backdrop: /img/hero_bg-bokeh3.png
+      backdrop: "https://ik.imagekit.io/centrinnovations/hero_bg-bokeh3.png"
     overlay-mode: none
     cover: true
     width: 12

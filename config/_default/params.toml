@@ -10,8 +10,8 @@
   dark = "#4E342E"       # Your espresso - rich and readable
 
   # Typography
-  themeFont = "Inter"
-  themeFontPath = "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
+  themeFont = "Inter, IBM Plex Mono"
+  themeFontPath = "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200..700;1,200..700&family=Inter:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
 
 # Extended palette for UI elements
 [extended_colors]
@@ -73,3 +73,28 @@
         account = "centrinnovations"
         container = "home"
         rewrite = false
+
+[sharing]
+    enabled = true
+    sort = "weight"
+    reverse = false
+    webshare = true
+
+[[sharing.providers]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/sharing/share-offsite/?url={url}"
+    icon = "fab linkedin"
+    weight = 10
+
+[[sharing.providers]]
+    name = "Bluesky"
+    url = "https://bsky.app/intent/compose?text={url}"
+    icon = "fab bluesky"
+    weight = 20
+
+[[sharing.providers]]
+    name = "email"
+    url = "{url}"
+    icon = "fas link"
+    weight = 50
+    clipboard = true

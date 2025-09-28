@@ -11,6 +11,8 @@
   </url><url>
     <loc>http://localhost:1313/contact/</loc>
   </url><url>
+    <loc>http://localhost:1313/framework/</loc>
+  </url><url>
     <loc>http://localhost:1313/services/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
