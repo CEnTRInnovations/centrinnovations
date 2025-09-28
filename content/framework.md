@@ -56,3 +56,11 @@ This framework uses architectural and urban metaphors to make abstract analyses 
 </div>
 
 <p style="margin-top: 2rem;">Seen together, these three layers create a system view of community engaged research. They provide a way to map current capacity, identify gaps, and set priorities. For universities, this framework sharpens institutional strategy. For community partners, it clarifies how values and commitments become outcomes. For funders, it shows where investments can create the greatest leverage for change.</p>
+
+{{< alert color="success" >}}
+
+#### Take the next step
+
+See how this framework can work in your setting. [Contact us](contact/) to explore tools, strategies, and examples tailored to your community.
+
+{{< /alert >}}
