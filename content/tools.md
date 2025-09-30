@@ -1,7 +1,10 @@
 ---
 title: "Tools"
 layout: docs
+weight: 50
 ---
+
+# Our Tools
 
 Our suite of proprietary tools is built to simplify and streamline the process of community engagement and data collection. Each tool is developed with a focus on user experience, ensuring that they are intuitive and accessible to everyone.
 

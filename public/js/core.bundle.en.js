@@ -6593,10 +6593,10 @@ function initIndex() {
         id: 0,
         href: "/about/",
         title: "About Us",
-        description: "Hi, I\u0026rsquo;m Jeremy Price. I\u0026rsquo;m the founder of CEnTRInnovations, and I believe in the power of merging smart technology with deep, community-driven insights. My mission is to empower communities and organizations to make informed decisions that lead to real, positive change.\nI am a passionate innovator, researcher, and technologist dedicated to building solutions that are not just effective, but also ethical and equitable. I work at the intersection of technology and human-centered design, creating tools that are rooted in collaboration and purpose.\n",
+        description: "About CEnTRInnovations CEnTRInnovations was founded by Jeremy F. Price, PhD, a scholar and technologist dedicated to making community-engaged research more effective, ethical, and impactful. We are guided by the belief that the strongest solutions emerge when rigorous research, smart technology, and authentic community partnerships come together.\nJeremy Price, PhD Dr. Price brings a unique blend of academic and applied expertise to this work. As the Faculty Fellow in Community Engaged Research for the IU Indianapolis Office of Research, he plays a key role in strengthening research infrastructures and building collaborative networks. His academic foundation includes a PhD in Curriculum and Instruction from Boston College\u0026rsquo;s Lynch School of Education and an EdM in Technology in Education from the Harvard Graduate School of Education.\n",
         
         
-        content: "Hi, I\u0026rsquo;m Jeremy Price. I\u0026rsquo;m the founder of CEnTRInnovations, and I believe in the power of merging smart technology with deep, community-driven insights. My mission is to empower communities and organizations to make informed decisions that lead to real, positive change.\nI am a passionate innovator, researcher, and technologist dedicated to building solutions that are not just effective, but also ethical and equitable. I work at the intersection of technology and human-centered design, creating tools that are rooted in collaboration and purpose."
+        content: "About CEnTRInnovations CEnTRInnovations was founded by Jeremy F. Price, PhD, a scholar and technologist dedicated to making community-engaged research more effective, ethical, and impactful. We are guided by the belief that the strongest solutions emerge when rigorous research, smart technology, and authentic community partnerships come together.\nJeremy Price, PhD Dr. Price brings a unique blend of academic and applied expertise to this work. As the Faculty Fellow in Community Engaged Research for the IU Indianapolis Office of Research, he plays a key role in strengthening research infrastructures and building collaborative networks. His academic foundation includes a PhD in Curriculum and Instruction from Boston College\u0026rsquo;s Lynch School of Education and an EdM in Technology in Education from the Harvard Graduate School of Education.\nJeremy Price, PhD Dr. Price brings a unique blend of academic and applied expertise to this work. As the Faculty Fellow in Community Engaged Research for the IU Indianapolis Office of Research, he plays a key role in strengthening research infrastructures and building collaborative networks. His academic foundation includes a PhD in Curriculum and Instruction from Boston College\u0026rsquo;s Lynch School of Education and an EdM in Technology in Education from the Harvard Graduate School of Education.\nOur Approach in Practice Our methodologies grow out of years of scholarship and hands-on leadership. We help institutions and their partners translate values into measurable outcomes by:\nCollaborating directly with community partners to co-design solutions. Presenting research findings in public, accessible forums. Building infrastructures that support long-term, sustainable collaboration. Co-designing solutions with communities Sharing data with community audiences Mapping the systems that drive change"
       })
       .add(
       
@@ -6605,12 +6605,12 @@ function initIndex() {
       
       {
         id: 1,
-        href: "/contact/",
-        title: "Contact",
-        description: "Let\u0026rsquo;s Connect! Please schedule a Discovery Dialogue with us.\n",
+        href: "/centrimpact/",
+        title: "CEnTR*IMPACT",
+        description: "CEnTR*IMPACT: From Complexity to Clarity",
         
         
-        content: "Let\u0026rsquo;s Connect! Please schedule a Discovery Dialogue with us."
+        content: ""
       })
       .add(
       
@@ -6619,12 +6619,12 @@ function initIndex() {
       
       {
         id: 2,
-        href: "/framework/",
-        title: "Making Community Engaged Research Yours",
-        description: " Effective community engaged research requires more than good intentions. It needs a framework that connects values, practices, and outcomes in ways leaders can plan around, resource, and evaluate. This three-layer framework provides that structure. It supports both the initiation and sustainability of engaged research across institutions and communities.\nThe Foundation Layer is the ground on which engaged research stands: the values, commitments, and guiding principles. It makes clear what must not be compromised and helps administrators, faculty, and funders align strategy with local priorities from the start. The Integration Layer holds everything together: the infrastructure that links people, methods, and resources. Like a transit system, it reveals where connections are strong, where bottlenecks occur, and where new pathways are needed. Strategic plans that account for this layer ensure that engagement practices move efficiently across units, organizations, and communities. The Leverage Layer is the architecture of influence: the visible structures where decisions are shaped, authority is exercised, and outcomes are recognized. This layer helps leaders and partners see where to direct investments, how to distribute power more equitably, and how to make impacts visible to wider audiences. Layers of analysis.\n",
+        href: "/projects/dharmma/",
+        title: "DHARMMA Strategic Framework",
+        description: "The Challenge A multi-institutional research network needed a unified vision to guide its collaborative efforts. We were brought in to design and facilitate a strategic planning process that could establish clear short-term (1-2 year) and long-term (3-7 year) goals while anticipating future challenges and opportunities.\nOur Approach We guided the network through our DHARMMA strategic planning framework, a multi-stage process designed to build consensus and create actionable roadmaps. The framework\u0026rsquo;s name outlines the key steps of our engagement:\n",
         
         
-        content: "Effective community engaged research requires more than good intentions. It needs a framework that connects values, practices, and outcomes in ways leaders can plan around, resource, and evaluate. This three-layer framework provides that structure. It supports both the initiation and sustainability of engaged research across institutions and communities.\nThe Foundation Layer is the ground on which engaged research stands: the values, commitments, and guiding principles. It makes clear what must not be compromised and helps administrators, faculty, and funders align strategy with local priorities from the start. The Integration Layer holds everything together: the infrastructure that links people, methods, and resources. Like a transit system, it reveals where connections are strong, where bottlenecks occur, and where new pathways are needed. Strategic plans that account for this layer ensure that engagement practices move efficiently across units, organizations, and communities. The Leverage Layer is the architecture of influence: the visible structures where decisions are shaped, authority is exercised, and outcomes are recognized. This layer helps leaders and partners see where to direct investments, how to distribute power more equitably, and how to make impacts visible to wider audiences. Layers of analysis.\nA Note on the Use of Metaphor This framework uses architectural and urban metaphors to make abstract analyses more tangible. These metaphors do not replace the technical analyses but provide accessible imagery for understanding how community engaged research is grounded, connected, and structured.\nSeen together, these three layers create a system view of community engaged research. They provide a way to map current capacity, identify gaps, and set priorities. For universities, this framework sharpens institutional strategy. For community partners, it clarifies how values and commitments become outcomes. For funders, it shows where investments can create the greatest leverage for change.\nTake the next step See how this framework can work in your setting. [Contact us] to explore tools, strategies, and examples tailored to your community."
+        content: "The Challenge A multi-institutional research network needed a unified vision to guide its collaborative efforts. We were brought in to design and facilitate a strategic planning process that could establish clear short-term (1-2 year) and long-term (3-7 year) goals while anticipating future challenges and opportunities.\nOur Approach We guided the network through our DHARMMA strategic planning framework, a multi-stage process designed to build consensus and create actionable roadmaps. The framework\u0026rsquo;s name outlines the key steps of our engagement:\nDESCRIBE your short- and long-term vision. HORIZON SCAN to identify catalysts and obstacles. ASSESS cascading effects for catalysts and obstacles. RATE catalysts and obstacles for likelihood, impact, and complexity. MAXIMIZE catalysts and MINIMIZE obstacles. APPLY key insights, cross-cutting themes, and next steps. This structured process empowered network members to move from high-level aspirations to a concrete, shared strategy, ensuring alignment and a clear path forward for the entire collaboration.\n!(images/dharmma-vision.jpg) The Visions and Cascade Effects framework used in the DHARMMA workshop."
       })
       .add(
       
@@ -6633,12 +6633,12 @@ function initIndex() {
       
       {
         id: 3,
-        href: "/services/",
-        title: "Services",
-        description: "Our services are designed to help you harness the power of community intelligence. We specialize in providing comprehensive solutions for community engagement, research, and data analysis.\nWe offer a range of services tailored to your specific needs, including:\nCustom Technology Solutions: Developing bespoke tools to help you gather, analyze, and visualize data. Strategic Consulting: Partnering with you to design and implement effective community-driven projects. Data Insights \u0026amp; Analysis: Transforming complex data into clear, actionable insights that drive results. ",
+        href: "/framework/",
+        title: "Making Community Engaged Research Yours",
+        description: " Making Community Engaged Research Yours Effective community engaged research requires more than good intentions. It needs a framework that connects values, practices, and outcomes in ways leaders can plan around, resource, and evaluate. This three-layer framework provides that structure. It supports both the initiation and sustainability of engaged research across institutions and communities.\nThe Foundation Layer is the ground on which engaged research stands: the values, commitments, and guiding principles. It makes clear what must not be compromised and helps administrators, faculty, and funders align strategy with local priorities from the start. The Integration Layer holds everything together: the infrastructure that links people, methods, and resources. Like a transit system, it reveals where connections are strong, where bottlenecks occur, and where new pathways are needed. Strategic plans that account for this layer ensure that engagement practices move efficiently across units, organizations, and communities. The Leverage Layer is the architecture of influence: the visible structures where decisions are shaped, authority is exercised, and outcomes are recognized. This layer helps leaders and partners see where to direct investments, how to distribute power more equitably, and how to make impacts visible to wider audiences. Layers of analysis.\n",
         
         
-        content: "Our services are designed to help you harness the power of community intelligence. We specialize in providing comprehensive solutions for community engagement, research, and data analysis.\nWe offer a range of services tailored to your specific needs, including:\nCustom Technology Solutions: Developing bespoke tools to help you gather, analyze, and visualize data. Strategic Consulting: Partnering with you to design and implement effective community-driven projects. Data Insights \u0026amp; Analysis: Transforming complex data into clear, actionable insights that drive results."
+        content: "Making Community Engaged Research Yours Effective community engaged research requires more than good intentions. It needs a framework that connects values, practices, and outcomes in ways leaders can plan around, resource, and evaluate. This three-layer framework provides that structure. It supports both the initiation and sustainability of engaged research across institutions and communities.\nThe Foundation Layer is the ground on which engaged research stands: the values, commitments, and guiding principles. It makes clear what must not be compromised and helps administrators, faculty, and funders align strategy with local priorities from the start. The Integration Layer holds everything together: the infrastructure that links people, methods, and resources. Like a transit system, it reveals where connections are strong, where bottlenecks occur, and where new pathways are needed. Strategic plans that account for this layer ensure that engagement practices move efficiently across units, organizations, and communities. The Leverage Layer is the architecture of influence: the visible structures where decisions are shaped, authority is exercised, and outcomes are recognized. This layer helps leaders and partners see where to direct investments, how to distribute power more equitably, and how to make impacts visible to wider audiences. Layers of analysis.\nA Note on the Use of Metaphor This framework uses architectural and urban metaphors to make abstract analyses more tangible. These metaphors do not replace the technical analyses but provide accessible imagery for understanding how community engaged research is grounded, connected, and structured.\nSeen together, these three layers create a system view of community engaged research. They provide a way to map current capacity, identify gaps, and set priorities. For universities, this framework sharpens institutional strategy. For community partners, it clarifies how values and commitments become outcomes. For funders, it shows where investments can create the greatest leverage for change.\nTake the next step See how this framework can work in your setting. Contact us to explore tools, strategies, and examples tailored to your community."
       })
       .add(
       
@@ -6647,12 +6647,40 @@ function initIndex() {
       
       {
         id: 4,
+        href: "/contact/",
+        title: "Partner with Us",
+        description: "Start the Conversation CEnTRInnovations works with universities, foundations, and community partners to build the infrastructures for impactful, ethical research.\nWe begin every partnership with a complimentary Discovery Dialogue. This is a 30-minute introductory call for us to learn about your goals and for you to explore how our frameworks and tools can help you achieve them.\nPlease use the calendar below to schedule a time that works for you.\nHave a quick question or need to send a document?\n",
+        
+        
+        content: "Start the Conversation CEnTRInnovations works with universities, foundations, and community partners to build the infrastructures for impactful, ethical research.\nWe begin every partnership with a complimentary Discovery Dialogue. This is a 30-minute introductory call for us to learn about your goals and for you to explore how our frameworks and tools can help you achieve them.\nPlease use the calendar below to schedule a time that works for you.\nHave a quick question or need to send a document?\nYou can also reach out directly via email at jeremy@centrinnovations.com."
+      })
+      .add(
+      
+      
+      
+      
+      {
+        id: 5,
+        href: "/services/",
+        title: "Services",
+        description: "Our Services Our services are designed to help you harness the power of community intelligence. We specialize in providing comprehensive solutions for community engagement, research, and data analysis.\nWe offer a range of services tailored to your specific needs, including:\nCustom Technology Solutions: Developing bespoke tools to help you gather, analyze, and visualize data. Strategic Consulting: Partnering with you to design and implement effective community-driven projects. Data Insights \u0026amp; Analysis: Transforming complex data into clear, actionable insights that drive results. ",
+        
+        
+        content: "Our Services Our services are designed to help you harness the power of community intelligence. We specialize in providing comprehensive solutions for community engagement, research, and data analysis.\nWe offer a range of services tailored to your specific needs, including:\nCustom Technology Solutions: Developing bespoke tools to help you gather, analyze, and visualize data. Strategic Consulting: Partnering with you to design and implement effective community-driven projects. Data Insights \u0026amp; Analysis: Transforming complex data into clear, actionable insights that drive results."
+      })
+      .add(
+      
+      
+      
+      
+      {
+        id: 6,
         href: "/tools/",
         title: "Tools",
-        description: "Our suite of proprietary tools is built to simplify and streamline the process of community engagement and data collection. Each tool is developed with a focus on user experience, ensuring that they are intuitive and accessible to everyone.\nWhile we develop our full toolset, you can expect to find:\nInteractive Mapping Platforms: To visualize community data and feedback in real-time.\nCollaborative Research Tools: To facilitate shared data collection and analysis among stakeholders.\n",
+        description: "Our Tools Our suite of proprietary tools is built to simplify and streamline the process of community engagement and data collection. Each tool is developed with a focus on user experience, ensuring that they are intuitive and accessible to everyone.\nWhile we develop our full toolset, you can expect to find:\nInteractive Mapping Platforms: To visualize community data and feedback in real-time.\nCollaborative Research Tools: To facilitate shared data collection and analysis among stakeholders.\n",
         
         
-        content: "Our suite of proprietary tools is built to simplify and streamline the process of community engagement and data collection. Each tool is developed with a focus on user experience, ensuring that they are intuitive and accessible to everyone.\nWhile we develop our full toolset, you can expect to find:\nInteractive Mapping Platforms: To visualize community data and feedback in real-time.\nCollaborative Research Tools: To facilitate shared data collection and analysis among stakeholders.\nReporting Dashboards: To instantly see and share the impact of your projects."
+        content: "Our Tools Our suite of proprietary tools is built to simplify and streamline the process of community engagement and data collection. Each tool is developed with a focus on user experience, ensuring that they are intuitive and accessible to everyone.\nWhile we develop our full toolset, you can expect to find:\nInteractive Mapping Platforms: To visualize community data and feedback in real-time.\nCollaborative Research Tools: To facilitate shared data collection and analysis among stakeholders.\nReporting Dashboards: To instantly see and share the impact of your projects."
       })
       ;
   

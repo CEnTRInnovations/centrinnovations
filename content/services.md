@@ -1,7 +1,10 @@
 ---
 title: "Services"
-layout: docs
+layout: single
+weight: 30
 ---
+
+# Our Services
 
 Our services are designed to help you harness the power of community intelligence. We specialize in providing comprehensive solutions for community engagement, research, and data analysis.
 

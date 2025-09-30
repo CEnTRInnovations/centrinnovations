@@ -1,9 +1,12 @@
 ---
 title: "About Us"
 layout: docs
+weight: 10
 ---
 
-CEnTRInnovations was founded by Jeremy F. Price, PhD, a leading scholar and technologist dedicated to making community-engaged research more effective, ethical, and impactful. Our work is built on the conviction that the most profound solutions emerge when rigorous research methods, smart technology, and authentic community partnerships are integrated.
+# About CEnTRInnovations
+
+CEnTRInnovations was founded by Jeremy F. Price, PhD, a scholar and technologist dedicated to making community-engaged research more effective, ethical, and impactful. We are guided by the belief that the strongest solutions emerge when rigorous research, smart technology, and authentic community partnerships come together.
 
 {{< persona thumbnail="https://ik.imagekit.io/centrinnovations/jfp.png?updatedAt=1759086314941" title="Jeremy Price, PhD" color="primary" >}}
 
@@ -11,14 +14,22 @@ Dr. Price brings a unique blend of academic and applied expertise to this work. 
 
 {{< /persona >}}
 
-Our methodologies are not just best practices; they are born from years of scholarship and hands-on project leadership. Dr. Price's extensive research, with numerous peer-reviewed publications, focuses on designing the very systems that help universities and their partners translate values into measurable outcomes.
+## Our Approach in Practice
+
+Our methodologies grow out of years of scholarship and hands-on leadership. We help institutions and their partners translate values into measurable outcomes by:
+
+* Collaborating directly with community partners to co-design solutions.
+* Presenting research findings in public, accessible forums.
+* Building infrastructures that support long-term, sustainable collaboration.
 
 <div class="row" style="margin-top: 4rem;">
-<div class="col-md-5">
-{{< image src="https://ik.imagekit.io/centrinnovations/about-1-jfp.jpg?updatedAt=1759087082476" ratio="16x9" class="rounded" wrapper="col-12" caption="Jeremy Price working with community partners" >}}
+<div class="col-md-4">
+{{< image src="https://ik.imagekit.io/centrinnovations/about-1-jfp.jpg?updatedAt=1759087082476" ratio="16x9" class="rounded" wrapper="col-12" caption="Co-designing solutions with communities" >}}
 </div>
-<div class="col-md-2"></div>
-<div class="col-md-5">
-{{< image src="https://ik.imagekit.io/centrinnovations/about-2-jfp.jpg?updatedAt=1759087082534" class="rounded" ratio="16x9" wrapper="col-12" caption="Jeremy Price presenting data to a community audience" >}}
+<div class="col-md-4">
+{{< image src="https://ik.imagekit.io/centrinnovations/about-2-jfp.jpg?updatedAt=1759087082534" class="rounded" ratio="16x9" wrapper="col-12" caption="Sharing data with community audiences" >}}
+</div>
+<div class="col-md-3">
+{{< image src="https://ik.imagekit.io/centrinnovations/ant.png?updatedAt=1759093404657" class="rounded" wrapper="col-12" caption="Mapping the systems that drive change" >}}
 </div>
 </div>

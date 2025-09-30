@@ -10,8 +10,8 @@
   dark = "#4E342E"       # Your espresso - rich and readable
 
   # Typography
-  themeFont = "Inter, IBM Plex Mono"
-  themeFontPath = "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200..700;1,200..700&family=Inter:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+  themeFont = "Inter, Work Sans"
+  themeFontPath = "https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200..700;1,200..700&family=Inter:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
 
 # Extended palette for UI elements
 [extended_colors]
@@ -39,14 +39,18 @@
 
 [main]
   footerBelowFold = true
-  endorse = true
+  endorse = false
+
+[main.colorMode]
+  enabled = false
+  toggle = false  
 
 [navigation]
     anchor = false
     color = "primary"
     fixed = false
     logo = "/img/centr-nav.png"
-    logo-mode = true
+    logo-mode = false
     logo-align = "start"
     logo-height = 36
     overlay = false

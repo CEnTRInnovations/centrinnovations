@@ -4,6 +4,11 @@
     weight = 10
 
 [[main]]
+    name = "CEnTR*IMPACT"
+    pageRef = "/centrimpact/"
+    weight = 20
+
+[[main]]
     name = "Services"
     pageRef = "/services/"
     weight = 30

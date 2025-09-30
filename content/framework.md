@@ -1,8 +1,11 @@
 ---
 title: "Making Community Engaged Research Yours"
+weight: 40
 ---
 
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css" />
+
+# Making Community Engaged Research Yours
 
 <div class="row">
 <div class="col-md-6">

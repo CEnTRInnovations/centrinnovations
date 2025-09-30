@@ -1,5 +1,5 @@
 html {
-    font-feature-setting: "dlig tnum ss01 ss02"
+    font-feature-setting: "dlig tnum ss01 ss02";
 }
 
 h1,
@@ -8,55 +8,45 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: bold !important;
-    font-family: "IBM Plex Mono" !important;
+    font-weight: normal !important;
+    font-family: "Work Sans" !important;
+    text-transform: uppercase;
+}
+
+.lod {
+    color: #E8D8C3;
+    font-family: "Work Sans" !important;
+    text-transform: uppercase;
 }
 
 .btn {
-    font-family: "IBM Plex Mono" !important;
+    font-family: "Work Sans" !important;
     font-weight: normal;
+    text-transform: uppercase;
 }
 
 .card-title {
-    font-family: "IBM Plex Mono" !important;
+    font-family: "Work Sans" !important;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 2em !important;
+    border-bottom: solid 1px #F0E5D7 !important;
 }
 
 .display-4 {
-    font-weight: 600 !important;
-    font-family: "IBM Plex Mono" !important;
+    font-weight: normal !important;
+    font-size: 3.25rem !important;
+    font-family: "Work Sans" !important;
+    text-transform: uppercase;
 }
 
 .fs-3 {
-    font-family: "IBM Plex Mono" !important;
+    font-family: "Work Sans" !important;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 .card-title {
     font-size: 1.5rem !important;
-}
-
-/* Fallback: Theme does not emit the `class` set in content/_index.md elements.
-    Target the first service card explicitly in both mobile and desktop layouts. */
-section.cards .container-fluid.d-sm-none .row > .col:nth-child(1) .card,
-section.cards .container-fluid.d-none.d-sm-block .row > .col:nth-child(1) .card {
-    background-color: #7491AE !important;
-    box-shadow: 0.1em 0.1em 0.5em #4A4A4A !important;
-}
-
-/* Optional: improve contrast for text in the tinted card */
-section.cards .container-fluid .row > .col:nth-child(1) .card .card-title,
-section.cards .container-fluid .row > .col:nth-child(1) .card .card-text {
-    color: #F2ECD7 !important;
-}
-
-/* Make text white in Card 2 */
-section.cards .container-fluid .row > .col:nth-child(2) .card .card-title,
-section.cards .container-fluid .row > .col:nth-child(2) .card .card-text {
-    color: #F2ECD7 !important;
-}
-
-/* Make text white in Card 3 */
-section.cards .container-fluid .row > .col:nth-child(3) .card .card-title,
-section.cards .container-fluid .row > .col:nth-child(3) .card .card-text {
-    color: #F2ECD7 !important;
 }
 
 /* Match circle behind icons to each card's background color */
@@ -68,20 +58,6 @@ section.cards .container-fluid .row > .col:nth-child(2) .card .card-icon .fa-cir
 }
 section.cards .container-fluid .row > .col:nth-child(3) .card .card-icon .fa-circle {
     color: #6b7894 !important;
-}
-
-/* Card 2 background */
-section.cards .container-fluid.d-sm-none .row > .col:nth-child(2) .card,
-section.cards .container-fluid.d-none.d-sm-block .row > .col:nth-child(2) .card {
-    background-color: #7BA377 !important;
-    box-shadow: 0.1em 0.1em 0.5em #4A4A4A !important;
-}
-
-/* Card 3 background */
-section.cards .container-fluid.d-sm-none .row > .col:nth-child(3) .card,
-section.cards .container-fluid.d-none.d-sm-block .row > .col:nth-child(3) .card {
-    background-color: #929FB0 !important;
-    box-shadow: 0.1em 0.1em 0.5em #4A4A4A !important;
 }
 
 .navbar {
@@ -192,8 +168,31 @@ section.cards .container-fluid.d-none.d-sm-block .row > .col:nth-child(3) .card 
 figcaption {
     font-size: 0.8rem;
     font-weight: 500;
-    font-family: "IBM Plex Mono";
+    font-family: "Work Sans";
     color: #4E342E;
     padding: 5px 5px 0 5px;
     margin-bottom: 0px !important;
 }
+
+/* Applies colors ONLY to the service cards on the homepage */
+body.kind-home .service-cards .col:nth-child(1) .card {
+    background-color: var(--bs-primary); /* Denim Blue */
+    color: var(--bs-light);
+  }
+  
+  body.kind-home .service-cards .col:nth-child(2) .card {
+    background-color: var(--bs-secondary); /* Forest Green */
+    color: var(--bs-light);
+  }
+  
+  body.kind-home .service-cards .col:nth-child(3) .card {
+    background-color: var(--bs-warning); /* Burnt Orange */
+    color: var(--bs-dark);
+  }
+  
+  /* Make sure text and links are readable on the new backgrounds */
+  body.kind-home .service-cards .card .card-title,
+  body.kind-home .service-cards .card .card-text,
+  body.kind-home .service-cards .card .btn {
+      color: inherit; /* Inherits the color set on the parent .card */
+  }

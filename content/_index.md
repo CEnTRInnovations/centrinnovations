@@ -8,7 +8,7 @@ content_blocks:
       preheading: '{{< image src="https://ik.imagekit.io/centrinnovations/centr-title.png" wrapper="w-80" >}}'
       content: |-
         **Smart Technology. Deeper Insights. Empowered Communities.**<br /><br />
-        CEnTR Innovations partners with universities, nonprofits, and philanthropies to advance community-engaged research through **strategic roadmaps and data-driven tools**. We provide multi-year planning aligned with institutional and community priorities, and our **CEnTR\*IMPACT framework** translates values like reciprocity and equity into clear metrics and visualizations. Together, these services give leaders the infrastructure to **track impact, build trust, and strengthen competitiveness for external funding**.
+        CEnTRInnovations (Community Engaged and Transformative Research) partners with universities, nonprofits, and philanthropies to advance community-engaged research through **strategic roadmaps and data-driven tools**. We provide multi-year planning aligned with institutional and community priorities, and our **CEnTR\*IMPACT framework** translates values like reciprocity and equity into clear metrics and visualizations. Together, these services give leaders the infrastructure to **track impact, build trust, and strengthen competitiveness for external funding**.
       width: 5
     illustration:
       image: /img/network_plot.png
@@ -26,6 +26,7 @@ content_blocks:
   - _bookshop_name: cards
     heading:
       title: Our Services
+      class: service-cards
       align: center
       content: |-
         Whether you're a university research office, community-based nonprofit, foundation program officer, or grassroots organization, we offer services to help you build research partnerships that are truly reciprocal, ethical, and impactful.
@@ -70,9 +71,10 @@ content_blocks:
       content: |-
         Raw data can be overwhelming and difficult to act on. We believe the most profound insights are useless if they aren't understood. That's why we use powerful visual metaphors to translate complex analytics into intuitive, actionable narratives.
       image: /img/featured_background.png
+  - _bookshop_name: separator
   - _bookshop_name: cta
     background:
-      color: success
+      color: light
       subtle: true
     heading:
       title: Let's Map Your Path to Impact.
