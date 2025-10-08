@@ -1,0 +1,1 @@
+function hasConsent(){return!0}function getLocalStorage(e,t,n){return hasConsent(n)?localStorage.getItem(e):t}function setLocalStorage(e,t,n){hasConsent(n)&&localStorage.setItem(e,t)}function getSessionStorage(e,t,n){return hasConsent(n)?sessionStorage.getItem(e):t}function setSessionStorage(e,t,n){hasConsent(n)&&sessionStorage.setItem(e,t)}

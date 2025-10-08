@@ -1,6 +1,7 @@
 baseURL = 'https://www.centrinnovations.com/'
 languageCode = 'en-us'
 title = 'CEnTRInnovations'
+images = ["https://ik.imagekit.io/centrinnovations/network_plot-card.png"]
 [[module.imports]]
     path = 'github.com/gethinode/hinode'
 [markup]

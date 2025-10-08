@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on CEnTRInnovations</title>
-    <link>http://localhost:1313/projects/</link>
+    <link>https://www.centrinnovations.com/projects/</link>
     <description>Recent content in Projects on CEnTRInnovations</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 15 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.centrinnovations.com/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DHARMMA Strategic Framework</title>
-      <link>http://localhost:1313/projects/dharmma/</link>
+      <link>https://www.centrinnovations.com/projects/dharmma/</link>
       <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/dharmma/</guid>
+      <guid>https://www.centrinnovations.com/projects/dharmma/</guid>
       <description>&lt;h2 id=&#34;the-challenge&#34;&gt;The Challenge&lt;/h2&gt;&#xA;&lt;p&gt;A multi-institutional research network needed a unified vision to guide its collaborative efforts. We were brought in to design and facilitate a strategic planning process that could establish clear short-term (1-2 year) and long-term (3-7 year) goals while anticipating future challenges and opportunities.&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;h2 id=&#34;our-approach&#34;&gt;Our Approach&lt;/h2&gt;&#xA;&lt;p&gt;We guided the network through our &lt;strong&gt;DHARMMA&lt;/strong&gt; strategic planning framework, a multi-stage process designed to build consensus and create actionable roadmaps. The framework&amp;rsquo;s name outlines the key steps of our engagement:&lt;/p&gt;</description>
     </item>
   </channel>
