@@ -1,0 +1,25 @@
+<section class="challenge section-bg-light">
+  <div class="section-inner">
+
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .eyebrow }}</span>
+      <h2>{{ .title }}</h2>
+      <div class="sidebar-stripe challenge-stripe"></div>
+      {{ range .body }}
+        <p class="sidebar-body">{{ . }}</p>
+      {{ end }}
+    </div>
+
+    <div class="challenge-items reveal">
+      <p class="right-intro">{{ .intro }}</p>
+      {{ range $i, $item := .items }}
+      <div class="challenge-item">
+        <div class="challenge-num">0{{ add $i 1 }}</div>
+        <img src="{{ $item.icon }}" alt="" />
+        <p>{{ $item.text }}</p>
+      </div>
+      {{ end }}
+    </div>
+
+  </div>
+</section>

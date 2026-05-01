@@ -1,0 +1,35 @@
+<section id="open-tools" class="open-tools section-bg-deep">
+  <div class="section-inner">
+
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .eyebrow }}</span>
+      <h2>{{ .title }}</h2>
+      <div class="sidebar-stripe tools-stripe"></div>
+      <p class="sidebar-body">{{ .body }}</p>
+    </div>
+
+    <div class="tools-cards reveal">
+      {{ range .tools }}
+      <div class="tool-card">
+        <div class="tool-card-header">
+          <h3>{{ .name }}</h3>
+          <img src="{{ .image }}" alt="" class="tool-illustration" />
+        </div>
+        <p class="tool-desc">{{ .description | safeHTML }}</p>
+        <div class="tool-tags">
+          {{ range .tags }}<span class="tool-tag">{{ . }}</span>{{ end }}
+        </div>
+        <div class="tool-links">
+          {{ if .primary_link }}
+            <a href="{{ .primary_link }}" class="tool-link-primary" target="_blank" rel="noopener">{{ .primary_text }}</a>
+          {{ end }}
+          {{ if .secondary_link }}
+            <a href="{{ .secondary_link }}" class="tool-link-secondary" target="_blank" rel="noopener">{{ .secondary_text }}</a>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+  {{ partial "hero.html" .Params.hero }}
+
+  {{ partial "challenge.html" .Params.challenge }}
+
+  {{ partial "system.html" .Params.system }}
+
+  {{ partial "outcomes.html" .Params.outcomes }}
+
+  {{ partial "open-tools.html" .Params.open_tools }}
+
+  {{ partial "bridge.html" .Params.bridge }}
+
+  {{ partial "cta.html" .Params.cta }}
+
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+{{ end }}

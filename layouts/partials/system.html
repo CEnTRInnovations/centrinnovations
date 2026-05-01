@@ -1,0 +1,35 @@
+<section id="system" class="system section-bg-main">
+  <div class="section-inner section-inner--reverse">
+
+    <div class="system-flow reveal">
+      {{ range $i, $step := .steps }}
+      {{ if gt $i 0 }}<div class="system-arrow">→</div>{{ end }}
+      <div class="system-step">
+        <div class="step-header">
+          <div class="step-num {{ $step.num_class }}">{{ $step.num }}</div>
+          <div class="circle {{ $step.circle_class }}">
+            <img src="{{ $step.image }}" alt="" />
+          </div>
+        </div>
+        <h3>{{ $step.title }}</h3>
+        <p class="system-lead">{{ $step.lead }}</p>
+        <ul class="system-bullets">
+          {{ range $step.points }}<li>{{ . }}</li>{{ end }}
+        </ul>
+        {{ if $step.link }}
+          <a href="{{ $step.link }}" class="system-page-link">{{ $step.link_text }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .eyebrow }}</span>
+      <h2>{{ .title }}</h2>
+      <div class="sidebar-stripe system-stripe"></div>
+      <p class="sidebar-body">{{ .body }}</p>
+      <a href='{{ "system" | relURL }}' class="learn-link">{{ .link_text }}</a>
+    </div>
+
+  </div>
+</section>

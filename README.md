@@ -1,2 +1,0 @@
-# centrinnovations
-Consulting Website

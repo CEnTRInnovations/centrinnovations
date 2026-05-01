@@ -1,0 +1,18 @@
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>{{ .headline }}</h1>
+      <p class="lead">{{ .lead | safeHTML }}</p>
+      <div class="actions">
+        <a href="{{ .primary_link }}" class="button primary">{{ .primary_text }}</a>
+        <a href="{{ .secondary_link }}" class="button secondary">{{ .secondary_text }}</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="{{ .image }}" alt="Botanical illustration of common milkweed" class="hero-botanical" />
+      <blockquote class="hero-quote">
+        <p>{{ .quote }}</p>
+      </blockquote>
+    </div>
+  </div>
+</section>

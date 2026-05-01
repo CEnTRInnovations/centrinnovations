@@ -1,0 +1,173 @@
+{{ define "main" }}
+
+<!-- Hero -->
+<section class="seek-hero">
+  <div class="hero-inner">
+    <span class="eyebrow">{{ .Params.hero_eyebrow }}</span>
+    <h1>{{ .Params.hero_title | safeHTML }}</h1>
+    <p class="hero-lead">{{ .Params.hero_lead_1 }}</p>
+    <p class="hero-lead" style="margin-top:-0.5rem;">{{ .Params.hero_lead_2 }}</p>
+    <div class="component-strip">
+      {{ range .Params.hero_strip }}
+      <a href="#{{ .anchor }}" class="strip-item {{ .class }}">
+        {{ .name }}<br><small style="font-size:0.65em;opacity:0.85;">{{ .label }}</small>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- Context -->
+<section class="seek-context">
+  <div class="section-inner">
+
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.context_eyebrow }}</span>
+      <h2>{{ .Params.context_title }}</h2>
+      <div class="sidebar-stripe seek-stripe"></div>
+      <p class="sidebar-body">{{ .Params.context_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.context_sidebar_2 }}</p>
+    </div>
+
+    <div class="context-content reveal">
+      <div class="seek-callout">
+        <p>{{ .Params.context_callout }}</p>
+      </div>
+      <p>{{ .Params.context_body_1 }}</p>
+      <p>{{ .Params.context_body_2 }}</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Pipeline -->
+<section id="pipeline" class="seek-pipeline">
+  <div class="section-inner section-inner--reverse">
+
+    <div class="component-content reveal">
+      <ol class="pipeline-steps">
+        {{ range .Params.pipeline_steps }}
+        <li class="pipeline-step {{ .class }}">
+          <span class="step-num">{{ .num }}</span>
+          <div class="step-body">
+            <strong>{{ .title }}</strong>
+            <p>{{ .body }}</p>
+          </div>
+        </li>
+        {{ end }}
+      </ol>
+    </div>
+
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.pipeline_eyebrow }}</span>
+      <h2>{{ .Params.pipeline_title }}</h2>
+      <div class="sidebar-stripe seek-stripe"></div>
+      <p class="sidebar-body">{{ .Params.pipeline_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.pipeline_sidebar_2 }}</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Transparency -->
+<section class="seek-transparency">
+  <div class="section-inner">
+
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.transparency_eyebrow }}</span>
+      <h2>{{ .Params.transparency_title }}</h2>
+      <div class="sidebar-stripe seek-stripe"></div>
+      <p class="sidebar-body">{{ .Params.transparency_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.transparency_sidebar_2 }}</p>
+    </div>
+
+    <div class="component-content reveal">
+      <div class="seek-quote">
+        <p>{{ .Params.transparency_quote }}</p>
+      </div>
+      <div class="seek-dimensions">
+        <span class="eyebrow" style="display:block;margin-bottom:1rem;">Five Classification Dimensions</span>
+        <ul class="dimension-list">
+          <li><span class="dim-dot"></span>Partnership and Power</li>
+          <li><span class="dim-dot"></span>Community Voice</li>
+          <li><span class="dim-dot"></span>Process and Methods</li>
+          <li><span class="dim-dot"></span>Outcomes and Impacts</li>
+          <li><span class="dim-dot"></span>Sustainability</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Outputs -->
+<section id="outputs" class="seek-outputs">
+  <div class="section-inner-wide">
+    <div class="outputs-header reveal">
+      <span class="eyebrow">{{ .Params.outputs_eyebrow }}</span>
+      <h2>{{ .Params.outputs_title }}</h2>
+    </div>
+    <div class="outputs-grid reveal">
+      {{ range .Params.outputs_cards }}
+      <div class="output-card {{ .class }}">
+        <h3>{{ .title }}</h3>
+        <p>{{ .body }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- Field Infrastructure -->
+<section class="seek-field">
+  <div class="section-inner section-inner--reverse">
+
+    <div class="component-content reveal">
+      <div class="seek-quote">
+        <p>{{ .Params.field_quote }}</p>
+      </div>
+      <div class="seek-system-links">
+        <span class="eyebrow" style="display:block;margin-bottom:1rem;">Part of the CEnTR* System</span>
+        <div class="system-chain">
+          <div class="chain-item chain-seek">
+            <strong>CEnTR*SEEK</strong>
+            <span>Surface the work</span>
+          </div>
+          <div class="chain-arrow">→</div>
+          <div class="chain-item chain-map">
+            <strong>CEnTR*MAP</strong>
+            <span>Understand the terrain</span>
+          </div>
+          <div class="chain-arrow">→</div>
+          <div class="chain-item chain-impact">
+            <strong>CEnTR*IMPACT</strong>
+            <span>Measure the value</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.field_eyebrow }}</span>
+      <h2>{{ .Params.field_title }}</h2>
+      <div class="sidebar-stripe seek-stripe"></div>
+      <p class="sidebar-body">{{ .Params.field_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.field_sidebar_2 }}</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <h2>{{ .Params.cta_title }}</h2>
+    <p>{{ .Params.cta_body }}</p>
+    <a href="{{ .Params.cta_primary_url }}" class="button primary" target="_blank" rel="noopener">{{ .Params.cta_primary_text }}</a>
+    <div style="margin-top:1.25rem;">
+      <a href="{{ .Params.cta_secondary_url }}" class="button secondary">{{ .Params.cta_secondary_text }}</a>
+    </div>
+  </div>
+</section>
+
+{{ end }}

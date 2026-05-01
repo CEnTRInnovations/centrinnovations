@@ -1,0 +1,49 @@
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-left">
+            <a href='{{ "/" | relURL }}' aria-label="CEnTRInnovations homepage">
+                <img
+                    src='{{ "assets/logo.png" | relURL }}'
+                    alt="CEnTRInnovations logo"
+                    class="logo"
+                />
+            </a>
+        </div>
+        <nav class="footer-nav">
+            <a href='{{ "system" | relURL }}'>Our System</a>
+            <a href='{{ "framework" | relURL }}'>The Framework</a>
+            <a href='{{ "centr-impact" | relURL }}'>CEnTR*IMPACT</a>
+            <a href='{{ "/#open-tools" | relURL }}'>Open Tools</a>
+            <a href='{{ "/#contact" | relURL }}'>Work With Us</a>
+        </nav>
+        <div class="footer-right">
+            <div class="footer-social">
+                <a
+                    href="https://www.linkedin.com/company/centrinnovations/"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="CEnTRInnovations on LinkedIn"
+                >
+                    <img
+                        src='{{ "assets/icons/linkedin.png" | relURL }}'
+                        alt="LinkedIn"
+                        class="social-icon"
+                    />
+                </a>
+                <a
+                    href="https://github.com/CEnTRInnovations"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="CEnTRInnovations on GitHub"
+                >
+                    <img
+                        src='{{ "assets/icons/github.png" | relURL }}'
+                        alt="GitHub"
+                        class="social-icon"
+                    />
+                </a>
+            </div>
+            © {{ now.Year }} CEnTRInnovations, LLC. All rights reserved.
+        </div>
+    </div>
+</footer>

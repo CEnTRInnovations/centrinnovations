@@ -1,0 +1,21 @@
+<section class="outcomes section-bg-warm">
+  <div class="section-inner">
+
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .eyebrow }}</span>
+      <h2>{{ .title }}</h2>
+      <div class="sidebar-stripe outcomes-stripe"></div>
+      <p class="sidebar-body">{{ .body }}</p>
+    </div>
+
+    <div class="outcomes-grid reveal">
+      {{ range .items }}
+      <div class="outcome-item">
+        <img src="{{ .icon }}" alt="" />
+        <p>{{ .text }}</p>
+      </div>
+      {{ end }}
+    </div>
+
+  </div>
+</section>

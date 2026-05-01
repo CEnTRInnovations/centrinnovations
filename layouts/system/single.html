@@ -1,0 +1,235 @@
+{{ define "main" }}
+
+<!-- Hero -->
+<section class="system-page-hero">
+  <div class="system-page-inner">
+    <span class="eyebrow">{{ .Params.hero_eyebrow }}</span>
+    <h1>{{ .Params.hero_title | safeHTML }}</h1>
+    <p class="system-page-lead">{{ .Params.hero_body }}</p>
+  </div>
+</section>
+
+<!-- System connector intro -->
+<section class="system-connector">
+  <div class="system-page-inner system-page-inner--narrow">
+    <span class="eyebrow">{{ .Params.connector_eyebrow }}</span>
+    <h2>{{ .Params.connector_title }}</h2>
+    <p>{{ .Params.connector_body_1 }}</p>
+    <p>{{ .Params.connector_body_2 }}</p>
+  </div>
+
+  <!-- Botanical flow diagram -->
+  <div class="system-flow-diagram">
+    <div class="system-flow-inner">
+
+      <div class="flow-node">
+        <div class="flow-circle flow-circle--seek">
+          <span class="flow-roman">I</span>
+          <img src="/assets/fern.png" alt="Fern — CEnTR*SEEK">
+        </div>
+        <strong>CEnTR*SEEK</strong>
+        <em>Make engagement visible.</em>
+      </div>
+
+      <div class="flow-connector">
+        <span class="flow-arrow">→</span>
+        <span class="flow-transfers">structured<br>engagement records</span>
+      </div>
+
+      <div class="flow-node">
+        <div class="flow-circle flow-circle--map">
+          <span class="flow-roman">II</span>
+          <img src="/assets/goldenrod.png" alt="Goldenrod — CEnTR*MAP">
+        </div>
+        <strong>CEnTR*MAP</strong>
+        <em>Understand and represent<br>engagement with integrity.</em>
+      </div>
+
+      <div class="flow-connector">
+        <span class="flow-arrow">→</span>
+        <span class="flow-transfers">asset-tagged<br>partnership data</span>
+      </div>
+
+      <div class="flow-node">
+        <div class="flow-circle flow-circle--impact">
+          <span class="flow-roman">III</span>
+          <img src="/assets/milkweed.png" alt="Milkweed — CEnTR*IMPACT">
+        </div>
+        <strong>CEnTR*IMPACT</strong>
+        <em>Make value legible.</em>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SEEK ── -->
+<section class="system-tool-section system-seek">
+  <div class="system-section-inner">
+
+    <div class="system-tool-sidebar reveal">
+      <div class="tool-mascot tool-mascot--seek">
+        <img src="/assets/fern.png" alt="Fern">
+      </div>
+      <span class="tool-num">{{ .Params.seek_eyebrow }}</span>
+      <h2>{{ .Params.seek_title }}</h2>
+      <p class="tool-lead">{{ .Params.seek_lead }}</p>
+      <div class="tool-stripe seek-stripe"></div>
+      <p class="sidebar-body">{{ .Params.seek_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.seek_sidebar_2 }}</p>
+      <span class="status-badge {{ .Params.seek_status_class }}">{{ .Params.seek_status }}</span>
+    </div>
+
+    <div class="system-tool-content reveal">
+      <p class="tool-body">{{ .Params.seek_body }}</p>
+      <p class="tool-body">{{ .Params.seek_body_2 }}</p>
+
+      <div class="tool-outputs">
+        <span class="outputs-label eyebrow">{{ .Params.seek_outputs_label }}</span>
+        <ul class="outputs-list">
+          {{ range .Params.seek_outputs }}
+          <li>{{ . | safeHTML }}</li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <a class="tool-page-link seek-link" href="{{ .Params.seek_link | relURL }}">{{ .Params.seek_link_text }}</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SEEK → MAP transition -->
+<div class="system-transition">
+  <div class="system-page-inner system-page-inner--narrow">
+    <div class="transition-arrow seek-transition-arrow">↓</div>
+    <p class="transition-body">{{ .Params.seek_into_map }}</p>
+  </div>
+</div>
+
+<!-- ── MAP ── -->
+<section class="system-tool-section system-map">
+  <div class="system-section-inner system-section-inner--reverse">
+
+    <div class="system-tool-content reveal">
+      <p class="tool-body">{{ .Params.map_body }}</p>
+      <p class="tool-body">{{ .Params.map_body_2 }}</p>
+
+      <div class="tool-outputs">
+        <span class="outputs-label eyebrow">{{ .Params.map_outputs_label }}</span>
+        <ul class="outputs-list">
+          {{ range .Params.map_outputs }}
+          <li>{{ . | safeHTML }}</li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <a class="tool-page-link map-link" href="{{ .Params.map_link | relURL }}">{{ .Params.map_link_text }}</a>
+    </div>
+
+    <div class="system-tool-sidebar reveal">
+      <div class="tool-mascot tool-mascot--map">
+        <img src="/assets/goldenrod.png" alt="Goldenrod">
+      </div>
+      <span class="tool-num">{{ .Params.map_eyebrow }}</span>
+      <h2>{{ .Params.map_title }}</h2>
+      <p class="tool-lead">{{ .Params.map_lead }}</p>
+      <div class="tool-stripe map-stripe"></div>
+      <p class="sidebar-body">{{ .Params.map_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.map_sidebar_2 }}</p>
+      <span class="status-badge {{ .Params.map_status_class }}">{{ .Params.map_status }}</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- MAP → IMPACT transition -->
+<div class="system-transition">
+  <div class="system-page-inner system-page-inner--narrow">
+    <div class="transition-arrow map-transition-arrow">↓</div>
+    <p class="transition-body">{{ .Params.map_into_impact }}</p>
+  </div>
+</div>
+
+<!-- ── IMPACT ── -->
+<section class="system-tool-section system-impact">
+  <div class="system-section-inner">
+
+    <div class="system-tool-sidebar reveal">
+      <div class="tool-mascot tool-mascot--impact">
+        <img src="/assets/milkweed.png" alt="Milkweed">
+      </div>
+      <span class="tool-num">{{ .Params.impact_eyebrow }}</span>
+      <h2>{{ .Params.impact_title }}</h2>
+      <p class="tool-lead">{{ .Params.impact_lead }}</p>
+      <div class="tool-stripe impact-stripe"></div>
+      <p class="sidebar-body">{{ .Params.impact_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.impact_sidebar_2 }}</p>
+      <span class="status-badge {{ .Params.impact_status_class }}">{{ .Params.impact_status }}</span>
+    </div>
+
+    <div class="system-tool-content reveal">
+      <p class="tool-body">{{ .Params.impact_body }}</p>
+      <p class="tool-body">{{ .Params.impact_body_2 }}</p>
+
+      <div class="tool-outputs">
+        <span class="outputs-label eyebrow">{{ .Params.impact_scores_label }}</span>
+        <p class="viz-note">Sample outputs from <em>Rising Waters, Resilient Communities</em>. Click any card to enlarge.</p>
+        <div class="impact-scores-grid">
+          {{ range $i, $s := .Params.impact_scores }}
+          {{ $imgs := slice "/assets/centrimpact/indicators.png" "/assets/centrimpact/alignment.png" "/assets/centrimpact/dynamics.png" "/assets/centrimpact/cascade_effects.png" }}
+          {{ $alts := slice "Direct Indicators plot" "Alignment plot" "Project Dynamics plot" "Cascade Effects plot" }}
+          <div class="impact-score-card" onclick="openLightbox('{{ index $imgs $i }}')">
+            <div class="score-viz-thumb">
+              <img src="{{ index $imgs $i }}" alt="{{ index $alts $i }}">
+            </div>
+            <div class="score-card-body">
+              <span class="score-sym">{{ $s.sym | safeHTML }}</span>
+              <strong>{{ $s.name }}</strong>
+              <p>{{ $s.desc }}</p>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <a class="tool-page-link impact-link" href="{{ .Params.impact_link | relURL }}">{{ .Params.impact_link_text }}</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="viz-lightbox" id="viz-lightbox" onclick="closeLightbox()">
+  <button class="viz-lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="viz-lightbox-img" src="" alt="">
+</div>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <h2>{{ .Params.cta_title }}</h2>
+    <p>{{ .Params.cta_body }}</p>
+    <a href="{{ .Params.cta_primary_url }}" class="button primary" target="_blank" rel="noopener">{{ .Params.cta_primary_text }}</a>
+    <div style="margin-top:1.25rem;">
+      <a href="{{ .Params.cta_secondary_url | relURL }}" class="button secondary">{{ .Params.cta_secondary_text }}</a>
+    </div>
+  </div>
+</section>
+
+<script>
+function openLightbox(src) {
+  document.getElementById('viz-lightbox-img').src = src;
+  document.getElementById('viz-lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('viz-lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
+
+{{ end }}

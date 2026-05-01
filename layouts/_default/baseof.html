@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{ if .IsHome }}CEnTRInnovations{{ else }}{{ .Title }} — CEnTRInnovations{{ end }}</title>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;1,400&family=Alegreya+Sans:wght@300;400;500&family=Alegreya+Sans+SC:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/css/styles.css" />
+
+        {{ if eq .Layout "impact" }}
+        <link rel="stylesheet" href="/css/impact.css" />
+        {{ end }} {{ if eq .Layout "framework" }}
+        <link rel="stylesheet" href="/css/framework.css" />
+        {{ end }}
+        {{ if eq .Layout "seek" }}
+        <link rel="stylesheet" href="/css/seek.css" />
+        {{ end }}
+        {{ if eq .Layout "map" }}
+        <link rel="stylesheet" href="/css/map.css" />
+        {{ end }}
+        {{ if eq .Layout "system" }}
+        <link rel="stylesheet" href="/css/system.css" />
+        {{ end }}
+        {{ if .Params.mathjax }}
+            {{ partial "mathjax.html" . }}
+        {{ end }}
+    </head>
+    <body>
+        {{ partial "header.html" . }}
+
+        <main>{{ block "main" . }}{{ end }}</main>
+
+        {{ partial "footer.html" . }} {{ block "scripts" . }}{{ end }}
+    </body>
+</html>

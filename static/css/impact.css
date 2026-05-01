@@ -1,0 +1,494 @@
+/* =============================================
+   CEnTR*IMPACT page — component styles
+   Loaded only on /centr-impact/ via baseof.html
+============================================= */
+
+:root {
+  /* CIP — steel blue */
+  --cip-deep:    #2A3D52;
+  --cip-mid:     #3F5E78;
+  --cip-light:   #6B8FA8;
+  --cip-bg:      #E0EAF2;
+
+  /* SCE — warm brown/tan */
+  --sce-deep:    #4A3A1A;
+  --sce-mid:     #8C6E45;
+  --sce-light:   #B8955A;
+  --sce-bg:      #EDE0CC;
+
+  /* CET — forest green */
+  --cet-deep:    #2C3A2A;
+  --cet-mid:     #4A6B42;
+  --cet-light:   #7A9B72;
+  --cet-bg:      #DDE8DA;
+
+  --text:        #3E3B35;
+  --text-muted:  #6b6760;
+  --primary:     #3F5E78;
+  --secondary:   #3B6B35;
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ── HERO ── */
+.impact-hero {
+  background: var(--bg-main, #F6F2E7);
+  border-bottom: 1px solid rgba(0,0,0,0.055);
+  overflow: hidden;
+  position: relative;
+}
+
+.impact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    180deg,
+    transparent 0px,
+    transparent 38px,
+    rgba(0,0,0,0.022) 38px,
+    rgba(0,0,0,0.022) 40px
+  );
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 5.5rem 1.25rem 5rem;
+  position: relative;
+}
+
+.hero-inner h1 {
+  margin-bottom: 1.25rem;
+}
+
+.hero-inner h1 em {
+  font-style: italic;
+  color: var(--cip-mid);
+}
+
+.hero-lead {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 620px;
+  margin-bottom: 2rem;
+  line-height: 1.65;
+}
+
+/* Component strip */
+.component-strip {
+  display: flex;
+  gap: 0;
+  margin-top: 3rem;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  max-width: 680px;
+}
+
+.strip-item {
+  flex: 1;
+  padding: 0.65rem 0.75rem;
+  text-align: center;
+  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  transition: filter 0.2s;
+}
+
+.strip-item:hover { filter: brightness(1.12); opacity: 1; }
+.strip-cip { background: var(--cip-mid); }
+.strip-sce { background: var(--sce-mid); }
+.strip-cet { background: var(--cet-mid); }
+
+/* ── SHARED SECTION LAYOUT ── */
+.section-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 5.5rem 1.25rem;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 5.5rem;
+  align-items: start;
+  border-bottom: 1px solid rgba(0,0,0,0.055);
+}
+
+.section-inner--reverse {
+  grid-template-columns: 1fr 300px;
+}
+
+/* For reverse layouts, component-content comes first in DOM order
+   but sidebar should appear on the right — no order swap needed
+   since we just flip the column widths. */
+
+.section-sidebar {
+  position: sticky;
+  top: 80px;
+}
+
+.section-sidebar h2 { margin-bottom: 0; }
+
+.sidebar-stripe {
+  height: 3px;
+  width: 48px;
+  border-radius: 2px;
+  margin: 1.1rem 0;
+}
+
+.sidebar-body {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  max-width: 260px;
+  line-height: 1.6;
+  margin-bottom: 0.85rem;
+}
+
+/* ── CONTEXT SECTION ── */
+.context-section { background: var(--bg-light, #F4EFE2); }
+
+.context-stripe { background: var(--cip-mid); }
+
+.context-content {
+  padding-top: 0.25rem;
+}
+
+.context-content p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  margin-bottom: 1.25rem;
+  max-width: 560px;
+}
+
+.context-callout {
+  border-left: 3px solid var(--cip-mid);
+  padding: 0.85rem 1.25rem;
+  background: rgba(63,94,120,0.05);
+  border-radius: 0 4px 4px 0;
+  margin: 0 0 1.5rem;
+  font-family: "Alegreya", serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--cip-deep);
+  line-height: 1.5;
+}
+
+.context-callout p { max-width: none; margin: 0; }
+
+.report-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.92rem;
+  border-bottom: 1px solid rgba(63,94,120,0.3);
+  padding-bottom: 1px;
+}
+
+/* ── COMPONENT SECTIONS — COLOR THEMES ── */
+
+.cip-section { background: var(--cip-bg); }
+.cip .section-sidebar .eyebrow { color: var(--cip-mid); }
+.cip .section-sidebar h2       { color: var(--cip-deep); }
+.cip-stripe                    { background: var(--cip-mid); }
+
+.sce-section { background: var(--sce-bg); }
+.sce .section-sidebar .eyebrow { color: var(--sce-mid); }
+.sce .section-sidebar h2       { color: var(--sce-deep); }
+.sce-stripe                    { background: var(--sce-mid); }
+
+.cet-section { background: var(--cet-bg); }
+.cet .section-sidebar .eyebrow { color: var(--cet-mid); }
+.cet .section-sidebar h2       { color: var(--cet-deep); }
+.cet-stripe                    { background: var(--cet-mid); }
+
+/* Component marker — Roman numeral circle */
+.component-marker {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Alegreya", serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 1.25rem;
+  flex-shrink: 0;
+}
+
+.marker-cip { background: var(--cip-mid); }
+.marker-sce { background: var(--sce-mid); }
+.marker-cet { background: var(--cet-mid); }
+
+/* Component content layout */
+.component-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Feature list */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.feature-item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.feature-num {
+  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  padding-top: 0.25rem;
+}
+
+.num-cip { color: var(--cip-mid); }
+.num-sce { color: var(--sce-mid); }
+.num-cet { color: var(--cet-mid); }
+
+.feature-item p {
+  font-size: 0.95rem;
+  color: var(--text);
+  max-width: none;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.feature-item strong {
+  display: block;
+  font-family: "Alegreya", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.15rem;
+  color: var(--text);
+}
+
+/* Pull quote */
+.component-quote {
+  border-left: 3px solid;
+  padding: 0.75rem 1.25rem;
+  font-family: "Alegreya", serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  border-radius: 0 4px 4px 0;
+}
+
+.component-quote p { max-width: none; margin: 0; }
+
+.quote-cip { border-color: var(--cip-mid); background: rgba(63,94,120,0.04);   color: var(--cip-deep); }
+.quote-sce { border-color: var(--sce-mid); background: rgba(140,110,69,0.04);  color: var(--sce-deep); }
+.quote-cet { border-color: var(--cet-mid); background: rgba(74,107,66,0.04);   color: var(--cet-deep); }
+
+/* Formula block */
+.formula-block {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid rgba(0,0,0,0.08);
+  font-family: "Alegreya", serif;
+}
+
+.formula-label {
+  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: #999;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.formula-display {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.formula-vars {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.3rem 1rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding-top: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.var-sym {
+  font-family: "Alegreya", serif;
+  font-style: italic;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+/* Tool actions */
+.tool-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  background: var(--secondary);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+/* Status badge */
+.status-badge {
+  display: inline-block;
+  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.badge-active {
+  background: rgba(74,107,66,0.12);
+  color: var(--cet-deep);
+}
+
+.badge-dev {
+  background: rgba(140,110,69,0.12);
+  color: var(--sce-deep);
+}
+
+/* ── INTEGRATION SECTION ── */
+.integration-section { background: var(--bg-main, #F6F2E7); }
+
+.integration-stripe { background: var(--primary); }
+
+.integration-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.integration-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.integration-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.integration-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  max-width: none;
+  line-height: 1.55;
+}
+
+.card-bar {
+  height: 3px;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.bar-cip { background: var(--cip-mid); }
+.bar-sce { background: var(--sce-mid); }
+.bar-cet { background: var(--cet-mid); }
+
+/* ── CTA ── */
+.cta { background: var(--bg-cta, #E3D7BE); text-align: center; }
+
+.cta-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 5.5rem 1.25rem;
+}
+
+.cta-inner h2 {
+  max-width: none;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.cta-inner p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  max-width: 480px;
+  margin: 0 auto 1.75rem;
+  line-height: 1.65;
+}
+
+/* ── BUTTONS ── */
+.button {
+  display: inline-block;
+  padding: 0.72rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.button.primary   { background: var(--secondary); color: white; }
+.button.secondary { border: 1px solid var(--secondary); color: var(--secondary); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .section-inner,
+  .section-inner--reverse {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 3.5rem 1.25rem;
+  }
+
+  /* In reverse layouts, sidebar was on the right (column 2).
+     On mobile, bump it back to the top. */
+  .section-inner--reverse .section-sidebar { order: -1; }
+
+  .section-sidebar { position: static; }
+
+  .integration-grid { grid-template-columns: 1fr; }
+
+  .component-strip { max-width: none; }
+
+  .hero-inner h1 { font-size: 2.2rem; }
+}
