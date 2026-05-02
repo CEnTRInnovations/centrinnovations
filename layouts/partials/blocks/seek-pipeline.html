@@ -1,0 +1,28 @@
+{{/* layouts/partials/blocks/seek-pipeline.html */}}
+<section id="pipeline" class="seek-pipeline">
+  <div class="section-inner section-inner--reverse">
+
+    <div class="pipeline-content reveal">
+      <ol class="pipeline-steps">
+        {{ range .Params.pipeline_steps }}
+        <li class="pipeline-step {{ .class }}">
+          <span class="step-num">{{ .num }}</span>
+          <div class="step-body">
+            <strong>{{ .title }}</strong>
+            <p>{{ .body }}</p>
+          </div>
+        </li>
+        {{ end }}
+      </ol>
+    </div>
+
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.pipeline_eyebrow }}</span>
+      <h2>{{ .Params.pipeline_title }}</h2>
+      <div class="sidebar-stripe seek-stripe"></div>
+      <p class="sidebar-body">{{ .Params.pipeline_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.pipeline_sidebar_2 }}</p>
+    </div>
+
+  </div>
+</section>

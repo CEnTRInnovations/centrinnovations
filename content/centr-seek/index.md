@@ -4,6 +4,15 @@ description: "Identify, classify, and surface community-engaged research from un
 layout: "seek"
 type: "seek"
 
+blocks:
+  - block: "seek-hero"
+  - block: "seek-context"
+  - block: "seek-pipeline"
+  - block: "seek-transparency"
+  - block: "seek-outputs"
+  - block: "seek-field"
+  - block: "seek-cta"
+
 # ─────────────────────────────────────────
 # HERO
 # ─────────────────────────────────────────
@@ -13,15 +22,15 @@ hero_lead_1: "Community-engaged research is happening across your institution ri
 hero_lead_2: "CEnTR*SEEK reads that text and finds the engagement. No self-reporting. No siloed databases. No additional burden on faculty, staff, or partners."
 
 hero_strip:
-  - name: "Ingest"
+  - name: "Search"
     label: "Collect Institutional Text"
     class: "strip-ingest"
     anchor: "pipeline"
-  - name: "Analyze"
+  - name: "Classify"
     label: "Classify Engagement"
     class: "strip-analyze"
     anchor: "pipeline"
-  - name: "Surface"
+  - name: "Output"
     label: "Structured Outputs"
     class: "strip-surface"
     anchor: "outputs"
@@ -31,10 +40,8 @@ hero_strip:
 # ─────────────────────────────────────────
 context_eyebrow: "The Problem"
 context_title: "You can't coordinate what you can't see."
-
 context_sidebar_1: "Community engagement offices, centers for public service, and evaluation teams face the same problem: the engaged work happening across their institution is nearly impossible to see in full."
 context_sidebar_2: "Faculty and staff may be conducting meaningful community partnerships without those efforts appearing in any central record. Strategic coordination — connecting academic resources to community-identified needs — depends on knowing where engagement is already occurring, and where the gaps are."
-
 context_callout: "CEnTR*SEEK doesn't ask people to report their work. It finds the work in text that already exists."
 context_body_1: "Traditional approaches rely on self-reporting, keyword searches, or manual review — all of which systematically miss work that doesn't describe itself in the expected terms. Engaged scholarship often uses different language than traditional research, and the communities it serves rarely appear in the databases institutions use to measure impact."
 context_body_2: "CEnTR*SEEK transforms dispersed institutional text into structured representations of engagement — giving institutions a comprehensive, accurate picture of their community-engaged landscape without creating new administrative burden."
@@ -49,26 +56,14 @@ pipeline_sidebar_2: "The pipeline can begin with a corpus of documents or a root
 
 pipeline_steps:
   - num: "01"
-    title: "Ingestion"
-    body: "Accepts file-based inputs — PDFs, CSVs, structured text — or a root URL from which the system crawls institutional domains. Content is extracted with associated metadata while respecting rate limits and robots.txt."
+    title: "Search"
+    body: "Accepts file-based inputs — PDFs, CSVs, structured text — or a root URL from which the system crawls institutional domains, extracting content with metadata while respecting rate limits and robots.txt. Transformer-based embeddings capture meaning beyond keyword matching, recognizing engagement even when it does not use expected vocabulary."
     class: "step-ingest"
-
   - num: "02"
-    title: "Preprocessing"
-    body: "Text is cleaned, tokenized, and segmented. Named entity recognition surfaces people, places, and organizations — anchoring abstract engagement language to concrete institutional actors and community contexts."
+    title: "Classify"
+    body: "A combination of machine learning models and rule-based logic assesses engagement across five dimensions: Partnership and Power, Community Voice, Process and Methods, Outcomes and Impacts, and Sustainability. Every classification includes highlighted excerpts and plain-language rationales that explain how the determination was made."
     class: "step-analyze"
-
   - num: "03"
-    title: "Embedding"
-    body: "Transformer-based models generate contextual embeddings that capture meaning beyond keyword matching — allowing the system to recognize engagement even when it doesn't use the expected vocabulary."
-    class: "step-analyze"
-
-  - num: "04"
-    title: "Classification"
-    body: "A combination of machine learning models and rule-based logic assesses engagement across five dimensions: Partnership and Power, Community Voice, Process and Methods, Outcomes and Impacts, and Sustainability."
-    class: "step-analyze"
-
-  - num: "05"
     title: "Output"
     body: "Structured JSON objects include classification labels, confidence scores, and supporting excerpts — designed for interoperability with CEnTR*MAP and CEnTR*IMPACT, and for translation into human-readable summaries."
     class: "step-surface"
@@ -78,14 +73,12 @@ pipeline_steps:
 # ─────────────────────────────────────────
 transparency_eyebrow: "A Design Commitment"
 transparency_title: "Transparency over opacity. Partnership over prescription."
-
 transparency_sidebar_1: "A defining feature of CEnTR*SEEK is its commitment to interpretability. In community-engaged contexts, trust and accountability are foundational — an opaque system that produces classifications without explanation is incompatible with those values."
 transparency_sidebar_2: "Every output includes not only a classification and confidence score but highlighted excerpts and plain-language rationales that explain how the determination was made. The system is designed as an analytical partner that invites human review."
-
 transparency_quote: "CEnTR*SEEK is not an opaque judge. It is an analytical partner — one that shows its work and invites the humans closest to the community to interpret what it finds."
 
 # ─────────────────────────────────────────
-# OUTPUTS / USE CASES
+# OUTPUTS
 # ─────────────────────────────────────────
 outputs_eyebrow: "What Becomes Possible"
 outputs_title: "From invisible to legible, at institutional scale."
@@ -94,15 +87,12 @@ outputs_cards:
   - title: "Surface Hidden Work"
     body: "Identify faculty and staff doing community-engaged work who are not yet connected to institutional collaborative structures — including work that falls outside traditional scholarly channels."
     class: "card-ingest"
-
   - title: "Reveal Patterns"
     body: "Surface engagement patterns across departments, neighborhoods, or partner types to inform strategic coordination and resource allocation — without waiting for annual surveys."
     class: "card-analyze"
-
   - title: "Support Documentation"
     body: "Generate structured data from existing institutional text that supports evaluation, accreditation, and reporting — reducing the documentation burden on researchers and partners."
     class: "card-surface"
-
   - title: "Demonstrate Scope"
     body: "Make the full landscape of institutional engagement legible to funders, accreditors, and leadership — in terms that reflect what the work actually is, not just what gets formally reported."
     class: "card-ingest"

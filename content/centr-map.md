@@ -68,41 +68,53 @@ framework_f3_body: "Drawn from Bronfenbrenner's ecological framework, CEnTR*MAP 
 # ─────────────────────────────────────────
 # PLATFORM / HOW IT WORKS
 # ─────────────────────────────────────────
-platform_eyebrow: "How It Works"
+platform_eyebrow: "Key Features"
 platform_title: "Narrative as data. Text as the starting point, not the afterthought."
 platform_sidebar_1: "CEnTR*MAP can work from existing textual artifacts — interview transcripts, project reports, research memos — rather than requiring new data entry. Narrative is not merely an interface feature. It is a foundational data source that can be revisited, reinterpreted, and built upon over time."
 platform_sidebar_2: "Predefined forms are available for structured input. But the platform's distinctive capability is processing narrative-rich documentation and identifying key elements: community assets organized by capital type and system level, and outcomes understood in community terms."
 
 platform_steps:
-  - num: "01"
-    title: "Collect"
-    body: "Upload existing documents — transcripts, reports, memos, web content — or connect structured data sources. The platform works with what already exists."
+  - num: "1"
+    title: "Narrative-first data ingestion"
+    body: "Processes transcripts, reports, and memos without requiring users to manually structure inputs from the outset."
     icon: "/assets/icons/basket.png"
     circle: "step-circle--assets"
 
-  - num: "02"
-    title: "Identify"
-    body: "AI-assisted processing identifies references to community contributions, forms of capital, and engagement patterns — mapped to the capital taxonomy while maintaining human control."
+  - num: "2"
+    title: "Capital taxonomy"
+    body: "Drawn from Community Cultural Wealth and ABCD frameworks, organizing assets across Microsystem, Mesosystem, Exosystem, and Macro-/Chronosystem levels."
     icon: "/assets/icons/dispersed.png"
     circle: "step-circle--systems"
 
-  - num: "03"
-    title: "Organize"
-    body: "Assets are structured by capital type and ecological system level, producing a relational dataset that supports flexible querying across projects and over time."
+  - num: "3"
+    title: "Asset-mapping framework"
+    body: "Highlights community strengths — from familial and linguistic capital to resistance capital and historical heritage — shifting focus from needs to contributions."
     icon: "/assets/icons/field.png"
     circle: "step-circle--narrative"
 
-  - num: "04"
-    title: "Analyze"
-    body: "Explore patterns across communities, partner types, and engagement histories. Identify where deficit language persists and where capital goes unrecognized."
+  - num: "4"
+    title: "Language support tool"
+    body: "Identifies deficit-oriented framing and suggests asset-based alternatives, functioning as a reflective aid rather than a prescriptive editor."
     icon: "/assets/icons/evaluated.png"
     circle: "step-circle--seek"
 
-  - num: "05"
-    title: "Represent"
-    body: "Generate asset-centered narratives for funders, accreditors, and leadership — expressed in community terms, not institutional shorthand."
+  - num: "5"
+    title: "Interactive asset maps and capital distribution visualizations"
+    body: "Supports longitudinal analysis of engagement across projects and contexts."
     icon: "/assets/icons/report.png"
     circle: "step-circle--tan"
+
+  - num: "6"
+    title: "Governance framework"
+    body: "Centered on consent and shared stewardship, ensuring contributors retain control over how their data is used and represented."
+    icon: "/assets/icons/basket.png"
+    circle: "step-circle--assets"
+
+  - num: "7"
+    title: "Modular architecture"
+    body: "Designed for interoperability across institutional contexts and integration with existing data systems."
+    icon: "/assets/icons/dispersed.png"
+    circle: "step-circle--systems"
 
 platform_note: "AI-assisted processes scaffold interpretation — they do not replace it. The system surfaces connections and gaps while users maintain control over how their work and their partners are represented."
 

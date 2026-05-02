@@ -1,0 +1,17 @@
+{{/* layouts/partials/blocks/seek-outputs.html */}}
+<section id="outputs" class="seek-outputs">
+  <div class="section-inner-wide">
+    <div class="outputs-header reveal">
+      <span class="eyebrow">{{ .Params.outputs_eyebrow }}</span>
+      <h2>{{ .Params.outputs_title }}</h2>
+    </div>
+    <div class="outputs-grid">
+      {{ range .Params.outputs_cards }}
+      <div class="output-card {{ .class }} reveal">
+        <h3>{{ .title }}</h3>
+        <p>{{ .body }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

@@ -169,9 +169,15 @@
 .step-body p {
   font-size: 0.92rem;
   color: var(--text-muted, #6b6760);
-  max-width: none;
+  max-width: none !important;
+  width: 100%;
   margin: 0;
   line-height: 1.55;
+}
+
+.step-body {
+  min-width: 0;
+  width: 100%;
 }
 
 /* Stage accent bars */
@@ -361,3 +367,28 @@
     padding-left: 1rem;
   }
 }
+/* ── PIPELINE GRID FIX ──────────────────────────────────────────────────
+   styles.css sets .step-num { position: absolute } for the homepage
+   system section's circular badges. This bleeds into the pipeline section,
+   pulling <span class="step-num"> out of grid flow so .step-body collapses
+   into the vacated 48px first column instead of the wide second column.
+   Reset position to static so the grid template columns work as intended.
+─────────────────────────────────────────────────────────────────────── */
+.pipeline-step .step-num {
+  position: static;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+  color: var(--seek-mid);
+  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
+  font-style: normal;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  padding-top: 0.3rem;
+}
+
+.step-ingest  .step-num { color: var(--ingest-color); }
+.step-analyze .step-num { color: var(--analyze-color); }
+.step-surface .step-num { color: var(--surface-color); }

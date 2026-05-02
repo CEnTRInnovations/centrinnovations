@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on CEnTRInnovations</title>
-    <link>http://localhost:1314/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Home on CEnTRInnovations</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1314/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CEnTR*IMPACT — Making Value Legible</title>
-      <link>http://localhost:1314/centr-impact/</link>
+      <link>http://localhost:1313/centr-impact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/centr-impact/</guid>
+      <guid>http://localhost:1313/centr-impact/</guid>
       <description></description>
     </item>
     <item>
       <title>CEnTR*MAP — Mapping Community Strength</title>
-      <link>http://localhost:1314/centr-map/</link>
+      <link>http://localhost:1313/centr-map/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/centr-map/</guid>
+      <guid>http://localhost:1313/centr-map/</guid>
       <description></description>
     </item>
     <item>
       <title>CEnTR*SEEK — Making Engagement Visible</title>
-      <link>http://localhost:1314/centr-seek/</link>
+      <link>http://localhost:1313/centr-seek/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/centr-seek/</guid>
+      <guid>http://localhost:1313/centr-seek/</guid>
       <description></description>
     </item>
     <item>
       <title>The CEnTR* System</title>
-      <link>http://localhost:1314/system/</link>
+      <link>http://localhost:1313/system/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/system/</guid>
+      <guid>http://localhost:1313/system/</guid>
       <description></description>
     </item>
     <item>
       <title>The Framework</title>
-      <link>http://localhost:1314/framework/</link>
+      <link>http://localhost:1313/framework/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/framework/</guid>
+      <guid>http://localhost:1313/framework/</guid>
       <description></description>
     </item>
   </channel>

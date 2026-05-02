@@ -245,13 +245,20 @@
   min-width: 0;
 }
 
-.platform-step-num {
+.platform-step-num,
+.platform-step-badge {
   font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   color: var(--text-muted, #6b6760);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.35rem;
   display: block;
+  line-height: 1;
+  background: none !important;
+  border-radius: 0 !important;
+  width: auto !important;
+  height: auto !important;
 }
 
 .platform-step-circle {

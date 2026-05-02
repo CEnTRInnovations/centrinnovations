@@ -112,7 +112,7 @@
       <div class="platform-flow">
         {{ range $i, $step := .Params.platform_steps }}
         <div class="platform-flow-step">
-          <span class="platform-step-num">{{ $step.num }}</span>
+          <div class="platform-step-badge {{ $step.circle }}">{{ $step.num }}</div>
           <div class="platform-step-circle {{ $step.circle }}">
             {{ if $step.icon }}
             <img src="{{ $step.icon }}" alt="{{ $step.title }}">
@@ -121,7 +121,7 @@
           <h3 class="platform-step-title">{{ $step.title }}</h3>
           <p class="platform-step-body">{{ $step.body }}</p>
         </div>
-        {{ if lt $i 4 }}
+        {{ if lt $i 6 }}
         <div class="platform-flow-arrow">→</div>
         {{ end }}
         {{ end }}

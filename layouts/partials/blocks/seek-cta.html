@@ -1,0 +1,11 @@
+{{/* layouts/partials/blocks/seek-cta.html */}}
+<section class="seek-cta">
+  <div class="cta-inner">
+    <h2>{{ .Params.cta_title }}</h2>
+    <p>{{ .Params.cta_body }}</p>
+    <div class="cta-actions">
+      <a href="{{ .Params.cta_primary_url }}" class="btn-primary">{{ .Params.cta_primary_text }}</a>
+      <a href="{{ .Params.cta_secondary_url }}" class="btn-secondary">{{ .Params.cta_secondary_text }}</a>
+    </div>
+  </div>
+</section>
