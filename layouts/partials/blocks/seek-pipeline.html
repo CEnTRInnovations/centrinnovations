@@ -4,16 +4,18 @@
 
     <div class="pipeline-content reveal">
       <ol class="pipeline-steps">
-        {{ range .Params.pipeline_steps }}
-        <li class="pipeline-step {{ .class }}">
-          <span class="step-num">{{ .num }}</span>
-          <div class="step-body">
-            <strong>{{ .title }}</strong>
-            <p>{{ .body }}</p>
-          </div>
-        </li>
-        {{ end }}
-      </ol>
+  {{ range .Params.pipeline_steps }}
+  <li class="pipeline-step {{ .class }}">
+    <div class="step-icon">
+      <img src="{{ .icon }}" alt="{{ .title }}">
+    </div>
+    <div class="step-body">
+      <strong>{{ .title }}</strong>
+      <p>{{ .body }}</p>
+    </div>
+  </li>
+  {{ end }}
+</ol>
     </div>
 
     <div class="section-sidebar reveal">

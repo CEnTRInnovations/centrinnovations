@@ -10,10 +10,16 @@
   --seek-light:  #5A9EA8;
   --seek-bg:     #DBE9EB;
 
-  /* Pipeline stage accents */
-  --ingest-color:  #3F5E78;   /* steel blue — same as CIP, ingestion/data */
-  --analyze-color: #2E6E78;   /* seek teal — processing/thinking */
-  --surface-color: #4A6B42;   /* forest green — outputs/growth */
+  /* Pipeline stage accents — one per Sources·Signals·Patterns·Understanding */
+  --sources-color:    #3F5E78;   /* steel blue   — Sources */
+  --signals-color:    #2E6E78;   /* seek teal    — Signals */
+  --patterns-color:   #5C6B3A;   /* olive green  — Patterns */
+  --understand-color: #4A6B42;   /* forest green — Understanding */
+
+  /* Legacy aliases (used by output cards) */
+  --ingest-color:  #3F5E78;
+  --analyze-color: #2E6E78;
+  --surface-color: #4A6B42;
 }
 
 /* ── HERO ── */
@@ -38,44 +44,140 @@
   pointer-events: none;
 }
 
-.seek-hero h1 em {
+/* Two-column layout matching framework hero */
+.seek-hero-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 5.5rem 1.25rem 5rem;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 3.5rem;
+  align-items: center;
+  position: relative;
+}
+
+.seek-hero-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.seek-hero-text h1 {
+  margin-bottom: 1.25rem;
+}
+
+.seek-hero-text h1 em {
   font-style: italic;
   color: var(--seek-mid);
 }
 
-/* Hero strip cards */
-.component-strip {
+/* Visual column */
+.seek-hero-visual {
+  position: relative;
   display: flex;
-  gap: 0;
-  margin-top: 3rem;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  max-width: 680px;
+  justify-content: flex-end;
 }
 
-.strip-item {
-  flex: 1;
-  padding: 0.65rem 0.75rem;
-  text-align: center;
+.seek-hero-botanical {
+  width: 72%;
+  max-width: 400px;
+  display: block;
+  /* Fern has black background — blend it away */
+  mix-blend-mode: multiply;
+  transform: translateX(-4%) translateY(-4%);
+}
+
+/* Floating pull-quote overlay — mirrors framework hero */
+.seek-hero-quote {
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  max-width: 220px;
+  background: rgba(246,242,231,0.92);
+  padding: 0.75rem 1rem 0.75rem 1.25rem;
+  border-radius: 4px;
+  border-left: 2px solid var(--seek-mid);
+  margin: 0;
+}
+
+.seek-hero-quote p {
+  font-family: "Alegreya", serif;
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--seek-deep);
+  line-height: 1.55;
+  max-width: none;
+  margin: 0;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+}
+
+/* ── SEEK ICON STRIP — matches MAP/Framework pattern ── */
+.seek-icon-strip {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 2.5rem;
+}
+
+.seek-strip-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+
+.seek-strip-item:hover { opacity: 0.75; }
+
+.seek-strip-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.seek-strip-icon img {
+  width: auto;
+  height: 55%;
+  object-fit: contain;
+}
+
+/* Icon circle backgrounds — muted teal/blue tones for each stage */
+.seek-icon--ingest  { background: #D4DCE4; }  /* steel blue wash */
+.seek-icon--analyze { background: #C8DDE0; }  /* teal wash */
+.seek-icon--pattern { background: #D8DACE; }  /* warm slate wash */
+.seek-icon--surface { background: #D0DDD0; }  /* green wash */
+
+.seek-strip-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+
+.seek-strip-label strong {
   font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
   font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
-  display: block;
-  transition: filter 0.2s;
+  letter-spacing: 0.06em;
+  color: var(--text, #3E3B35);
 }
 
-.strip-item:hover {
-  filter: brightness(1.12);
+.seek-strip-label span {
+  font-size: 0.68rem;
+  color: var(--text-muted, #6b6760);
+  line-height: 1.3;
 }
 
-/* Strip colors */
-.strip-ingest  { background: var(--ingest-color); }
-.strip-analyze { background: var(--analyze-color); }
-.strip-surface { background: var(--surface-color); }
+.seek-strip-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(0,0,0,0.12);
+  margin: 0 1.1rem;
+  flex-shrink: 0;
+}
 
 /* ── SHARED SEEK STRIPE ── */
 .seek-stripe { background: var(--seek-mid); }
@@ -124,7 +226,7 @@
 
 .pipeline-step {
   display: grid;
-  grid-template-columns: 48px 1fr;
+  grid-template-columns: 40px 1fr;
   gap: 1.1rem;
   align-items: start;
   padding: 1.25rem 0;
@@ -145,17 +247,28 @@
   background: rgba(0,0,0,0.12);
 }
 
-.step-num {
-  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
-  padding-top: 0.3rem;
-  color: var(--seek-mid);
+/* Icon circle — reuses hero strip icon sizing */
+.step-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.step-ingest  .step-num { color: var(--ingest-color); }
-.step-analyze .step-num { color: var(--analyze-color); }
-.step-surface .step-num { color: var(--surface-color); }
+.step-icon img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* No circle background on pipeline icons — bare icons only */
+.step-sources    .step-icon,
+.step-signals    .step-icon,
+.step-patterns   .step-icon,
+.step-understand .step-icon { background: none; }
 
 .step-body strong {
   display: block;
@@ -180,10 +293,17 @@
   width: 100%;
 }
 
-/* Stage accent bars */
-.step-ingest  { border-left: 3px solid var(--ingest-color);  padding-left: 1rem; }
-.step-analyze { border-left: 3px solid var(--analyze-color); padding-left: 1rem; }
-.step-surface { border-left: 3px solid var(--surface-color); padding-left: 1rem; }
+/* Left accent bars — one color per stage */
+.step-sources    { border-left: 3px solid var(--sources-color);    padding-left: 1rem; }
+.step-signals    { border-left: 3px solid var(--signals-color);    padding-left: 1rem; }
+.step-patterns   { border-left: 3px solid var(--patterns-color);   padding-left: 1rem; }
+.step-understand { border-left: 3px solid var(--understand-color); padding-left: 1rem; }
+
+/* Strong label color per stage */
+.step-sources    .step-body strong { color: var(--sources-color); }
+.step-signals    .step-body strong { color: var(--signals-color); }
+.step-patterns   .step-body strong { color: var(--patterns-color); }
+.step-understand .step-body strong { color: var(--understand-color); }
 
 /* ── TRANSPARENCY ── */
 .seek-transparency {
@@ -344,14 +464,34 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 960px) {
-  .component-strip {
-    max-width: none;
-    flex-wrap: wrap;
+  .seek-hero-inner {
+    grid-template-columns: 1fr;
+    padding: 4rem 1.25rem 3rem;
+    gap: 2.5rem;
   }
 
-  .strip-item {
-    flex: 1 1 50%;
+  .seek-hero-visual {
+    justify-content: center;
   }
+
+  .seek-hero-botanical {
+    width: 55%;
+    max-width: 280px;
+    transform: none;
+  }
+
+  .seek-hero-quote {
+    position: static;
+    max-width: none;
+    margin-top: 1rem;
+  }
+
+  .seek-icon-strip {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .seek-strip-divider { display: none; }
 
   .outputs-grid {
     grid-template-columns: 1fr;
@@ -367,28 +507,11 @@
     padding-left: 1rem;
   }
 }
+
 /* ── PIPELINE GRID FIX ──────────────────────────────────────────────────
    styles.css sets .step-num { position: absolute } for the homepage
-   system section's circular badges. This bleeds into the pipeline section,
-   pulling <span class="step-num"> out of grid flow so .step-body collapses
-   into the vacated 48px first column instead of the wide second column.
-   Reset position to static so the grid template columns work as intended.
+   system section's circular badges. Pipeline steps now use .step-icon
+   (a 40px flex circle) instead of .step-num, so the bleed no longer
+   applies. Keeping this comment as a reminder in case step-num is
+   reintroduced elsewhere.
 ─────────────────────────────────────────────────────────────────────── */
-.pipeline-step .step-num {
-  position: static;
-  width: auto;
-  height: auto;
-  border-radius: 0;
-  box-shadow: none;
-  background: none;
-  color: var(--seek-mid);
-  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
-  font-style: normal;
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
-  padding-top: 0.3rem;
-}
-
-.step-ingest  .step-num { color: var(--ingest-color); }
-.step-analyze .step-num { color: var(--analyze-color); }
-.step-surface .step-num { color: var(--surface-color); }

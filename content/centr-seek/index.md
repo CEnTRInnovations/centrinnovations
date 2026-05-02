@@ -10,7 +10,7 @@ blocks:
   - block: "seek-pipeline"
   - block: "seek-transparency"
   - block: "seek-outputs"
-  - block: "seek-field"
+#  - block: "seek-field"
   - block: "seek-cta"
 
 # ─────────────────────────────────────────
@@ -22,17 +22,25 @@ hero_lead_1: "Community-engaged research is happening across your institution ri
 hero_lead_2: "CEnTR*SEEK reads that text and finds the engagement. No self-reporting. No siloed databases. No additional burden on faculty, staff, or partners."
 
 hero_strip:
-  - name: "Search"
+  - name: "Sources"
     label: "Collect Institutional Text"
-    class: "strip-ingest"
+    icon: "/assets/icons/pile.png"
+    icon_class: "seek-icon--ingest"
     anchor: "pipeline"
-  - name: "Classify"
-    label: "Classify Engagement"
-    class: "strip-analyze"
+  - name: "Signals"
+    label: "Detect Engagement"
+    icon: "/assets/icons/lantern.png"
+    icon_class: "seek-icon--analyze"
     anchor: "pipeline"
-  - name: "Output"
+  - name: "Patterns"
+    label: "Classify & Structure"
+    icon: "/assets/icons/patterns.png"
+    icon_class: "seek-icon--pattern"
+    anchor: "pipeline"
+  - name: "Understanding"
     label: "Structured Outputs"
-    class: "strip-surface"
+    icon: "/assets/icons/report.png"
+    icon_class: "seek-icon--surface"
     anchor: "outputs"
 
 # ─────────────────────────────────────────
@@ -47,26 +55,31 @@ context_body_1: "Traditional approaches rely on self-reporting, keyword searches
 context_body_2: "CEnTR*SEEK transforms dispersed institutional text into structured representations of engagement — giving institutions a comprehensive, accurate picture of their community-engaged landscape without creating new administrative burden."
 
 # ─────────────────────────────────────────
-# PIPELINE
+# PIPELINE — Sources · Signals · Patterns · Understanding
 # ─────────────────────────────────────────
+
 pipeline_eyebrow: "How It Works"
-pipeline_title: "A modular pipeline from institutional text to structured insight."
+pipeline_title: "From sources to understanding — a modular pipeline for institutional text."
 pipeline_sidebar_1: "CEnTR*SEEK is designed as a modular, extensible system capable of operating at institutional scale. Its components can be independently updated or replaced, allowing it to evolve as needs change."
 pipeline_sidebar_2: "The pipeline can begin with a corpus of documents or a root URL — from which it recursively crawls and extracts relevant content while filtering out non-substantive material."
 
 pipeline_steps:
-  - num: "01"
-    title: "Search"
+  - title: "Sources"
     body: "Accepts file-based inputs — PDFs, CSVs, structured text — or a root URL from which the system crawls institutional domains, extracting content with metadata while respecting rate limits and robots.txt. Transformer-based embeddings capture meaning beyond keyword matching, recognizing engagement even when it does not use expected vocabulary."
-    class: "step-ingest"
-  - num: "02"
-    title: "Classify"
+    icon: "/assets/icons/pile.png"
+    class: "step-sources"
+  - title: "Signals"
+    body: "The system reads extracted text for indicators of community engagement — language of partnership, reciprocity, community voice, and shared purpose. Because engaged scholarship often describes itself in terms that differ from traditional research, signal detection operates on meaning rather than keywords alone."
+    icon: "/assets/icons/lantern.png"
+    class: "step-signals"
+  - title: "Patterns"
     body: "A combination of machine learning models and rule-based logic assesses engagement across five dimensions: Partnership and Power, Community Voice, Process and Methods, Outcomes and Impacts, and Sustainability. Every classification includes highlighted excerpts and plain-language rationales that explain how the determination was made."
-    class: "step-analyze"
-  - num: "03"
-    title: "Output"
-    body: "Structured JSON objects include classification labels, confidence scores, and supporting excerpts — designed for interoperability with CEnTR*MAP and CEnTR*IMPACT, and for translation into human-readable summaries."
-    class: "step-surface"
+    icon: "/assets/icons/patterns.png"
+    class: "step-patterns"
+  - title: "Understanding"
+    body: "Structured JSON objects include classification labels, confidence scores, and supporting excerpts — designed for interoperability with CEnTR*MAP and CEnTR*IMPACT, and for translation into human-readable summaries for researchers, administrators, and community partners."
+    icon: "/assets/icons/report.png"
+    class: "step-understand"
 
 # ─────────────────────────────────────────
 # TRANSPARENCY
