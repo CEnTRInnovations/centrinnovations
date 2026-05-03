@@ -1,0 +1,166 @@
+{{ define "main" }}
+
+<!-- ── HERO ── -->
+<section class="wt-hero">
+  <div class="wt-hero-inner">
+    <div class="wt-hero-text reveal">
+      <span class="eyebrow">{{ .Params.hero_eyebrow }}</span>
+      <h1>{{ .Params.hero_title }}</h1>
+      <p class="lead">{{ .Params.hero_lead_1 }}</p>
+      <p class="lead">{{ .Params.hero_lead_2 }}</p>
+    </div>
+    <div class="wt-hero-visual reveal">
+      <div class="wt-hero-botanical-frame">
+        <img src="/assets/root_system.png" alt="Botanical illustration of a root system" class="wt-hero-botanical" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FRAMING ── -->
+<section class="wt-framing">
+  <div class="section-inner">
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.framing_eyebrow }}</span>
+      <h2>{{ .Params.framing_title }}</h2>
+      <div class="sidebar-stripe wt-stripe"></div>
+    </div>
+    <div class="component-content reveal">
+      <p>{{ .Params.framing_body_1 }}</p>
+      <p>{{ .Params.framing_body_2 }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── OFFERING ONE: DEFINING CER ── -->
+<section class="wt-offering wt-offering--one" id="defining">
+  <div class="section-inner">
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.o1_eyebrow }}</span>
+      <h2>{{ .Params.o1_title }}</h2>
+      <div class="sidebar-stripe wt-stripe"></div>
+      <p class="sidebar-body">{{ .Params.o1_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.o1_sidebar_2 }}</p>
+    </div>
+    <div class="component-content reveal">
+      <p class="offering-lead">{{ .Params.o1_lead }}</p>
+      <p>{{ .Params.o1_body_1 }}</p>
+      <p>{{ .Params.o1_body_2 }}</p>
+      <div class="wt-quote">
+        <p>{{ .Params.o1_quote }}</p>
+      </div>
+      <div class="wt-deliverables">
+        <span class="deliverables-label">{{ .Params.o1_deliverables_label }}</span>
+        <ul>
+          {{ range .Params.o1_deliverables }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      <p class="wt-format"><em>Format:</em> {{ .Params.o1_format }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── OFFERING TWO: IMPACT IMPLEMENTATION ── -->
+<section class="wt-offering wt-offering--two" id="implementation">
+  <div class="section-inner">
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.o2_eyebrow }}</span>
+      <h2>{{ .Params.o2_title }}</h2>
+      <div class="sidebar-stripe wt-stripe"></div>
+      <p class="sidebar-body">{{ .Params.o2_sidebar_1 | safeHTML }}</p>
+      <p class="sidebar-body">{{ .Params.o2_sidebar_2 }}</p>
+    </div>
+    <div class="component-content reveal">
+      <p class="offering-lead">{{ .Params.o2_lead }}</p>
+      <p>{{ .Params.o2_body_1 }}</p>
+      <p>{{ .Params.o2_body_2 }}</p>
+      <div class="wt-deliverables">
+        <span class="deliverables-label">{{ .Params.o2_deliverables_label }}</span>
+        <ul>
+          {{ range .Params.o2_deliverables }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      <p class="wt-format"><em>Format:</em> {{ .Params.o2_format }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── OFFERING THREE: STRATEGIC PLANNING ── -->
+<section class="wt-offering wt-offering--three" id="strategy">
+  <div class="section-inner">
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.o3_eyebrow }}</span>
+      <h2>{{ .Params.o3_title }}</h2>
+      <div class="sidebar-stripe wt-stripe"></div>
+      <p class="sidebar-body">{{ .Params.o3_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.o3_sidebar_2 }}</p>
+    </div>
+    <div class="component-content reveal">
+      <p class="offering-lead">{{ .Params.o3_lead }}</p>
+      <p>{{ .Params.o3_body_1 }}</p>
+      <p>{{ .Params.o3_body_2 }}</p>
+      <div class="wt-deliverables">
+        <span class="deliverables-label">{{ .Params.o3_deliverables_label }}</span>
+        <ul>
+          {{ range .Params.o3_deliverables }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      <p class="wt-format"><em>Format:</em> {{ .Params.o3_format }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHO WE WORK WITH ── -->
+<section class="wt-who">
+  <div class="section-inner-wide">
+    <div class="who-header reveal">
+      <span class="eyebrow">{{ .Params.who_eyebrow }}</span>
+      <h2>{{ .Params.who_title }}</h2>
+    </div>
+    <div class="who-grid reveal">
+      {{ range .Params.who_cards }}
+      <div class="who-card">
+        <h3>{{ .role }}</h3>
+        <p>{{ .body }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- ── BIO / TRUST ── -->
+<section class="wt-bio">
+  <div class="section-inner">
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.bio_eyebrow }}</span>
+      <h2>{{ .Params.bio_title }}</h2>
+      <div class="sidebar-stripe wt-stripe"></div>
+    </div>
+    <div class="component-content reveal">
+      <p>{{ .Params.bio_body_1 }}</p>
+      <p>{{ .Params.bio_body_2 }}</p>
+      <a href="{{ .Params.bio_link }}" class="button primary" target="_blank" rel="noopener">{{ .Params.bio_cta }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="wt-cta">
+  <div class="cta-inner">
+    <span class="eyebrow" style="color: var(--text-muted);">{{ .Params.cta_eyebrow }}</span>
+    <h2>{{ .Params.cta_title }}</h2>
+    <p>{{ .Params.cta_body }}</p>
+    <div class="cta-buttons">
+      <a href="{{ .Params.cta_primary_url }}" class="button primary" target="_blank" rel="noopener">{{ .Params.cta_primary_text }}</a>
+      <a href="{{ .Params.cta_secondary_url }}" class="button secondary">{{ .Params.cta_secondary_text }}</a>
+    </div>
+  </div>
+</section>
+
+{{ end }}

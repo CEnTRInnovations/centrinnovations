@@ -1,0 +1,349 @@
+/* =============================================
+   Working Together page — component styles
+   Loaded only on /working-together/ via baseof.html
+   Color identity: warm mauve / earth tones
+============================================= */
+
+:root {
+  /* Working Together — warm earth / mauve */
+  --wt-deep:   #5A3A4A;
+  --wt-mid:    #7A4A62;
+  --wt-light:  #A07088;
+  --wt-bg:     #EEE0E6;
+
+  /* Offering accents — step progression */
+  --wt-one:    #3B6B35;   /* forest green  — before / foundational */
+  --wt-two:    #3F5E78;   /* steel blue    — with tools */
+  --wt-three:  #8C6E45;   /* warm amber    — beyond / strategy */
+}
+
+/* ── HERO ── */
+.wt-hero {
+  background: var(--bg-main, #F6F2E7);
+  border-bottom: 1px solid rgba(0,0,0,0.055);
+  overflow: hidden;
+  position: relative;
+}
+
+.wt-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    180deg,
+    transparent 0px,
+    transparent 38px,
+    rgba(0,0,0,0.018) 38px,
+    rgba(0,0,0,0.018) 40px
+  );
+  pointer-events: none;
+}
+
+.wt-hero-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 5.5rem 1.25rem 5rem;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 3.5rem;
+  align-items: center;
+  position: relative;
+}
+
+.wt-hero h1 {
+  color: var(--wt-deep);
+  margin-bottom: 1.25rem;
+}
+
+.wt-hero .lead {
+  font-size: 1.1rem;
+  color: var(--text-muted, #6b6760);
+  max-width: 500px;
+  margin-bottom: 0.75rem;
+}
+
+.wt-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wt-hero-botanical-frame {
+  display: inline-block;
+  background: #f9f5ec;
+  padding: 0.9rem 0.9rem 2.5rem;
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.12),
+    0 12px 40px rgba(0,0,0,0.10),
+    0 1px 3px rgba(0,0,0,0.08);
+  transform: rotate(-1.75deg);
+  border: 1px solid rgba(0,0,0,0.07);
+}
+
+.wt-hero-botanical {
+  width: 100%;
+  max-width: 320px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .wt-hero-inner {
+    grid-template-columns: 1fr;
+    padding: 3.5rem 1.25rem 2rem;
+  }
+  .wt-hero-visual {
+    display: none;
+  }
+}
+
+/* ── SHARED STRIPE ── */
+.wt-stripe {
+  width: 36px;
+  height: 3px;
+  background: var(--wt-mid);
+  margin: 1rem 0 1.5rem;
+  border-radius: 2px;
+}
+
+/* ── FRAMING ── */
+.wt-framing {
+  background: var(--bg-light, #F0EAD8);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.wt-framing .section-inner {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+/* ── OFFERINGS ── */
+.wt-offering {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.wt-offering .section-inner {
+  padding: 4.5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+/* Alternating background */
+.wt-offering--one   { background: var(--bg-main, #F6F2E7); }
+.wt-offering--two   { background: var(--bg-light, #F0EAD8); }
+.wt-offering--three { background: var(--bg-warm, #EAE0CA); }
+
+/* Offering eyebrow colors */
+.wt-offering--one   .eyebrow { color: var(--wt-one); }
+.wt-offering--two   .eyebrow { color: var(--wt-two); }
+.wt-offering--three .eyebrow { color: var(--wt-three); }
+
+/* Offering stripe colors */
+.wt-offering--one   .wt-stripe { background: var(--wt-one); }
+.wt-offering--two   .wt-stripe { background: var(--wt-two); }
+.wt-offering--three .wt-stripe { background: var(--wt-three); }
+
+.offering-lead {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--text, #3E3B35);
+  margin-bottom: 1.25rem;
+  max-width: 520px;
+}
+
+/* ── QUOTE ── */
+.wt-quote {
+  border-left: 3px solid var(--wt-mid);
+  padding: 0.75rem 0 0.75rem 1.5rem;
+  margin: 1.75rem 0;
+}
+
+.wt-quote p {
+  font-family: "Alegreya", serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text, #3E3B35);
+  line-height: 1.5;
+}
+
+/* ── DELIVERABLES ── */
+.wt-deliverables {
+  background: rgba(0,0,0,0.025);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.deliverables-label {
+  display: block;
+  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  color: var(--text-muted, #6b6760);
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.wt-deliverables ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.wt-deliverables li {
+  font-size: 0.9rem;
+  color: var(--text, #3E3B35);
+  padding-left: 1.1rem;
+  position: relative;
+  line-height: 1.45;
+  max-width: none;
+}
+
+.wt-deliverables li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--wt-mid);
+  font-size: 0.8rem;
+}
+
+/* ── FORMAT NOTE ── */
+.wt-format {
+  font-size: 0.85rem;
+  color: var(--text-muted, #6b6760);
+  margin-top: 1rem;
+  max-width: 480px;
+}
+
+/* ── WHO WE WORK WITH ── */
+.wt-who {
+  background: var(--bg-mid, #E2D4B8);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 4.5rem 2rem;
+}
+
+.wt-who .section-inner-wide {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.who-header {
+  margin-bottom: 2.5rem;
+}
+
+.who-header .eyebrow {
+  color: var(--wt-mid);
+}
+
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.who-card {
+  background: var(--bg-main, #F6F2E7);
+  border-radius: 6px;
+  padding: 1.5rem;
+  border-top: 3px solid var(--wt-mid);
+}
+
+.who-card h3 {
+  font-family: "Alegreya", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--wt-deep);
+  margin-bottom: 0.6rem;
+}
+
+.who-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted, #6b6760);
+  line-height: 1.55;
+  max-width: none;
+}
+
+/* ── BIO ── */
+.wt-bio {
+  background: var(--bg-light, #F0EAD8);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.wt-bio .section-inner {
+  padding: 4.5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.wt-bio .component-content p {
+  margin-bottom: 1rem;
+}
+
+.wt-bio .button {
+  margin-top: 1.25rem;
+  display: inline-block;
+}
+
+/* ── CTA ── */
+.wt-cta {
+  background: var(--bg-cta, #E3D7BE);
+  padding: 4.5rem 2rem;
+  text-align: center;
+}
+
+.wt-cta .cta-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.wt-cta h2 {
+  margin: 0.75rem auto 1.25rem;
+  max-width: 520px;
+  text-align: center;
+}
+
+.wt-cta p {
+  color: var(--text-muted, #6b6760);
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .wt-framing .section-inner,
+  .wt-offering .section-inner,
+  .wt-bio .section-inner {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1.25rem;
+  }
+
+  .who-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}

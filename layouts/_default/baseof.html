@@ -28,6 +28,12 @@
         {{ if .Params.mathjax }}
             {{ partial "mathjax.html" . }}
         {{ end }}
+        {{ if eq .Layout "working-together" }}
+<link rel="stylesheet" href="/css/working-together.css" />
+{{ end }}
+{{ if eq .Layout "open-tools" }}
+<link rel="stylesheet" href="/css/open-tools.css" />
+{{ end }}
     </head>
     <body>
         {{ partial "header.html" . }}

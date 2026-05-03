@@ -29,6 +29,13 @@
       <description></description>
     </item>
     <item>
+      <title>Open Tools // CEnTRInnovations</title>
+      <link>http://localhost:1313/open-tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/open-tools/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>The CEnTR* System</title>
       <link>http://localhost:1313/system/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -40,6 +47,13 @@
       <link>http://localhost:1313/framework/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/framework/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Working Together // CEnTRInnovations</title>
+      <link>http://localhost:1313/working-together/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/working-together/</guid>
       <description></description>
     </item>
   </channel>

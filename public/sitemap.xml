@@ -12,10 +12,14 @@
   </url><url>
     <loc>http://localhost:1313/</loc>
   </url><url>
+    <loc>http://localhost:1313/open-tools/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url><url>
     <loc>http://localhost:1313/system/</loc>
   </url><url>
     <loc>http://localhost:1313/framework/</loc>
+  </url><url>
+    <loc>http://localhost:1313/working-together/</loc>
   </url>
 </urlset>
