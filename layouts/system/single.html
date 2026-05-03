@@ -2,10 +2,15 @@
 
 <!-- Hero -->
 <section class="system-page-hero">
-  <div class="system-page-inner">
-    <span class="eyebrow">{{ .Params.hero_eyebrow }}</span>
-    <h1>{{ .Params.hero_title | safeHTML }}</h1>
-    <p class="system-page-lead">{{ .Params.hero_body }}</p>
+  <div class="system-page-inner system-page-hero-inner">
+    <div class="system-hero-text">
+      <span class="eyebrow">{{ .Params.hero_eyebrow }}</span>
+      <h1>{{ .Params.hero_title | safeHTML }}</h1>
+      <p class="system-page-lead">{{ .Params.hero_body }}</p>
+    </div>
+    <div class="system-hero-visual">
+      <img src="/assets/system-right.png" alt="The CEnTR* System">
+    </div>
   </div>
 </section>
 
@@ -174,22 +179,8 @@
 
       <div class="tool-outputs">
         <span class="outputs-label eyebrow">{{ .Params.impact_scores_label }}</span>
-        <p class="viz-note">Sample outputs from <em>Rising Waters, Resilient Communities</em>. Click any card to enlarge.</p>
-        <div class="impact-scores-grid">
-          {{ range $i, $s := .Params.impact_scores }}
-          {{ $imgs := slice "/assets/centrimpact/indicators.png" "/assets/centrimpact/alignment.png" "/assets/centrimpact/dynamics.png" "/assets/centrimpact/cascade_effects.png" }}
-          {{ $alts := slice "Direct Indicators plot" "Alignment plot" "Project Dynamics plot" "Cascade Effects plot" }}
-          <div class="impact-score-card" onclick="openLightbox('{{ index $imgs $i }}')">
-            <div class="score-viz-thumb">
-              <img src="{{ index $imgs $i }}" alt="{{ index $alts $i }}">
-            </div>
-            <div class="score-card-body">
-              <span class="score-sym">{{ $s.sym | safeHTML }}</span>
-              <strong>{{ $s.name }}</strong>
-              <p>{{ $s.desc }}</p>
-            </div>
-          </div>
-          {{ end }}
+        <div class="impact-collage">
+          <img src="/assets/centrimpact/dashboard.png" alt="CEnTR*IMPACT visualization dashboard">
         </div>
       </div>
 
@@ -199,11 +190,6 @@
   </div>
 </section>
 
-<!-- Lightbox -->
-<div class="viz-lightbox" id="viz-lightbox" onclick="closeLightbox()">
-  <button class="viz-lightbox-close" onclick="closeLightbox()">✕</button>
-  <img id="viz-lightbox-img" src="" alt="">
-</div>
 
 <!-- CTA -->
 <section class="cta">
@@ -216,20 +202,5 @@
     </div>
   </div>
 </section>
-
-<script>
-function openLightbox(src) {
-  document.getElementById('viz-lightbox-img').src = src;
-  document.getElementById('viz-lightbox').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeLightbox() {
-  document.getElementById('viz-lightbox').classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeLightbox();
-});
-</script>
 
 {{ end }}

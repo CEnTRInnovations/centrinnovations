@@ -1,23 +1,61 @@
 {{ define "scripts" }}
 <script src="{{ "js/impact.js" | relURL }}"></script>
-{{ end }}
+<!-- Lightbox -->
+<div class="viz-lightbox" id="viz-lightbox" onclick="closeLightbox()">
+  <button class="viz-lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="viz-lightbox-img" src="" alt="">
+</div>
 
-{{ define "main" }}
+<script>
+function openLightbox(src) {
+  document.getElementById('viz-lightbox-img').src = src;
+  document.getElementById('viz-lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('viz-lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
+
+{{ end }}{{ define "main" }}
 
 <!-- Hero -->
 <section class="impact-hero">
   <div class="hero-inner">
-    <span class="eyebrow">{{ .Params.hero_eyebrow }}</span>
-    <h1>{{ .Params.hero_title | safeHTML }}</h1>
-    <p class="hero-lead">{{ .Params.hero_lead_1 }}</p>
-    <p class="hero-lead" style="margin-top:-0.5rem;">{{ .Params.hero_lead_2 }}</p>
-    <div class="component-strip">
-      {{ range .Params.hero_strip }}
-      <a href="#{{ .anchor }}" class="strip-item {{ .class }}">
-        {{ .name }}<br><small style="font-size:0.65em;opacity:0.85;">{{ .label }}</small>
-      </a>
-      {{ end }}
+
+    <div class="hero-text">
+      <span class="eyebrow">{{ .Params.hero_eyebrow }}</span>
+      <h1>{{ .Params.hero_title | safeHTML }}</h1>
+      <p class="hero-lead">{{ .Params.hero_lead_1 }}</p>
+      <p class="hero-lead" style="margin-top:-0.5rem;">{{ .Params.hero_lead_2 }}</p>
+
+      <div class="component-circles">
+        {{ range $i, $item := .Params.hero_strip }}
+        {{ if $i }}<div class="circles-divider"></div>{{ end }}
+        <a href="#{{ $item.anchor }}" class="circle-nav-item">
+          <div class="circle-nav-ring {{ $item.icon_class }}">
+            <img src="{{ $item.icon }}" alt="{{ $item.name }}">
+          </div>
+          <div class="circle-nav-text">
+            <strong class="circle-nav-name">{{ $item.name }}</strong>
+            <span class="circle-nav-label">{{ $item.label }}</span>
+          </div>
+        </a>
+        {{ end }}
+      </div>
     </div>
+
+    <div class="hero-visual">
+      <img src="/assets/milkweed.png" alt="Botanical illustration of common milkweed" class="hero-botanical" />
+      <blockquote class="hero-quote impact-quote">
+        <p>{{ .Params.hero_quote }}</p>
+      </blockquote>
+    </div>
+
   </div>
 </section>
 
@@ -71,11 +109,29 @@
           <span class="feature-num num-cip">03</span>
           <p><strong>{{ .Params.cip_f3_title }}</strong> {{ .Params.cip_f3_body }}</p>
         </li>
-        <li class="feature-item">
-          <span class="feature-num num-cip">04</span>
-          <p><strong>{{ .Params.cip_f4_title }}</strong> {{ .Params.cip_f4_body }}</p>
-        </li>
       </ul>
+
+      <div class="cip-scores">
+        <span class="eyebrow outputs-label">{{ .Params.cip_scores_label }}</span>
+        <p class="viz-note">{{ .Params.cip_scores_note }}</p>
+        <div class="impact-scores-grid">
+          {{ range $i, $s := .Params.cip_scores }}
+          {{ $imgs := slice "/assets/centrimpact/indicators.png" "/assets/centrimpact/alignment.png" "/assets/centrimpact/dynamics.png" "/assets/centrimpact/cascade_effects.png" }}
+          {{ $alts := slice "Direct Indicators plot" "Alignment Score plot" "Project Dynamics plot" "Cascade Effects plot" }}
+          <div class="impact-score-card" onclick="openLightbox('{{ index $imgs $i }}')">
+            <div class="score-viz-thumb">
+              <img src="{{ index $imgs $i }}" alt="{{ index $alts $i }}">
+            </div>
+            <div class="score-card-body">
+              <span class="score-sym">{{ $s.sym | safeHTML }}</span>
+              <strong>{{ $s.name }}</strong>
+              <p>{{ $s.desc }}</p>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
       <div class="tool-actions">
         <a href="{{ if or (hasPrefix .Params.cip_primary_url "http://") (hasPrefix .Params.cip_primary_url "https://") (hasPrefix .Params.cip_primary_url "#") (hasPrefix .Params.cip_primary_url "mailto:") (hasPrefix .Params.cip_primary_url "tel:") }}{{ .Params.cip_primary_url }}{{ else }}{{ .Params.cip_primary_url | relURL }}{{ end }}" class="btn-primary" target="_blank" rel="noopener">{{ .Params.cip_primary_text }}</a>
         <a href="{{ if or (hasPrefix .Params.cip_secondary_url "http://") (hasPrefix .Params.cip_secondary_url "https://") (hasPrefix .Params.cip_secondary_url "#") (hasPrefix .Params.cip_secondary_url "mailto:") (hasPrefix .Params.cip_secondary_url "tel:") }}{{ .Params.cip_secondary_url }}{{ else }}{{ .Params.cip_secondary_url | relURL }}{{ end }}" class="btn-secondary" target="_blank" rel="noopener">{{ .Params.cip_secondary_text }}</a>
@@ -83,7 +139,8 @@
     </div>
 
     <div class="section-sidebar reveal">
-      <div class="component-marker marker-cip">I</div>
+
+      <img src="/assets/icons/community.png" alt="Community Impact Profile" class="section-icon">
       <span class="eyebrow">{{ .Params.cip_eyebrow }}</span>
       <h2>{{ .Params.cip_title }}</h2>
       <div class="sidebar-stripe cip-stripe"></div>
@@ -99,7 +156,8 @@
   <div class="section-inner">
 
     <div class="section-sidebar reveal">
-      <div class="component-marker marker-sce">II</div>
+
+      <img src="/assets/icons/pile.png" alt="Scholarly Credit Equivalent" class="section-icon">
       <span class="eyebrow">{{ .Params.sce_eyebrow }}</span>
       <h2>{{ .Params.sce_title }}</h2>
       <div class="sidebar-stripe sce-stripe"></div>
@@ -189,7 +247,8 @@
     </div>
 
     <div class="section-sidebar reveal">
-      <div class="component-marker marker-cet">III</div>
+
+      <img src="/assets/icons/seedling.png" alt="Community Engagement Trajectory" class="section-icon">
       <span class="eyebrow">{{ .Params.cet_eyebrow }}</span>
       <h2>{{ .Params.cet_title }}</h2>
       <div class="sidebar-stripe cet-stripe"></div>

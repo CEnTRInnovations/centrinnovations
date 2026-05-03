@@ -110,19 +110,18 @@
 
     <div class="component-content reveal">
       <div class="platform-flow">
-        {{ range $i, $step := .Params.platform_steps }}
+        {{ range .Params.platform_steps }}
+        {{ if not .hidden }}
         <div class="platform-flow-step">
-          <div class="platform-step-badge {{ $step.circle }}">{{ $step.num }}</div>
-          <div class="platform-step-circle {{ $step.circle }}">
-            {{ if $step.icon }}
-            <img src="{{ $step.icon }}" alt="{{ $step.title }}">
+          <div class="platform-step-badge {{ .circle }}">{{ .num }}</div>
+          <div class="platform-step-circle {{ .circle }}">
+            {{ if .icon }}
+            <img src="{{ .icon }}" alt="{{ .title }}">
             {{ end }}
           </div>
-          <h3 class="platform-step-title">{{ $step.title }}</h3>
-          <p class="platform-step-body">{{ $step.body }}</p>
+          <h3 class="platform-step-title">{{ .title }}</h3>
+          <p class="platform-step-body">{{ .body }}</p>
         </div>
-        {{ if lt $i 6 }}
-        <div class="platform-flow-arrow">→</div>
         {{ end }}
         {{ end }}
       </div>

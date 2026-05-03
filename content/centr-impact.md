@@ -10,20 +10,33 @@ mathjax: true
 # ─────────────────────────────────────────
 hero_eyebrow: "The CEnTR* System"
 hero_title: "CEnTR*<em>IMPACT</em>"
+hero_lead_1: "Community-engaged research produces real value — for communities, for institutions, for the public good. But existing evaluation systems were never designed to see it. Impact goes uncounted, contributions go uncredited, and the most important work remains invisible."
+hero_lead_2: "CEnTR*IMPACT changes that. Three integrated components profile community impact, translate engaged outputs into scholarly credit, and track how an institution's engagement deepens over time."
 
 hero_strip:
   - name: "CIP"
+    numeral: "I"
     label: "Community Impact Profile"
     class: "strip-cip"
+    icon: "/assets/icons/community.png"
+    icon_class: "impact-icon--cip"
     anchor: "cip"
   - name: "SCE"
+    numeral: "II"
     label: "Scholarly Credit Equivalent"
     class: "strip-sce"
+    icon: "/assets/icons/pile.png"
+    icon_class: "impact-icon--sce"
     anchor: "sce"
   - name: "CET"
+    numeral: "III"
     label: "Community Engagement Trajectory"
     class: "strip-cet"
+    icon: "/assets/icons/seedling.png"
+    icon_class: "impact-icon--cet"
     anchor: "cet"
+
+hero_quote: "Like milkweed spreading silk-tufted seeds on the wind, intentional metrics help gather community members together and facilitate the distribution of information and power."
 
 # ─────────────────────────────────────────
 # CONTEXT
@@ -67,6 +80,22 @@ cip_f3_body: "Generates visualizations and narrative summaries suitable for P&T 
 
 cip_f4_title: "Transparent rationale"
 cip_f4_body: "Every score comes with plain-language explanation — not a black box. Researchers and institutions can see exactly what the model is measuring and why."
+
+cip_scores_label: "The four score types"
+cip_scores_note: "Sample outputs from Rising Waters, Resilient Communities. Click any card to enlarge."
+cip_scores:
+  - sym: "S<sub>I</sub>"
+    name: "Direct Indicators"
+    desc: "Counts of quantifiable activities and outputs — engagement hours, individuals served, students involved — that provide essential contextual background."
+  - sym: "S<sub>A</sub>"
+    name: "Alignment Score"
+    desc: "Captures how much researchers and community partners agree on how the project is being carried out across eight factors, from Goals and Purposes to Community Empowerment."
+  - sym: "S<sub>D</sub>"
+    name: "Project Dynamics"
+    desc: "Organized around the CBPR framework across five domains, it reveals how evenly distributed effort and cooperation are spread across the full arc of the project."
+  - sym: "S<sub>C</sub>"
+    name: "Cascade Effects"
+    desc: "Draws on social network analysis to map and measure the potential for information and impact to spread — illuminating clear pathways and bottlenecks."
 
 cip_primary_text: "Try CEnTR*IMPACT →"
 cip_primary_url: "https://connect.posit.iu.edu/centrimpact/"

@@ -229,30 +229,33 @@
   border-bottom: 1px solid rgba(0,0,0,0.055);
 }
 
-/* Horizontal flow */
+/* Horizontal flow — replaced with 2×2 card grid */
 .platform-flow {
-  display: flex;
-  align-items: flex-start;
-  gap: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .platform-flow-step {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
+  background: var(--map-bg);
+  border-radius: 10px;
+  padding: 1.5rem 1.5rem 1.75rem;
+  border: 1px solid rgba(0,0,0,0.06);
   min-width: 0;
 }
 
 .platform-step-num,
 .platform-step-badge {
   font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   color: var(--text-muted, #6b6760);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.85rem;
   display: block;
   line-height: 1;
   background: none !important;
@@ -262,10 +265,10 @@
 }
 
 .platform-step-circle {
-  width: 72px;
-  height: 72px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  margin-bottom: 0.9rem;
+  margin-bottom: 1rem;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -287,35 +290,28 @@
 
 .platform-step-title {
   font-family: "Alegreya", serif;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 /* Title colors matching circle accents */
 .platform-flow-step:nth-child(1) .platform-step-title { color: var(--assets-color); }
-.platform-flow-step:nth-child(3) .platform-step-title { color: var(--systems-color); }
-.platform-flow-step:nth-child(5) .platform-step-title { color: var(--narrative-color); }
-.platform-flow-step:nth-child(7) .platform-step-title { color: #2E6E78; }
-.platform-flow-step:nth-child(9) .platform-step-title { color: var(--map-mid); }
+.platform-flow-step:nth-child(2) .platform-step-title { color: var(--systems-color); }
+.platform-flow-step:nth-child(3) .platform-step-title { color: var(--narrative-color); }
+.platform-flow-step:nth-child(4) .platform-step-title { color: #2E6E78; }
 
 .platform-step-body {
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   color: var(--text-muted, #6b6760);
-  line-height: 1.5;
-  max-width: 140px;
-  margin: 0 auto;
+  line-height: 1.55;
+  max-width: none;
+  margin: 0;
 }
 
-/* Arrows between steps */
-.platform-flow-arrow {
-  flex-shrink: 0;
-  padding: 0 0.5rem;
-  padding-top: 36px; /* aligns with circle center */
-  color: rgba(0,0,0,0.2);
-  font-size: 1rem;
-}
+/* No arrows needed in grid layout */
+.platform-flow-arrow { display: none; }
 
 .platform-note {
   margin-top: 2rem;
@@ -479,34 +475,16 @@
 /* ── RESPONSIVE ── */
 @media (max-width: 960px) {
   .platform-flow {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    grid-template-columns: 1fr;
   }
 
   .platform-flow-step {
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: left;
-    gap: 1rem;
+    /* already left-aligned in grid layout */
   }
 
   .platform-step-circle {
     width: 48px;
     height: 48px;
-    flex-shrink: 0;
-    margin-bottom: 0;
-  }
-
-  .platform-flow-arrow {
-    padding-top: 0;
-    padding-left: 1.5rem;
-    transform: rotate(90deg);
-  }
-
-  .platform-step-body {
-    max-width: none;
-    margin: 0;
   }
 
   .map-uses-layout {
@@ -557,4 +535,3 @@
     padding-left: 1rem;
   }
 }
-
