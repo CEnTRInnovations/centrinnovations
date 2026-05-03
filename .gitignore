@@ -5,3 +5,5 @@
 hugo_stats.json
 .DS_Store 
 cache/filecache/_gen/
+claude.md
+REFACTOR.md

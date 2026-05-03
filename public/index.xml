@@ -8,21 +8,21 @@
     <language>en-us</language>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>CEnTR*IMPACT — Making Value Legible</title>
+      <title>CEnTR*IMPACT: Making Value Legible</title>
       <link>http://localhost:1313/centr-impact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/centr-impact/</guid>
       <description></description>
     </item>
     <item>
-      <title>CEnTR*MAP — Mapping Community Ecosystems</title>
+      <title>CEnTR*MAP: Mapping Community Ecosystems</title>
       <link>http://localhost:1313/centr-map/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/centr-map/</guid>
       <description></description>
     </item>
     <item>
-      <title>CEnTR*SEEK — Making Engagement Visible</title>
+      <title>CEnTR*SEEK: Making Engagement Visible</title>
       <link>http://localhost:1313/centr-seek/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/centr-seek/</guid>

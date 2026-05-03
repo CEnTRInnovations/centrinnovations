@@ -24,7 +24,7 @@ challenge:
     - "Public trust in higher education is under pressure. Institutions are being asked — by governments, funders, accreditors, and communities — to demonstrate their value to society."
     - "That value is already being created through community-engaged research widely and meaningfully."
 
-  intro: "The challenge is that this work remains disconnected from the systems that define and reward success — shaping decisions about advancement, funding, and strategy."
+  intro: "The challenge is that this work remains disconnected from the systems that define and reward success, shaping decisions about advancement, funding, and strategy."
 
   items:
     - icon: "/assets/icons/dispersed.png"
