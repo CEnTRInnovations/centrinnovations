@@ -1,4 +1,5 @@
 {{ define "scripts" }}
+{{ if .Params.mathjax }}{{ partial "mathjax.html" . }}{{ end }}
 <script src="{{ "js/impact.js" | relURL }}"></script>
 <!-- Lightbox -->
 <div class="viz-lightbox" id="viz-lightbox" onclick="closeLightbox()">

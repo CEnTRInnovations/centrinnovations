@@ -9,7 +9,7 @@ mathjax: true
 # HERO
 # ─────────────────────────────────────────
 hero_eyebrow: "The CEnTR* System"
-hero_title: "CEnTR*<em>IMPACT</em>"
+hero_title: "CEnTR*IMPACT"
 hero_lead_1: "Community-engaged research produces real value: for communities, for institutions, for the public good. But existing evaluation systems were never designed to see it. Impact goes uncounted, contributions go uncredited, and the most important work remains invisible."
 hero_lead_2: "CEnTR*IMPACT changes that. Three integrated components profile community impact, translate engaged outputs into scholarly credit, and track how an institution's engagement deepens over time."
 
