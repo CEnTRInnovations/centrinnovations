@@ -1,0 +1,57 @@
+{{/* layouts/partials/blocks/impact-sce.html */}}
+<section id="sce" class="sce-section sce">
+  <div class="section-inner">
+
+    <div class="section-sidebar reveal">
+      <img src="/assets/icons/pile.png" alt="Scholarly Credit Equivalent" class="section-icon">
+      <span class="eyebrow">{{ .Params.sce_eyebrow }}</span>
+      <h2>{{ .Params.sce_title }}</h2>
+      <div class="sidebar-stripe sce-stripe"></div>
+      <p class="sidebar-body">{{ .Params.sce_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.sce_sidebar_2 }}</p>
+    </div>
+
+    <div class="component-content reveal">
+      <span class="status-badge {{ .Params.sce_status_class }}">{{ .Params.sce_status }}</span>
+      <div class="component-quote quote-sce">
+        <p>{{ .Params.sce_quote }}</p>
+      </div>
+
+      <div class="formula-block">
+        <span class="formula-label">{{ .Params.sce_formula_label }}</span>
+        <div class="formula-display">{{ .Params.sce_formula_display | safeHTML }}</div>
+        <div class="formula-vars">
+          {{ range .Params.sce_formula_vars }}
+          <span class="var-sym">{{ .sym | safeHTML }}</span>
+          <span>{{ .desc | safeHTML }}</span>
+          {{ end }}
+        </div>
+      </div>
+
+      <ul class="feature-list">
+        <li class="feature-item">
+          <span class="feature-num num-sce">01</span>
+          <p><strong>{{ .Params.sce_f1_title }}</strong> {{ .Params.sce_f1_body | safeHTML }}</p>
+        </li>
+        <li class="feature-item">
+          <span class="feature-num num-sce">02</span>
+          <p><strong>{{ .Params.sce_f2_title }}</strong> {{ .Params.sce_f2_body | safeHTML }}</p>
+        </li>
+        <li class="feature-item">
+          <span class="feature-num num-sce">03</span>
+          <p><strong>{{ .Params.sce_f3_title }}</strong> {{ .Params.sce_f3_body }}</p>
+        </li>
+      </ul>
+
+      {{ if .Params.sce_primary_url }}
+      <div class="tool-actions">
+        <a href="{{ partial "smart-url.html" (dict "url" .Params.sce_primary_url) }}"
+           class="btn-primary">{{ .Params.sce_primary_text }}</a>
+        <a href="{{ partial "smart-url.html" (dict "url" .Params.sce_secondary_url) }}"
+           class="btn-secondary">{{ .Params.sce_secondary_text }}</a>
+      </div>
+      {{ end }}
+    </div>
+
+  </div>
+</section>

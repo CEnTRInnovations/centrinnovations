@@ -1,0 +1,45 @@
+{{/* layouts/partials/blocks/map-framework.html */}}
+<section id="framework" class="map-framework">
+  <div class="framework-inner">
+
+    <div class="framework-header reveal">
+      <span class="eyebrow">{{ .Params.framework_eyebrow }}</span>
+      <h2>{{ .Params.framework_title }}</h2>
+    </div>
+
+    <div class="framework-columns reveal">
+
+      <div class="framework-col framework-col--assets">
+        <div class="framework-icon framework-icon--assets">
+          <img src="/assets/icons/seedling.png" alt="Seedling">
+        </div>
+        <span class="eyebrow">{{ .Params.framework_f1_eyebrow }}</span>
+        <h3>{{ .Params.framework_f1_title }}</h3>
+        <p>{{ .Params.framework_f1_body }}</p>
+      </div>
+
+      <div class="framework-col-divider"></div>
+
+      <div class="framework-col framework-col--systems">
+        <div class="framework-icon framework-icon--systems">
+          <img src="/assets/icons/oak_tree.png" alt="Oak tree">
+        </div>
+        <span class="eyebrow">{{ .Params.framework_f2_eyebrow }}</span>
+        <h3>{{ .Params.framework_f2_title }}</h3>
+        <p>{{ .Params.framework_f2_body }}</p>
+      </div>
+
+      <div class="framework-col-divider"></div>
+
+      <div class="framework-col framework-col--narrative">
+        <div class="framework-icon framework-icon--narrative">
+          <img src="/assets/icons/ripple.png" alt="Ripple">
+        </div>
+        <span class="eyebrow">{{ .Params.framework_f3_eyebrow }}</span>
+        <h3>{{ .Params.framework_f3_title }}</h3>
+        <p>{{ .Params.framework_f3_body }}</p>
+      </div>
+
+    </div>
+  </div>
+</section>

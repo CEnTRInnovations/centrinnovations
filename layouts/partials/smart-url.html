@@ -1,0 +1,13 @@
+{{/* layouts/partials/smart-url.html
+     Usage: {{ partial "smart-url.html" .url }}
+     where .url is the URL string.
+     Returns the URL as-is if absolute or anchor, otherwise applies relURL.
+     
+     Example: <a href="{{ partial "smart-url.html" (dict "url" .Params.cta_primary_url) }}">
+*/}}
+{{- $url := .url -}}
+{{- if or (hasPrefix $url "http://") (hasPrefix $url "https://") (hasPrefix $url "#") (hasPrefix $url "mailto:") (hasPrefix $url "tel:") -}}
+  {{- $url -}}
+{{- else -}}
+  {{- $url | relURL -}}
+{{- end -}}

@@ -1,0 +1,50 @@
+{{/* layouts/partials/blocks/hero.html
+     Shared hero for CEnTR* product pages.
+     Reads from front matter — no page-specific logic here.
+     Page color theming is handled by the section class + each page's CSS.
+*/}}
+<section class="page-hero {{ .Params.hero_section_class }}">
+  <div class="hero-inner">
+
+    <div class="hero-text">
+      <span class="eyebrow">{{ .Params.hero_eyebrow }}</span>
+      <h1>{{ .Params.hero_title | safeHTML }}</h1>
+      <p class="hero-lead">{{ .Params.hero_lead_1 }}</p>
+      {{ if .Params.hero_lead_2 }}
+      <p class="hero-lead" style="margin-top:-0.5rem;">{{ .Params.hero_lead_2 }}</p>
+      {{ end }}
+
+      <div class="hero-strip">
+        {{ $strip := .Params.hero_strip }}
+        {{ range $i, $item := $strip }}
+        {{ if $i }}<div class="hero-strip-divider"></div>{{ end }}
+        <a href="#{{ $item.anchor }}" class="hero-strip-item">
+          <div class="hero-strip-icon {{ $item.icon_class }}">
+            <img src="{{ $item.icon }}" alt="{{ $item.name }}">
+          </div>
+          <div class="hero-strip-label">
+            <strong>{{ $item.name }}</strong>
+            <span>{{ $item.label }}</span>
+          </div>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-botanical-frame">
+        <img
+          src="{{ .Params.hero_botanical | relURL }}"
+          alt="{{ .Params.hero_botanical_alt }}"
+          class="hero-botanical"
+        />
+      </div>
+      {{ if .Params.hero_quote }}
+      <blockquote class="hero-quote {{ .Params.hero_quote_class }}">
+        <p>{{ .Params.hero_quote }}</p>
+      </blockquote>
+      {{ end }}
+    </div>
+
+  </div>
+</section>

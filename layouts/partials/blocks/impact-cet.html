@@ -1,0 +1,57 @@
+{{/* layouts/partials/blocks/impact-cet.html */}}
+<section id="cet" class="cet-section cet">
+  <div class="section-inner section-inner--reverse">
+
+    <div class="component-content reveal">
+      <span class="status-badge {{ .Params.cet_status_class }}">{{ .Params.cet_status }}</span>
+      <div class="component-quote quote-cet">
+        <p>{{ .Params.cet_quote }}</p>
+      </div>
+
+      <div class="formula-block">
+        <span class="formula-label">{{ .Params.cet_formula_label }}</span>
+        <div class="formula-display">{{ .Params.cet_formula_display | safeHTML }}</div>
+        <div class="formula-vars">
+          {{ range .Params.cet_formula_vars }}
+          <span class="var-sym">{{ .sym | safeHTML }}</span>
+          <span>{{ .desc }}</span>
+          {{ end }}
+        </div>
+      </div>
+
+      <ul class="feature-list">
+        <li class="feature-item">
+          <span class="feature-num num-cet">01</span>
+          <p><strong>{{ .Params.cet_f1_title }}</strong> {{ .Params.cet_f1_body }}</p>
+        </li>
+        <li class="feature-item">
+          <span class="feature-num num-cet">02</span>
+          <p><strong>{{ .Params.cet_f2_title }}</strong> {{ .Params.cet_f2_body }}</p>
+        </li>
+        <li class="feature-item">
+          <span class="feature-num num-cet">03</span>
+          <p><strong>{{ .Params.cet_f3_title }}</strong> {{ .Params.cet_f3_body }}</p>
+        </li>
+      </ul>
+
+      {{ if .Params.cet_primary_url }}
+      <div class="tool-actions">
+        <a href="{{ partial "smart-url.html" (dict "url" .Params.cet_primary_url) }}"
+           class="btn-primary">{{ .Params.cet_primary_text }}</a>
+        <a href="{{ partial "smart-url.html" (dict "url" .Params.cet_secondary_url) }}"
+           class="btn-secondary">{{ .Params.cet_secondary_text }}</a>
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="section-sidebar reveal">
+      <img src="/assets/icons/seedling.png" alt="Community Engagement Trajectory" class="section-icon">
+      <span class="eyebrow">{{ .Params.cet_eyebrow }}</span>
+      <h2>{{ .Params.cet_title }}</h2>
+      <div class="sidebar-stripe cet-stripe"></div>
+      <p class="sidebar-body">{{ .Params.cet_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.cet_sidebar_2 }}</p>
+    </div>
+
+  </div>
+</section>

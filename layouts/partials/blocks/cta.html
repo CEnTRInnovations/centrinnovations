@@ -1,0 +1,15 @@
+{{/* layouts/partials/blocks/cta.html
+     Shared CTA for all CEnTR* product pages.
+     Expects: cta_title, cta_body, cta_primary_text, cta_primary_url,
+              cta_secondary_text, cta_secondary_url
+*/}}
+<section class="cta">
+  <div class="cta-inner">
+    <h2>{{ .Params.cta_title }}</h2>
+    <p>{{ .Params.cta_body }}</p>
+    <div class="cta-actions">
+      <a href="{{ .Params.cta_primary_url }}" class="button primary" target="_blank" rel="noopener">{{ .Params.cta_primary_text }}</a>
+      <a href="{{ .Params.cta_secondary_url }}" class="button secondary">{{ .Params.cta_secondary_text }}</a>
+    </div>
+  </div>
+</section>

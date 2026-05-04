@@ -1,0 +1,12 @@
+{{/* layouts/partials/blocks/ot-cta.html */}}
+<section class="ot-cta">
+  <div class="cta-inner">
+    <span class="eyebrow">{{ .Params.cta_eyebrow }}</span>
+    <h2>{{ .Params.cta_title }}</h2>
+    <p>{{ .Params.cta_body }}</p>
+    <div class="cta-buttons">
+      <a href="{{ .Params.cta_primary_url }}" class="button primary">{{ .Params.cta_primary_text }}</a>
+      <a href="{{ .Params.cta_secondary_url }}" class="button secondary">{{ .Params.cta_secondary_text }}</a>
+    </div>
+  </div>
+</section>

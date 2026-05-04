@@ -1,0 +1,27 @@
+{{/* layouts/partials/blocks/map-uses.html */}}
+<section class="map-uses">
+  <div class="section-inner-wide">
+    <div class="map-uses-layout reveal">
+
+      <div class="map-uses-left">
+        <span class="eyebrow">{{ .Params.uses_eyebrow }}</span>
+        <h2>{{ .Params.uses_title }}</h2>
+        <div class="map-use-cards">
+          {{ range .Params.uses_cards }}
+          <div class="map-use-card {{ .class }}">
+            <h3>{{ .title }}</h3>
+            <p>{{ .body }}</p>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="map-uses-right">
+        <div class="map-uses-image" aria-hidden="true">
+          <img src="/assets/icons/map.png" alt="">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

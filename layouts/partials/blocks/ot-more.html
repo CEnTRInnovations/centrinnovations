@@ -1,0 +1,18 @@
+{{/* layouts/partials/blocks/ot-more.html */}}
+<section class="ot-more">
+  <div class="section-inner">
+
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.more_eyebrow }}</span>
+      <h2>{{ .Params.more_title }}</h2>
+      <div class="sidebar-stripe ot-stripe"></div>
+    </div>
+
+    <div class="component-content reveal">
+      <p>{{ .Params.more_body_1 }}</p>
+      <p>{{ .Params.more_body_2 }}</p>
+      <a href="{{ .Params.more_cta_link }}" class="button primary" target="_blank" rel="noopener">{{ .Params.more_cta_text }}</a>
+    </div>
+
+  </div>
+</section>

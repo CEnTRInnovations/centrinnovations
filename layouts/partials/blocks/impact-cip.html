@@ -1,0 +1,70 @@
+{{/* layouts/partials/blocks/impact-cip.html */}}
+{{ $imgs := slice "/assets/centrimpact/indicators.png" "/assets/centrimpact/alignment.png" "/assets/centrimpact/dynamics.png" "/assets/centrimpact/cascade_effects.png" }}
+{{ $alts := slice "Direct Indicators plot" "Alignment Score plot" "Project Dynamics plot" "Cascade Effects plot" }}
+
+<section id="cip" class="cip-section cip">
+  <div class="section-inner section-inner--reverse">
+
+    <div class="component-content reveal">
+      <span class="status-badge {{ .Params.cip_status_class }}">{{ .Params.cip_status }}</span>
+      <div class="component-quote quote-cip">
+        <p>{{ .Params.cip_quote }}</p>
+      </div>
+
+      <ul class="feature-list">
+        <li class="feature-item">
+          <span class="feature-num num-cip">01</span>
+          <p><strong>{{ .Params.cip_f1_title }}</strong> {{ .Params.cip_f1_body }}</p>
+        </li>
+        <li class="feature-item">
+          <span class="feature-num num-cip">02</span>
+          <p><strong>{{ .Params.cip_f2_title }}</strong> {{ .Params.cip_f2_body }}</p>
+        </li>
+        <li class="feature-item">
+          <span class="feature-num num-cip">03</span>
+          <p><strong>{{ .Params.cip_f3_title }}</strong> {{ .Params.cip_f3_body }}</p>
+        </li>
+        <li class="feature-item">
+          <span class="feature-num num-cip">04</span>
+          <p><strong>{{ .Params.cip_f4_title }}</strong> {{ .Params.cip_f4_body }}</p>
+        </li>
+      </ul>
+
+      <div class="cip-scores">
+        <span class="eyebrow outputs-label">{{ .Params.cip_scores_label }}</span>
+        <p class="viz-note">{{ .Params.cip_scores_note }}</p>
+        <div class="impact-scores-grid">
+          {{ range $i, $s := .Params.cip_scores }}
+          <div class="impact-score-card" onclick="openLightbox('{{ index $imgs $i }}')">
+            <div class="score-viz-thumb">
+              <img src="{{ index $imgs $i }}" alt="{{ index $alts $i }}">
+            </div>
+            <div class="score-card-body">
+              <span class="score-sym">{{ $s.sym | safeHTML }}</span>
+              <strong>{{ $s.name }}</strong>
+              <p>{{ $s.desc }}</p>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="tool-actions">
+        <a href="{{ partial "smart-url.html" (dict "url" .Params.cip_primary_url) }}"
+           class="btn-primary" target="_blank" rel="noopener">{{ .Params.cip_primary_text }}</a>
+        <a href="{{ partial "smart-url.html" (dict "url" .Params.cip_secondary_url) }}"
+           class="btn-secondary" target="_blank" rel="noopener">{{ .Params.cip_secondary_text }}</a>
+      </div>
+    </div>
+
+    <div class="section-sidebar reveal">
+      <img src="/assets/icons/community.png" alt="Community Impact Profile" class="section-icon">
+      <span class="eyebrow">{{ .Params.cip_eyebrow }}</span>
+      <h2>{{ .Params.cip_title }}</h2>
+      <div class="sidebar-stripe cip-stripe"></div>
+      <p class="sidebar-body">{{ .Params.cip_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.cip_sidebar_2 }}</p>
+    </div>
+
+  </div>
+</section>

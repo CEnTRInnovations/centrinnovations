@@ -1,0 +1,22 @@
+{{/* layouts/partials/blocks/map-context.html */}}
+<section class="map-context">
+  <div class="section-inner">
+
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.context_eyebrow }}</span>
+      <h2>{{ .Params.context_title }}</h2>
+      <div class="sidebar-stripe map-stripe"></div>
+      <p class="sidebar-body">{{ .Params.context_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.context_sidebar_2 }}</p>
+    </div>
+
+    <div class="context-content reveal">
+      <div class="map-callout">
+        <p>{{ .Params.context_callout }}</p>
+      </div>
+      <p>{{ .Params.context_body_1 }}</p>
+      <p>{{ .Params.context_body_2 }}</p>
+    </div>
+
+  </div>
+</section>

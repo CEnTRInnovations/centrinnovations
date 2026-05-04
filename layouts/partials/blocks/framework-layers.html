@@ -1,0 +1,42 @@
+{{/* layouts/partials/blocks/framework-layers.html */}}
+{{ range .Params.framework_layers }}
+<section id="{{ .id }}" class="layer-section {{ .section_class }}">
+  <div class="layer-inner">
+
+    <div class="layer-sidebar reveal">
+      <div class="layer-marker" {{ if .marker_color }}style="background: {{ .marker_color }};"{{ end }}>{{ .num }}</div>
+      <div class="layer-title">{{ .title }}</div>
+      <div class="layer-subtitle">{{ .subtitle }}</div>
+      <div class="layer-stripe"></div>
+      <p style="font-size:0.9rem; color: {{ .color_var }}; max-width:220px; line-height:1.5;">
+        {{ .description }}
+      </p>
+      <div class="layer-sidebar-icon {{ .icon_class }}">
+        <img src="{{ .icon }}" alt="{{ .title }}">
+      </div>
+    </div>
+
+    <div class="layer-content reveal">
+      <h3>{{ .asks_title }}</h3>
+      <p>{{ .asks_body | safeHTML }}</p>
+
+      <div class="layer-quote">{{ .quote }}</div>
+
+      <h3>{{ .reveals_title }}</h3>
+      {{ range .reveals_body }}
+      <p>{{ . }}</p>
+      {{ end }}
+
+      <div class="concept-cluster">
+        {{ range .concepts }}
+        <span class="concept-tag">{{ . }}</span>
+        {{ end }}
+      </div>
+
+      <h3>{{ .practice_title }}</h3>
+      <p>{{ .practice_body }}</p>
+    </div>
+
+  </div>
+</section>
+{{ end }}

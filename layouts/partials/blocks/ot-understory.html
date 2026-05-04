@@ -1,0 +1,27 @@
+{{/* layouts/partials/blocks/ot-understory.html */}}
+<section class="ot-tool ot-tool--two" id="understory">
+  <div class="section-inner">
+
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.t2_eyebrow }}</span>
+      <h2>{{ .Params.t2_title }}</h2>
+      <div class="sidebar-stripe ot-stripe"></div>
+      <img src="{{ .Params.t2_image }}" alt="Understory illustration" class="tool-page-illustration" />
+      <p class="sidebar-body">{{ .Params.t2_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.t2_sidebar_2 }}</p>
+    </div>
+
+    <div class="component-content reveal">
+      <p class="tool-lead">{{ .Params.t2_lead }}</p>
+      <p>{{ .Params.t2_body_1 }}</p>
+      <p>{{ .Params.t2_body_2 }}</p>
+      <div class="tool-tags">
+        {{ range .Params.t2_tags }}<span class="tool-tag">{{ . }}</span>{{ end }}
+      </div>
+      <div class="tool-page-links">
+        <a href="{{ .Params.t2_primary_link }}" class="button primary" target="_blank" rel="noopener">{{ .Params.t2_primary_text }}</a>
+      </div>
+    </div>
+
+  </div>
+</section>

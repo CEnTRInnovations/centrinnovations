@@ -1,0 +1,20 @@
+{{/* layouts/partials/blocks/wt-who.html */}}
+<section class="wt-who">
+  <div class="section-inner-wide">
+
+    <div class="who-header reveal">
+      <span class="eyebrow">{{ .Params.who_eyebrow }}</span>
+      <h2>{{ .Params.who_title }}</h2>
+    </div>
+
+    <div class="who-grid reveal">
+      {{ range .Params.who_cards }}
+      <div class="who-card">
+        <h3>{{ .role }}</h3>
+        <p>{{ .body }}</p>
+      </div>
+      {{ end }}
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,39 @@
+{{/* layouts/partials/blocks/map-field.html */}}
+<section class="map-field">
+  <div class="section-inner section-inner--reverse">
+
+    <div class="component-content reveal">
+      <div class="map-quote">
+        <p>{{ .Params.field_quote }}</p>
+      </div>
+      <div class="map-system-links">
+        <span class="eyebrow" style="display:block;margin-bottom:1rem;">Part of the CEnTR* System</span>
+        <div class="system-chain">
+          <div class="chain-item chain-seek">
+            <strong>CEnTR*SEEK</strong>
+            <span>Surface the work</span>
+          </div>
+          <div class="chain-arrow">→</div>
+          <div class="chain-item chain-map">
+            <strong>CEnTR*MAP</strong>
+            <span>Understand the terrain</span>
+          </div>
+          <div class="chain-arrow">→</div>
+          <div class="chain-item chain-impact">
+            <strong>CEnTR*IMPACT</strong>
+            <span>Measure the value</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.field_eyebrow }}</span>
+      <h2>{{ .Params.field_title }}</h2>
+      <div class="sidebar-stripe map-stripe"></div>
+      <p class="sidebar-body">{{ .Params.field_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.field_sidebar_2 }}</p>
+    </div>
+
+  </div>
+</section>

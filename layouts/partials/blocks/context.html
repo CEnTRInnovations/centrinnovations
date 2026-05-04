@@ -1,0 +1,43 @@
+{{/* layouts/partials/blocks/context.html
+     Shared context section for CEnTR* product pages.
+     Expects:
+       context_section_class   — e.g. "seek-context"
+       context_stripe_class    — e.g. "seek-stripe"
+       context_callout_class   — e.g. "seek-callout"
+       context_eyebrow
+       context_title
+       context_sidebar_1
+       context_sidebar_2
+       context_callout
+       context_body_1
+       context_body_2
+       context_report_url      — optional, IMPACT only
+       context_report_text     — optional, IMPACT only
+*/}}
+<section class="{{ .Params.context_section_class }}">
+  <div class="section-inner">
+
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.context_eyebrow }}</span>
+      <h2>{{ .Params.context_title }}</h2>
+      <div class="sidebar-stripe {{ .Params.context_stripe_class }}"></div>
+      <p class="sidebar-body">{{ .Params.context_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.context_sidebar_2 }}</p>
+    </div>
+
+    <div class="context-content reveal">
+      <div class="{{ .Params.context_callout_class }}">
+        <p>{{ .Params.context_callout }}</p>
+      </div>
+      <p>{{ .Params.context_body_1 }}</p>
+      <p>{{ .Params.context_body_2 }}</p>
+      {{ if .Params.context_report_url }}
+      <a href="{{ partial "smart-url.html" (dict "url" .Params.context_report_url) }}"
+         class="report-link" target="_blank" rel="noopener">
+        {{ .Params.context_report_text }}
+      </a>
+      {{ end }}
+    </div>
+
+  </div>
+</section>

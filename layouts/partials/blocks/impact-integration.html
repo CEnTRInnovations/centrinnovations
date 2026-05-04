@@ -1,0 +1,24 @@
+{{/* layouts/partials/blocks/impact-integration.html */}}
+<section class="integration-section">
+  <div class="section-inner">
+
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.integration_eyebrow }}</span>
+      <h2>{{ .Params.integration_title }}</h2>
+      <div class="sidebar-stripe integration-stripe"></div>
+      <p class="sidebar-body">{{ .Params.integration_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.integration_sidebar_2 }}</p>
+    </div>
+
+    <div class="integration-grid reveal">
+      {{ range .Params.integration_cards }}
+      <div class="integration-card">
+        <div class="card-bar {{ .bar }}"></div>
+        <h3>{{ .title }}</h3>
+        <p>{{ .body }}</p>
+      </div>
+      {{ end }}
+    </div>
+
+  </div>
+</section>

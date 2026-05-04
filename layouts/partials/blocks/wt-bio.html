@@ -1,0 +1,18 @@
+{{/* layouts/partials/blocks/wt-bio.html */}}
+<section class="wt-bio">
+  <div class="section-inner">
+
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.bio_eyebrow }}</span>
+      <h2>{{ .Params.bio_title }}</h2>
+      <div class="sidebar-stripe wt-stripe"></div>
+    </div>
+
+    <div class="component-content reveal">
+      <p>{{ .Params.bio_body_1 }}</p>
+      <p>{{ .Params.bio_body_2 }}</p>
+      <a href="{{ .Params.bio_link }}" class="button primary" target="_blank" rel="noopener">{{ .Params.bio_cta }}</a>
+    </div>
+
+  </div>
+</section>

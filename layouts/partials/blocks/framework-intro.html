@@ -1,0 +1,29 @@
+{{/* layouts/partials/blocks/framework-intro.html */}}
+<section class="intro-section">
+  <div class="intro-inner">
+    <div class="intro-text reveal">
+      <span class="eyebrow">{{ .Params.intro_eyebrow }}</span>
+      <h2>{{ .Params.intro_title }}</h2>
+      {{ range .Params.intro_body }}
+      <p>{{ . }}</p>
+      {{ end }}
+    </div>
+
+    <div class="cross-section reveal">
+      <div class="layer-diagram-wrap">
+        <img
+          src="{{ "assets/layer_analysis.png" | relURL }}"
+          alt="Four-layer cross-section model: stone foundation (Stratigraphy), landscape (Topography), transit infrastructure (Infrastructure), and built city (Architecture)"
+          class="layer-diagram-img"
+        />
+        {{ range .Params.intro_diagram_labels }}
+        <div class="diagram-label {{ .class }}">
+          <span class="dlabel-name">{{ .name }}</span>
+          <span class="dlabel-sub">{{ .sub }}</span>
+        </div>
+        {{ end }}
+      </div>
+      <p class="cross-section-note">{{ .Params.intro_diagram_note }}</p>
+    </div>
+  </div>
+</section>

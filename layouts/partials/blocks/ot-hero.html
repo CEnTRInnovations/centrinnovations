@@ -1,0 +1,23 @@
+{{/* layouts/partials/blocks/ot-hero.html */}}
+<section class="page-hero ot-hero">
+  <div class="hero-inner">
+
+    <div class="hero-text reveal">
+      <span class="eyebrow">{{ .Params.hero_eyebrow }}</span>
+      <h1>{{ .Params.hero_title }}</h1>
+      <p class="hero-lead">{{ .Params.hero_lead_1 }}</p>
+      {{ if .Params.hero_lead_2 }}
+      <p class="hero-lead" style="margin-top:-0.5rem;">{{ .Params.hero_lead_2 }}</p>
+      {{ end }}
+    </div>
+
+    <div class="hero-visual reveal">
+      <img
+        src="/assets/basket-tools.png"
+        alt="Botanical illustration of basket weaving tools"
+        class="hero-botanical ot-hero-botanical"
+      />
+    </div>
+
+  </div>
+</section>

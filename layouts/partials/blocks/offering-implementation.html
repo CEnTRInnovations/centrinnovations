@@ -1,0 +1,29 @@
+{{/* layouts/partials/blocks/wt-offering-implementation.html */}}
+<section class="wt-offering wt-offering--two" id="implementation">
+  <div class="section-inner">
+
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.o2_eyebrow }}</span>
+      <h2>{{ .Params.o2_title }}</h2>
+      <div class="sidebar-stripe wt-stripe"></div>
+      <p class="sidebar-body">{{ .Params.o2_sidebar_1 | safeHTML }}</p>
+      <p class="sidebar-body">{{ .Params.o2_sidebar_2 }}</p>
+    </div>
+
+    <div class="component-content reveal">
+      <p class="offering-lead">{{ .Params.o2_lead }}</p>
+      <p>{{ .Params.o2_body_1 }}</p>
+      <p>{{ .Params.o2_body_2 }}</p>
+      <div class="wt-deliverables">
+        <span class="deliverables-label">{{ .Params.o2_deliverables_label }}</span>
+        <ul>
+          {{ range .Params.o2_deliverables }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      <p class="wt-format"><em>Format:</em> {{ .Params.o2_format }}</p>
+    </div>
+
+  </div>
+</section>
