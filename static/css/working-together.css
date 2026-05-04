@@ -1,45 +1,26 @@
 /* =============================================
    Working Together page — component styles
    Loaded only on /working-together/ via baseof.html
+   Structural layout from styles.css
    Color identity: warm mauve / earth tones
 ============================================= */
 
 :root {
-  /* Working Together — warm earth / mauve */
   --wt-deep:   #5A3A4A;
   --wt-mid:    #7A4A62;
   --wt-light:  #A07088;
   --wt-bg:     #EEE0E6;
 
-  /* Offering accents — step progression */
+  /* Offering step progression */
   --wt-one:    #3B6B35;   /* forest green  — before / foundational */
   --wt-two:    #3F5E78;   /* steel blue    — with tools */
   --wt-three:  #8C6E45;   /* warm amber    — beyond / strategy */
 }
 
 /* ── HERO ── */
-.wt-hero {
-  background: var(--bg-main, #F6F2E7);
-  border-bottom: 1px solid rgba(0,0,0,0.055);
-  overflow: hidden;
-  position: relative;
-}
+/* .page-hero background/border/texture from styles.css */
 
-.wt-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    180deg,
-    transparent 0px,
-    transparent 38px,
-    rgba(0,0,0,0.018) 38px,
-    rgba(0,0,0,0.018) 40px
-  );
-  pointer-events: none;
-}
-
-.wt-hero-inner {
+.wt-hero .hero-inner {
   max-width: 1180px;
   margin: 0 auto;
   padding: 5.5rem 1.25rem 5rem;
@@ -50,74 +31,38 @@
   position: relative;
 }
 
-.wt-hero h1 {
-  color: var(--wt-deep);
-  margin-bottom: 1.25rem;
-}
+.wt-hero h1 { color: var(--wt-deep); }
 
-.wt-hero .lead {
-  font-size: 1.1rem;
-  color: var(--text-muted, #6b6760);
-  max-width: 500px;
-  margin-bottom: 0.75rem;
-}
-
-.wt-hero-visual {
+.wt-hero .hero-visual {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.wt-hero-botanical-frame {
-  display: inline-block;
-  background: #f9f5ec;
-  padding: 0.9rem 0.9rem 2.5rem;
-  box-shadow:
-    0 4px 12px rgba(0,0,0,0.12),
-    0 12px 40px rgba(0,0,0,0.10),
-    0 1px 3px rgba(0,0,0,0.08);
-  transform: rotate(-1.75deg);
-  border: 1px solid rgba(0,0,0,0.07);
-}
-
 .wt-hero-botanical {
-  width: 100%;
-  max-width: 320px;
+  width: 72%;
+  max-width: 400px;
   display: block;
+  mix-blend-mode: multiply;
+  transform: translateX(-4%) translateY(-4%);
 }
 
 @media (max-width: 768px) {
-  .wt-hero-inner {
+  .wt-hero .hero-inner {
     grid-template-columns: 1fr;
     padding: 3.5rem 1.25rem 2rem;
   }
-  .wt-hero-visual {
-    display: none;
-  }
+  .wt-hero .hero-visual { display: none; }
 }
 
 /* ── SHARED STRIPE ── */
 .wt-stripe {
-  width: 36px;
-  height: 3px;
   background: var(--wt-mid);
-  margin: 1rem 0 1.5rem;
-  border-radius: 2px;
 }
 
 /* ── FRAMING ── */
 .wt-framing {
   background: var(--bg-light, #F0EAD8);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-.wt-framing .section-inner {
-  padding: 4rem 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  gap: 4rem;
-  align-items: flex-start;
 }
 
 /* ── OFFERINGS ── */
@@ -125,16 +70,6 @@
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-.wt-offering .section-inner {
-  padding: 4.5rem 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  gap: 4rem;
-  align-items: flex-start;
-}
-
-/* Alternating background */
 .wt-offering--one   { background: var(--bg-main, #F6F2E7); }
 .wt-offering--two   { background: var(--bg-light, #F0EAD8); }
 .wt-offering--three { background: var(--bg-warm, #EAE0CA); }
@@ -149,6 +84,7 @@
 .wt-offering--two   .wt-stripe { background: var(--wt-two); }
 .wt-offering--three .wt-stripe { background: var(--wt-three); }
 
+/* ── OFFERING LEAD ── */
 .offering-lead {
   font-size: 1.05rem;
   font-style: italic;
@@ -241,9 +177,7 @@
   margin-bottom: 2.5rem;
 }
 
-.who-header .eyebrow {
-  color: var(--wt-mid);
-}
+.who-header .eyebrow { color: var(--wt-mid); }
 
 .who-grid {
   display: grid;
@@ -276,16 +210,6 @@
 /* ── BIO ── */
 .wt-bio {
   background: var(--bg-light, #F0EAD8);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-.wt-bio .section-inner {
-  padding: 4.5rem 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  gap: 4rem;
-  align-items: flex-start;
 }
 
 .wt-bio .component-content p {
@@ -321,23 +245,8 @@
   text-align: center;
 }
 
-.cta-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  .wt-framing .section-inner,
-  .wt-offering .section-inner,
-  .wt-bio .section-inner {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 3rem 1.25rem;
-  }
-
   .who-grid {
     grid-template-columns: 1fr;
   }

@@ -47,17 +47,21 @@
   pointer-events: none;
 }
 
-.hero-inner {
+/* Two-column grid matching the shared hero layout */
+.framework-hero .hero-inner {
   max-width: 1180px;
   margin: 0 auto;
   padding: 5rem 1.25rem 4rem;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3.5rem;
+  align-items: center;
   position: relative;
 }
 
 .framework-hero h1 {
   font-size: 3.2rem;
   line-height: 1.1;
-  max-width: 680px;
   margin-bottom: 1.5rem;
 }
 
@@ -66,98 +70,62 @@
   color: var(--strat-mid);
 }
 
-.hero-lead {
+.framework-hero .hero-lead {
   font-size: 1.15rem;
-  max-width: 560px;
+  max-width: 520px;
   color: #5a5a5a;
   margin-bottom: 2rem;
 }
 
-/* ── ICON STRIP NAV ── */
-.framework-icon-strip {
+/* Visual column */
+.framework-hero .hero-visual {
   display: flex;
-  align-items: center;
-  gap: 0;
-  margin-top: 2rem;
-}
-
-.framework-strip-item {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  text-decoration: none;
-  color: inherit;
-  flex-shrink: 0;
-}
-
-.framework-strip-item:hover { opacity: 0.75; }
-
-.framework-strip-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  align-items: center;
+  align-self: center;
 }
 
-.framework-strip-icon img {
-  width: 60%;
-  height: 60%;
-  object-fit: contain;
+/* Botanical: constrain height for portrait image */
+.framework-hero .hero-botanical {
+  max-height: 420px;
+  width: auto;
+  max-width: 100%;
 }
 
+/* Strip: 4 items, slightly compressed to stay on one row */
+.framework-hero .hero-strip {
+  margin-top: 2rem;
+  flex-wrap: nowrap;
+}
+
+.framework-hero .hero-strip-item {
+  gap: 0.5rem;
+}
+
+.framework-hero .hero-strip-label strong {
+  font-size: 0.68rem;
+}
+
+.framework-hero .hero-strip-label span {
+  font-size: 0.63rem;
+}
+
+.framework-hero .hero-strip-divider {
+  margin: 0 0.75rem;
+}
+
+/* Icon backgrounds for framework strip */
 .fstrip-strat { background: var(--strat-bg); }
 .fstrip-topo  { background: var(--topo-bg); }
 .fstrip-infra { background: var(--infra-bg); }
 .fstrip-arch  { background: var(--arch-bg); }
-
-.framework-strip-label {
-  display: flex;
-  flex-direction: column;
-  gap: 0.05rem;
-}
-
-.framework-strip-label strong {
-  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  color: var(--text, #3E3B35);
-}
-
-.framework-strip-label span {
-  font-size: 0.68rem;
-  color: var(--text-muted, #6b6760);
-  line-height: 1.3;
-}
-
-.framework-strip-divider {
-  width: 1px;
-  height: 32px;
-  background: rgba(0,0,0,0.12);
-  margin: 0 1.1rem;
-  flex-shrink: 0;
-}
-
-/* ── RIPPLE ILLUSTRATION ── */
-.hero-ripple {
-  max-width: 560px;
-  margin: 2rem 0 0;
-}
-
-.hero-ripple img {
-  width: 100%;
-  height: auto;
-  display: block;
-  opacity: 0.88;
-}
 
 /* ── INTRO ── */
 .intro-section {
   background: var(--bg-main);
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
+
 .intro-inner {
   max-width: 1180px;
   margin: 0 auto;
@@ -167,11 +135,13 @@
   gap: 5rem;
   align-items: start;
 }
+
 .intro-text h2 {
   font-size: 2rem;
   max-width: 480px;
   margin-bottom: 1.25rem;
 }
+
 .intro-text p {
   max-width: 500px;
   color: #5a5a5a;
@@ -186,12 +156,12 @@
   display: inline-block;
   width: 100%;
 }
+
 .layer-diagram-img {
   width: 100%;
   max-width: 460px;
   display: block;
   border-radius: 8px;
-  /* box-shadow: 0 4px 24px rgba(0,0,0,0.10); */
 }
 
 .diagram-label {
@@ -203,6 +173,7 @@
   transform: translateX(100%);
   padding-left: 0.75rem;
 }
+
 .diagram-label::before {
   content: "";
   position: absolute;
@@ -213,6 +184,7 @@
   background: currentColor;
   opacity: 0.4;
 }
+
 .dlabel-name {
   font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
   font-size: 0.75rem;
@@ -220,12 +192,14 @@
   font-weight: 500;
   line-height: 1.2;
 }
+
 .dlabel-sub {
   font-family: "Alegreya Sans", sans-serif;
   font-size: 0.68rem;
   opacity: 0.65;
   font-style: italic;
 }
+
 .diagram-label-arch  { top: 12%; color: var(--arch-mid); }
 .diagram-label-infra { top: 38%; color: var(--infra-mid); }
 .diagram-label-topo  { top: 60%; color: var(--topo-mid); }
@@ -244,6 +218,7 @@
   border-bottom: 1px solid rgba(0,0,0,0.06);
   position: relative;
 }
+
 .layer-inner {
   max-width: 1180px;
   margin: 0 auto;
@@ -253,9 +228,11 @@
   gap: 5rem;
   align-items: start;
 }
+
 .layer-section:nth-child(even) .layer-inner {
   grid-template-columns: 1fr 280px;
 }
+
 .layer-section:nth-child(even) .layer-sidebar { order: 2; }
 .layer-section:nth-child(even) .layer-content { order: 1; }
 
@@ -263,6 +240,7 @@
   position: sticky;
   top: 80px;
 }
+
 .layer-marker {
   width: 56px;
   height: 56px;
@@ -276,36 +254,43 @@
   color: white;
   font-style: italic;
 }
+
 .layer-num {
   font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
   font-size: 0.68rem;
   letter-spacing: 0.14em;
   margin-bottom: 0.35rem;
 }
+
 .layer-title {
   font-family: "Alegreya", serif;
   font-size: 2rem;
   line-height: 1.1;
   margin-bottom: 0.5rem;
 }
+
 .layer-subtitle {
   font-size: 0.9rem;
   font-style: italic;
   color: #777;
   margin-bottom: 1.5rem;
 }
+
 .layer-stripe {
   height: 3px;
   border-radius: 2px;
   width: 48px;
   margin-bottom: 1.5rem;
 }
+
 .layer-content h3 {
   font-size: 1.3rem;
   margin-bottom: 0.75rem;
   margin-top: 2rem;
 }
+
 .layer-content h3:first-child { margin-top: 0; }
+
 .layer-content p {
   max-width: 580px;
   color: #5a5a5a;
@@ -319,6 +304,7 @@
   gap: 0.5rem;
   margin: 1.25rem 0;
 }
+
 .concept-tag {
   padding: 0.3rem 0.75rem;
   border-radius: 20px;
@@ -371,84 +357,6 @@
 .arch .concept-tag  { background: rgba(74,42,58,0.08); border-color: rgba(74,42,58,0.25); color: var(--arch-deep); }
 .arch .layer-quote  { border-color: var(--arch-mid); color: var(--arch-deep); background: rgba(74,42,58,0.04); }
 
-/* ── RELATIONS SECTION ── */
-.relations-section {
-  background: var(--bg-main);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-.relations-inner {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 5rem 1.25rem;
-}
-.relations-inner h2 {
-  font-size: 2rem;
-  max-width: 560px;
-  margin-bottom: 1rem;
-}
-.relations-inner > p {
-  max-width: 580px;
-  color: #5a5a5a;
-  margin-bottom: 3rem;
-}
-.relations-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-.relation-card {
-  background: white;
-  border-radius: 10px;
-  padding: 1.5rem;
-  border: 1px solid rgba(0,0,0,0.06);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-}
-.relation-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
-.relation-card p  { font-size: 0.9rem; color: #666; max-width: none; }
-.relation-layers  { display: flex; gap: 0.35rem; margin-bottom: 0.75rem; }
-.rl { height: 6px; flex: 1; border-radius: 3px; }
-.rl-strat { background: var(--strat-mid); }
-.rl-topo  { background: var(--topo-mid); }
-.rl-infra { background: var(--infra-mid); }
-.rl-arch  { background: var(--arch-mid); }
-
-/* ── CTA ── */
-.cta-section { background: var(--bg-cta); text-align: center; }
-.cta-inner {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 5rem 1.25rem;
-}
-.cta-inner h2 { font-size: 2rem; margin-bottom: 1rem; }
-.cta-inner p  { max-width: 480px; margin: 0 auto 2rem; color: #5a5a5a; }
-
-/* Scroll reveal */
-.reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
-}
-.reveal.visible { opacity: 1; transform: none; }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 860px) {
-  .intro-inner,
-  .layer-inner,
-  .layer-section:nth-child(even) .layer-inner {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-  .layer-section:nth-child(even) .layer-sidebar,
-  .layer-section:nth-child(even) .layer-content { order: unset; }
-  .layer-sidebar { position: static; }
-  .framework-hero h1 { font-size: 2.2rem; }
-  .framework-icon-strip { flex-wrap: wrap; gap: 1rem; }
-  .framework-strip-divider { display: none; }
-  .relations-header { flex-direction: column; gap: 2rem; }
-.relations-header-image { flex: none; width: 100%; max-width: 320px; }
-.relations-grid { grid-template-columns: 1fr; }
-}
-
 /* ── SIDEBAR BOTANICAL ICONS ── */
 .layer-sidebar-icon {
   margin-top: 1.75rem;
@@ -474,6 +382,7 @@
   background: var(--bg-main);
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
+
 .relations-inner {
   max-width: 1180px;
   margin: 0 auto;
@@ -487,9 +396,7 @@
   margin-bottom: 3rem;
 }
 
-.relations-header-text {
-  flex: 1;
-}
+.relations-header-text { flex: 1; }
 
 .relations-header-text h2 {
   font-size: 2rem;
@@ -517,4 +424,73 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+}
+
+.relation-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.relation-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+.relation-card p  { font-size: 0.9rem; color: #666; max-width: none; }
+
+.relation-layers  { display: flex; gap: 0.35rem; margin-bottom: 0.75rem; }
+.rl { height: 6px; flex: 1; border-radius: 3px; }
+.rl-strat { background: var(--strat-mid); }
+.rl-topo  { background: var(--topo-mid); }
+.rl-infra { background: var(--infra-mid); }
+.rl-arch  { background: var(--arch-mid); }
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 860px) {
+  .framework-hero .hero-inner {
+    grid-template-columns: 1fr;
+    padding: 3.5rem 1.25rem 2.5rem;
+  }
+  .framework-hero .hero-visual {
+    display: none;
+  }
+  .framework-hero .hero-strip {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .framework-hero .hero-strip-divider {
+    display: none;
+  }
+  .framework-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .intro-inner,
+  .layer-inner,
+  .layer-section:nth-child(even) .layer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .layer-section:nth-child(even) .layer-sidebar,
+  .layer-section:nth-child(even) .layer-content { order: unset; }
+  .layer-sidebar { position: static; }
+
+  .relations-header {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .relations-header-image {
+    flex: none;
+    width: 100%;
+    max-width: 320px;
+  }
+  .relations-grid { grid-template-columns: 1fr; }
 }

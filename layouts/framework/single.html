@@ -1,32 +1,6 @@
+{{/* layouts/framework/single.html */}}
 {{ define "main" }}
-  {{ partial "framework/hero.html" . }}
-  {{ partial "framework/intro.html" . }}
-  {{ partial "framework/layers.html" . }}
-  {{ partial "framework/relations.html" . }}
-  {{ partial "framework/cta.html" . }}
-{{ end }}
-
-{{ define "scripts" }}
-<script>
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  reveals.forEach(el => observer.observe(el));
-
-  // Smooth strip scroll
-  document.querySelectorAll('.strip-item').forEach(item => {
-    item.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(item.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-</script>
+  {{ range .Params.blocks }}
+    {{ partial (printf "blocks/%s.html" .block) $ }}
+  {{ end }}
 {{ end }}

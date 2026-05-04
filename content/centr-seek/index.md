@@ -5,17 +5,23 @@ layout: "seek"
 type: "seek"
 
 blocks:
-  - block: "seek-hero"
-  - block: "seek-context"
+  - block: "hero"
+  - block: "context"
   - block: "seek-pipeline"
   - block: "seek-transparency"
   - block: "seek-outputs"
 #  - block: "seek-field"
-  - block: "seek-cta"
+  - block: "cta"
 
 # ─────────────────────────────────────────
 # HERO
 # ─────────────────────────────────────────
+hero_section_class: "seek-hero"
+hero_botanical: "assets/fern.png"
+hero_botanical_alt: "Botanical illustration of a fern with exposed root system"
+hero_quote: "Finding what's already there, without asking anyone to report it."
+hero_quote_class: ""
+
 hero_eyebrow: "The CEnTR* System"
 hero_title: "CEnTR*SEEK"
 hero_lead_1: "Community-engaged research is happening across your institution right now. Most of it is invisible, distributed across websites, reports, course descriptions, and publications that were never designed with discoverability in mind."
@@ -46,6 +52,10 @@ hero_strip:
 # ─────────────────────────────────────────
 # CONTEXT
 # ─────────────────────────────────────────
+context_section_class: "seek-context"
+context_stripe_class: "seek-stripe"
+context_callout_class: "seek-callout"
+
 context_eyebrow: "The Problem"
 context_title: "You can't coordinate what you can't see."
 context_sidebar_1: "Community engagement offices, centers for public service, and evaluation teams face the same problem: the engaged work happening across their institution is nearly impossible to see in full."
@@ -55,9 +65,8 @@ context_body_1: "Traditional approaches rely on self-reporting, keyword searches
 context_body_2: "CEnTR*SEEK transforms dispersed institutional text into structured representations of engagement, giving institutions a comprehensive, accurate picture of their community-engaged landscape without creating new administrative burden."
 
 # ─────────────────────────────────────────
-# PIPELINE — Sources · Signals · Patterns · Understanding
+# PIPELINE
 # ─────────────────────────────────────────
-
 pipeline_eyebrow: "How It Works"
 pipeline_title: "From sources to understanding, a modular pipeline for institutional text."
 pipeline_sidebar_1: "CEnTR*SEEK is designed as a modular, extensible system capable of operating at institutional scale. Its components can be independently updated or replaced, allowing it to evolve as needs change."
@@ -111,7 +120,7 @@ outputs_cards:
     class: "card-ingest"
 
 # ─────────────────────────────────────────
-# FIELD INFRASTRUCTURE
+# FIELD INFRASTRUCTURE (currently disabled in blocks)
 # ─────────────────────────────────────────
 field_eyebrow: "Beyond the Institution"
 field_title: "Infrastructure for a field, not just a campus."

@@ -36,90 +36,27 @@
 }
 .reveal.visible { opacity: 1; transform: none; }
 
-/* ── HERO ── */
-.impact-hero {
-  background: var(--bg-main, #F6F2E7);
-  border-bottom: 1px solid rgba(0,0,0,0.055);
-  overflow: hidden;
-  position: relative;
+/* IMPACT hero — page-specific color only.
+   Structural layout lives in styles.css (.page-hero, .hero-strip etc.) */
+
+.impact-hero h1 em { color: var(--cip-mid); }
+
+/* Slightly larger icon rings with shadow — IMPACT's visual treatment */
+.impact-hero .hero-strip-icon {
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.14);
 }
 
-.impact-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    180deg,
-    transparent 0px,
-    transparent 38px,
-    rgba(0,0,0,0.022) 38px,
-    rgba(0,0,0,0.022) 40px
-  );
-  pointer-events: none;
-}
-
-.hero-inner {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 5.5rem 1.25rem 5rem;
-  position: relative;
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 3.5rem;
-  align-items: center;
-}
-
-.hero-text h1 {
-  margin-bottom: 1.25rem;
-}
-
-.hero-text h1 em {
-  font-style: italic;
+/* Quote border and text color */
+.impact-hero .hero-quote p {
   color: var(--cip-mid);
 }
 
-.hero-lead {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  max-width: 540px;
-  margin-bottom: 0.85rem;
-  line-height: 1.65;
-}
-
-/* ── HERO VISUAL ── */
-.hero-visual {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.hero-botanical {
-  width: 62%;
-  max-width: 380px;
-  transform: translateX(-8%) translateY(-8%);
-  display: block;
-}
-
-.hero-quote {
-  position: absolute;
-  right: 5%;
-  bottom: 14%;
-  max-width: 230px;
-  background: rgba(246,242,231,0.9);
-  padding: 0.75rem 1rem 0.75rem 1.25rem;
-  border-radius: 4px;
-  border-left: 2px solid rgba(0,0,0,0.12);
-}
-
-.impact-quote p {
-  font-family: "Alegreya", serif;
-  font-style: italic;
-  font-size: 0.85rem;
-  color: var(--cip-mid);
-  line-height: 1.55;
-  max-width: none;
-  margin: 0;
-}
+/* Icon circle backgrounds — one per component */
+.impact-icon--cip { background: rgba(63,94,120,0.15); }
+.impact-icon--sce { background: rgba(140,110,69,0.15); }
+.impact-icon--cet { background: rgba(74,107,66,0.15); }
 
 /* ── COMPONENT CIRCLES NAV ── */
 .component-circles {

@@ -16,32 +16,15 @@
   --narrative-color: #3F5E78;  /* steel blue — narrative/text processing */
 }
 
-/* ── HERO ── */
-.map-hero {
-  background: var(--bg-main, #F6F2E7);
-  border-bottom: 1px solid rgba(0,0,0,0.055);
-  overflow: hidden;
-  position: relative;
-}
+/* MAP hero — page-specific color only.
+   Structural layout lives in styles.css (.page-hero, .hero-strip etc.) */
 
-.map-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    180deg,
-    transparent 0px,
-    transparent 38px,
-    rgba(0,0,0,0.022) 38px,
-    rgba(0,0,0,0.022) 40px
-  );
-  pointer-events: none;
-}
+.map-hero h1 em { color: var(--map-mid); }
 
-.map-hero h1 em {
-  font-style: italic;
-  color: var(--map-mid);
-}
+/* Icon circle backgrounds — one per framework pillar */
+.map-icon--assets    { background: #DCE4D6; }
+.map-icon--systems   { background: #EADFD3; }
+.map-icon--narrative { background: #E7DADF; }
 
 /* ── ICON STRIP ── */
 .map-icon-strip {

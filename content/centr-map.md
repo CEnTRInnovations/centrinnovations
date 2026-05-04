@@ -4,9 +4,22 @@ description: "Reveal, model, and strengthen community-engaged research through a
 layout: "map"
 type: "map"
 
+blocks:
+  - block: "hero"
+  - block: "context"
+  - block: "map-framework"
+  - block: "map-platform"
+  - block: "map-uses"
+  - block: "map-field"
+  - block: "cta"
+
 # ─────────────────────────────────────────
 # HERO
 # ─────────────────────────────────────────
+hero_section_class: "map-hero"
+hero_botanical: "assets/goldenrod.png"
+hero_botanical_alt: "Botanical illustration of goldenrod"
+
 hero_eyebrow: "The CEnTR* System"
 hero_title: "CEnTR*MAP"
 hero_lead_1: "Community-engaged work is inherently relational and shaped by local knowledge, but institutional systems represent it in fragments. A list of outputs. A grant report. A number of people served."
@@ -15,19 +28,16 @@ hero_lead_2: "CEnTR*MAP starts somewhere different. Not with what communities la
 hero_strip:
   - name: "Assets"
     label: "Community Cultural Wealth"
-    class: "strip-assets"
     icon: "/assets/icons/seedling.png"
     icon_class: "map-icon--assets"
     anchor: "framework"
   - name: "Systems"
     label: "Ecological Framework"
-    class: "strip-systems"
     icon: "/assets/icons/roots.png"
     icon_class: "map-icon--systems"
     anchor: "framework"
   - name: "Narrative"
     label: "From Text to Structure"
-    class: "strip-narrative"
     icon: "/assets/icons/book.png"
     icon_class: "map-icon--narrative"
     anchor: "platform"
@@ -35,12 +45,14 @@ hero_strip:
 # ─────────────────────────────────────────
 # CONTEXT
 # ─────────────────────────────────────────
+context_section_class: "map-context"
+context_stripe_class: "map-stripe"
+context_callout_class: "map-callout"
+
 context_eyebrow: "The Problem with Deficit Framing"
 context_title: "What you measure shapes what you see. Most systems are looking for the wrong things."
-
 context_sidebar_1: "Conventional documentation systems ask what communities lack. They record unmet needs, service gaps, and populations served, producing representations that position communities as recipients of institutional expertise rather than as sources of knowledge, strength, and leadership."
 context_sidebar_2: "This isn't just a representation problem. It shapes what research gets done, which partnerships are valued, and what counts as impact. It erodes the trust that community-engaged work depends on."
-
 context_callout: "CEnTR*MAP transforms what gets mapped, how relationships are understood, and what coordination becomes possible by centering community ecosystems rather than institutional categories."
 context_body_1: "CEnTR*MAP is grounded in Asset-Based Community Development, Community Cultural Wealth, and ecological systems thinking. These aren't rhetorical commitments, they are structural features of the platform that determine what gets revealed and how. That includes formal assets and informal ones: lived experience, community knowledge, informal leadership, cultural practices, and historical heritage that conventional systems never surface."
 context_body_2: "The platform also supports a reflective function: identifying deficit-oriented language in existing documentation and supporting more accurate, strengths-based representation. And because mapping is most powerful when communities and institutions build it together, CEnTR*MAP supports participatory processes, enabling co-creation and validation of shared ecosystem representations, rather than imposing a top-down view."
@@ -66,7 +78,7 @@ framework_f3_title: "Ecological Systems Thinking"
 framework_f3_body: "Drawn from Bronfenbrenner's ecological framework, CEnTR*MAP organizes its capital taxonomy within a nested systems model, situating assets from the deeply personal to the broadly historical. Crucially, this framework centers relationships as a primary unit of analysis: trust, collaboration, and influence are not secondary features but the connective tissue of the ecosystem. Engaged work is understood not as a transaction between an institution and a community, but as something embedded in layers of relationship, history, and structure that shape what is possible and what persists."
 
 # ─────────────────────────────────────────
-# PLATFORM / HOW IT WORKS
+# PLATFORM
 # ─────────────────────────────────────────
 platform_eyebrow: "Key Features"
 platform_title: "Narrative as data. Relationships as the unit of analysis. The ecosystem as the output."
@@ -79,39 +91,33 @@ platform_steps:
     body: "Processes transcripts, reports, and memos without requiring users to manually structure inputs, treating existing narrative as the living starting point for ecosystem analysis."
     icon: "/assets/icons/basket.png"
     circle: "step-circle--assets"
-
   - num: "2"
     title: "Relationship-centered capital taxonomy"
     body: "Drawn from Community Cultural Wealth and ABCD frameworks, mapping assets and the connections between them across Microsystem, Mesosystem, Exosystem, and Macro-/Chronosystem levels, shifting from inventories to networked ecosystems."
     icon: "/assets/icons/dispersed.png"
     circle: "step-circle--systems"
-
   - num: "3"
     title: "Participatory asset-mapping framework"
     body: "Surfaces community strengths, from familial and linguistic capital to resistance capital and historical heritage, through a co-created process that enables communities and institutions to validate shared representations of their ecosystem."
     icon: "/assets/icons/field.png"
     circle: "step-circle--narrative"
-
   - num: "4"
     title: "Language support tool"
     body: "Identifies deficit-oriented framing and suggests asset-based alternatives, functioning as a reflective aid rather than a prescriptive editor, supporting researchers and students in examining how they represent community partners."
     icon: "/assets/icons/evaluated.png"
     circle: "step-circle--seek"
-
   - num: "5"
     title: "Living ecosystem maps and capital distribution visualizations"
     body: "Maintains a continuously evolving representation of community assets and relationships, supporting longitudinal analysis that guides coordination, identifies partnerships, reduces duplication, and strengthens strategic alignment."
     icon: "/assets/icons/report.png"
     circle: "step-circle--tan"
     hidden: true
-
   - num: "6"
     title: "Governance framework"
     body: "Centered on consent and shared stewardship, ensuring contributors retain control over how their data is used and represented, keeping knowledge connected to the communities who generated it."
     icon: "/assets/icons/basket.png"
     circle: "step-circle--assets"
     hidden: true
-
   - num: "7"
     title: "Modular architecture"
     body: "Designed for interoperability across institutional contexts, transforming engagement discovered through CEnTR*SEEK into structured ecosystem maps that inform evaluation through CEnTR*IMPACT."
@@ -131,15 +137,12 @@ uses_cards:
   - title: "Full-Spectrum Ecosystem Mapping"
     body: "Reveal the full range of community capital that conventional systems never surface — familial and linguistic capital, resistance capital, informal leadership, lived experience, historical heritage — and map the relationships between them to show how the ecosystem actually functions."
     class: "card-assets"
-
   - title: "Deficit Language Audit"
     body: "Identify where existing documentation frames communities in terms of need rather than strength, and support revision toward more accurate, equitable representation, giving researchers and students a tool to examine and improve how they position community partners."
     class: "card-systems"
-
   - title: "Equitable Impact Narratives"
     body: "Produce asset-centered reports for funders, accreditors, and leadership that position community contributions accurately — not as a backdrop to institutional work, but as its foundation — supporting strategic coordination and guiding future investment."
     class: "card-narrative"
-
   - title: "Longitudinal Ecosystem Tracking"
     body: "Maintain a living, continuously evolving record of community assets and relationships over time, giving institutions and partners a shared picture of how ecosystems develop, where alignment is strong, and where new coordination is needed."
     class: "card-assets"
