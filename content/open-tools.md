@@ -68,7 +68,7 @@ more_title: "More tools are in development."
 more_body_1: "The commons grows as the work grows. Additional open tools are planned as part of the broader CEnTR* system, including tools for community asset documentation and engagement pattern analysis."
 more_body_2: "If you're building something in this space and want to collaborate, or if you have a use case that none of these tools yet address, we'd like to hear about it."
 more_cta_text: "Get in touch"
-more_cta_link: "https://outlook.office.com/bookwithme/user/93badc8cbff54115aab9a542fbea0fdf@iu.edu?anonymous&ismsaljsauthenabled&ep=pcard"
+more_cta_link: "https://calendly.com/centrinnovations/45min"
 
 # ─────────────────────────────────────────
 # CTA

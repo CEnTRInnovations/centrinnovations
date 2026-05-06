@@ -109,7 +109,7 @@ cta_eyebrow: "Start a Conversation"
 cta_title: "Not sure where to begin? That's fine. We can figure it out together."
 cta_body: "Every institution is in a different place. Some need to start with definitions. Some have definitions and need tools. Some have tools and need strategy. Book a conversation and we'll figure out where you are, and what would actually help."
 cta_primary_text: "Book Time with Jeremy"
-cta_primary_url: "https://outlook.office.com/bookwithme/user/93badc8cbff54115aab9a542fbea0fdf@iu.edu?anonymous&ismsaljsauthenabled&ep=pcard"
+cta_primary_url: "https://calendly.com/centrinnovations/45min"
 cta_secondary_text: "Explore the Tools"
 cta_secondary_url: "/#system"
 ---

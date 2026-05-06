@@ -1,0 +1,520 @@
+/* =============================================
+   CEnTR*MAP page — component styles
+   Loaded only on /centr-map/ via baseof.html
+============================================= */
+
+:root {
+  /* MAP — warm amber/ochre, grounded and earthen */
+  --map-deep:    #3A2A0E;
+  --map-mid:     #7A5C1E;
+  --map-light:   #B08A42;
+  --map-bg:      #EDE3CC;
+
+  /* Framework pillar accents */
+  --assets-color:    #7A5C1E;  /* map amber — ABCD / assets */
+  --systems-color:   #4A6B42;  /* forest green — ecological systems */
+  --narrative-color: #3F5E78;  /* steel blue — narrative/text processing */
+}
+
+/* MAP hero — page-specific color only.
+   Structural layout lives in styles.css (.page-hero, .hero-strip etc.) */
+
+.map-hero h1 em { color: var(--map-mid); }
+
+/* Icon circle backgrounds — one per framework pillar */
+.map-icon--assets    { background: #DCE4D6; }
+.map-icon--systems   { background: #EADFD3; }
+.map-icon--narrative { background: #E7DADF; }
+
+/* ── ICON STRIP ── */
+.map-icon-strip {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 2rem;
+}
+
+.map-strip-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+.map-strip-item:hover { opacity: 0.75; }
+
+.map-strip-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.map-strip-icon img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.map-icon--assets    { background: #DCE4D6; }
+.map-icon--systems   { background: #EADFD3; }
+.map-icon--narrative { background: #E7DADF; }
+
+.map-strip-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+
+.map-strip-label strong {
+  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--text, #3E3B35);
+}
+
+.map-strip-label span {
+  font-size: 0.68rem;
+  color: var(--text-muted, #6b6760);
+  line-height: 1.3;
+}
+
+.map-strip-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(0,0,0,0.12);
+  margin: 0 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ── SHARED MAP STRIPE ── */
+.map-stripe { background: var(--map-mid); }
+
+/* ── CONTEXT ── */
+.map-context {
+  background: var(--bg-light, #F4EFE2);
+}
+
+.map-callout {
+  border-left: 3px solid var(--map-mid);
+  padding: 0.85rem 1.25rem;
+  background: rgba(122,92,30,0.05);
+  border-radius: 0 4px 4px 0;
+  margin: 0 0 1.5rem;
+  font-family: "Alegreya", serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--map-deep);
+  line-height: 1.5;
+}
+
+.map-callout p { max-width: none; margin: 0; }
+
+.context-content p {
+  font-size: 0.98rem;
+  color: var(--text-muted, #6b6760);
+  max-width: 560px;
+  margin-bottom: 1.25rem;
+}
+
+/* ── FRAMEWORK ── */
+.map-framework {
+  background: var(--map-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.055);
+}
+
+.framework-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 5.5rem 1.25rem;
+}
+
+.framework-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.framework-header h2 {
+  max-width: 700px;
+  margin: 0.5rem auto 0;
+  font-size: 2rem;
+}
+
+.framework-columns {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr 1px 1fr;
+  gap: 0 2.5rem;
+  align-items: start;
+}
+
+.framework-col-divider {
+  background: rgba(0,0,0,0.08);
+  align-self: stretch;
+}
+
+.framework-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.framework-col .eyebrow {
+  margin-bottom: 0.4rem;
+}
+
+.framework-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  flex-shrink: 0;
+}
+
+.framework-icon img {
+  width: 65%;
+  height: 65%;
+  object-fit: contain;
+}
+
+.framework-icon--assets    { background: #DCE4D6; }
+.framework-icon--systems   { background: #EADFD3; }
+.framework-icon--narrative { background: #E7DADF; }
+
+.framework-col--assets   h3 { color: var(--assets-color); }
+.framework-col--systems  h3 { color: var(--systems-color); }
+.framework-col--narrative h3 { color: var(--narrative-color); }
+
+.framework-col h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.65rem;
+  line-height: 1.25;
+}
+
+.framework-col p {
+  font-size: 0.88rem;
+  color: var(--text-muted, #6b6760);
+  max-width: none;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── PLATFORM ── */
+.map-platform {
+  background: var(--bg-main, #F6F2E7);
+  border-bottom: 1px solid rgba(0,0,0,0.055);
+}
+
+/* Horizontal flow — replaced with 2×2 card grid */
+.platform-flow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.platform-flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  background: var(--map-bg);
+  border-radius: 10px;
+  padding: 1.5rem 1.5rem 1.75rem;
+  border: 1px solid rgba(0,0,0,0.06);
+  min-width: 0;
+}
+
+.platform-step-num,
+.platform-step-badge {
+  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted, #6b6760);
+  margin-bottom: 0.85rem;
+  display: block;
+  line-height: 1;
+  background: none !important;
+  border-radius: 0 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.platform-step-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.platform-step-circle img {
+  width: 62%;
+  height: 62%;
+  object-fit: contain;
+}
+
+/* Circle colors cycling through site palette */
+.step-circle--assets   { background: #DCE4D6; } /* muted green */
+.step-circle--systems  { background: #EADFD3; } /* warm tan */
+.step-circle--narrative { background: #E7DADF; } /* dusty mauve */
+.step-circle--seek     { background: #D6E5E7; } /* slate teal */
+.step-circle--tan      { background: #EDE3CC; } /* map amber */
+
+.platform-step-title {
+  font-family: "Alegreya", serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+}
+
+/* Title colors matching circle accents */
+.platform-flow-step:nth-child(1) .platform-step-title { color: var(--assets-color); }
+.platform-flow-step:nth-child(2) .platform-step-title { color: var(--systems-color); }
+.platform-flow-step:nth-child(3) .platform-step-title { color: var(--narrative-color); }
+.platform-flow-step:nth-child(4) .platform-step-title { color: #2E6E78; }
+
+.platform-step-body {
+  font-size: 0.88rem;
+  color: var(--text-muted, #6b6760);
+  line-height: 1.55;
+  max-width: none;
+  margin: 0;
+}
+
+/* No arrows needed in grid layout */
+.platform-flow-arrow { display: none; }
+
+.platform-note {
+  margin-top: 2rem;
+  padding: 1rem 1.25rem;
+  background: var(--map-bg);
+  border-radius: 6px;
+  font-size: 0.88rem;
+  color: var(--text-muted, #6b6760);
+  font-style: italic;
+  max-width: none;
+  line-height: 1.55;
+}
+
+/* ── USE CASES ── */
+.map-uses {
+  background: var(--bg-light, #F4EFE2);
+  border-bottom: 1px solid rgba(0,0,0,0.055);
+}
+
+.map-uses .section-inner-wide {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 5.5rem 1.25rem;
+}
+
+/* Two-column: cards left, image right — image stays sticky */
+.map-uses-layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 5rem;
+  align-items: start;
+}
+
+.map-uses-left {}
+
+.map-uses-left .eyebrow {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.map-uses-left h2 {
+  margin-bottom: 2rem;
+}
+
+.map-uses-right {
+  position: sticky;
+  top: 80px;
+}
+
+.map-uses-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.9;
+}
+
+/* Cards — defined here since seek.css isn't loaded on this page */
+.map-use-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.map-use-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.1rem 1.4rem;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-left: 3px solid transparent;
+  margin-bottom: 0.75rem;
+}
+
+.map-use-card:last-child { margin-bottom: 0; }
+
+.map-use-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+}
+
+.map-use-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted, #6b6760);
+  max-width: none;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.card-assets    { border-left-color: var(--assets-color); }
+.card-systems   { border-left-color: var(--systems-color); }
+.card-narrative { border-left-color: var(--narrative-color); }
+
+/* ── FIELD INFRASTRUCTURE ── */
+.map-field {
+  background: var(--bg-main, #F6F2E7);
+  border-bottom: 1px solid rgba(0,0,0,0.055);
+}
+
+.map-quote {
+  border-left: 3px solid var(--map-mid);
+  padding: 0.75rem 1.25rem;
+  font-family: "Alegreya", serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  border-radius: 0 4px 4px 0;
+  background: rgba(122,92,30,0.04);
+  color: var(--map-deep);
+  margin-bottom: 2rem;
+}
+
+.map-quote p { max-width: none; margin: 0; }
+
+.map-system-links {
+  padding: 1.25rem 1.5rem;
+  background: var(--map-bg);
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.system-chain {
+  display: flex;
+  align-items: stretch;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.chain-item {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.85rem 1rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.chain-item strong {
+  font-family: "Alegreya", serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.chain-item span {
+  font-size: 0.78rem;
+  color: var(--text-muted, #6b6760);
+}
+
+.chain-seek   { background: rgba(46,110,120,0.1);  border-left: 3px solid #2E6E78; }
+.chain-map    { background: rgba(122,92,30,0.1);   border-left: 3px solid var(--map-mid); }
+.chain-impact { background: rgba(74,107,66,0.08);  border-left: 3px solid #4A6B42; }
+
+.chain-arrow {
+  display: flex;
+  align-items: center;
+  color: rgba(0,0,0,0.25);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .platform-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .platform-flow-step {
+    /* already left-aligned in grid layout */
+  }
+
+  .platform-step-circle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .map-uses-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .map-uses-right {
+    position: static;
+    order: -1;
+  }
+
+  .map-uses-image img {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .framework-columns {
+    grid-template-columns: 1fr;
+    gap: 2rem 0;
+  }
+
+  .framework-col-divider {
+    height: 1px;
+    width: 100%;
+    align-self: auto;
+  }
+
+  .framework-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .map-uses-header {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .map-uses-image img {
+    max-width: 100%;
+  }
+
+  .system-chain {
+    flex-direction: column;
+  }
+
+  .chain-arrow {
+    transform: rotate(90deg);
+    align-self: flex-start;
+    padding-left: 1rem;
+  }
+}

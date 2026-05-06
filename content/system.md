@@ -113,7 +113,7 @@ impact_link_text: "Explore CEnTR*IMPACT →"
 cta_title: "Ready to apply the system in your context?"
 cta_body: "If your institution is ready to move from fragmented documentation to coherent infrastructure for community-engaged scholarship, we'd be glad to talk."
 cta_primary_text: "Book Time with Jeremy"
-cta_primary_url: "https://outlook.office.com/bookwithme/user/93badc8cbff54115aab9a542fbea0fdf@iu.edu?anonymous&ismsaljsauthenabled&ep=pcard"
+cta_primary_url: "https://calendly.com/centrinnovations/45min"
 cta_secondary_text: "View the Framework"
 cta_secondary_url: "framework"
 ---

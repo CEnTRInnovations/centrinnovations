@@ -36,6 +36,34 @@ challenge:
     - icon: "/assets/icons/evaluated.png"
       text: "Evaluated using systems designed for traditional scholarship that fail to capture the forms of impact and value institutions are being asked to demonstrate."
 
+serve:
+  eyebrow: "Your Role"
+  title: "Where are you in this work?"
+  body: "We'll help you find the right path."
+ 
+  cards:
+    - role: "Faculty Affairs & Development"
+      icon: "/assets/icons/serve-researcher.png"
+      body: "Build evaluation systems that recognize the full range of engaged scholarship — and help faculty document their work in ways that travel across department lines, into P&T portfolios, and out to public audiences."
+ 
+    - role: "Community Engagement Offices"
+      icon: "/assets/icons/serve-community.png"
+      body: "Move from coordination to strategy. Use the tools and frameworks to build a credible, longitudinal case for the engagement your institution is already doing."
+ 
+    - role: "Provosts & Academic Leadership"
+      icon: "/assets/icons/serve-institutions.png"
+      body: "Ground strategic commitments in operational infrastructure. Make engagement legible to accreditors, funders, and governing boards — in terms they can evaluate."
+ 
+    - role: "Community Partners"
+      icon: "/assets/icons/serve-community.png"
+      body: "Participate in processes that represent your assets and priorities — not just as recipients of institutional documentation, but as co-interpreters of what the work means."
+ 
+    - role: "Researchers & Scholars"
+      icon: "/assets/icons/serve-researcher.png"
+      body: "Your community-engaged work is real scholarship. The systems that evaluate it often don't recognize it as such. We build the infrastructure that makes your work legible — to committees, funders, and the field."
+ 
+  fallback: "Not sure where you fit? <a href=\"/system/\">Explore the system</a> to see how it works."
+
 system:
   eyebrow: "Our System"
   title: "A connected system for making engagement visible, credible, and actionable."
@@ -139,12 +167,15 @@ bridge:
 
 cta:
   pre: "Ready to move from insight to action?"
-
+ 
   title: "Make the work visible. Build the trust to sustain it."
-
+ 
   body: "Whether you're mapping engagement for the first time or aligning institutional systems to support it, we can help you move from scattered efforts to coordinated, credible, and actionable practice."
-
+ 
   button_text: "Book time with Jeremy"
-  button_link: "https://outlook.office.com/bookwithme/user/93badc8cbff54115aab9a542fbea0fdf@iu.edu?anonymous&ismsaljsauthenabled&ep=pcard"
+  button_link: "https://calendly.com/centrinnovations/45min"
+ 
+  secondary_text: "Explore Working Together"
+  secondary_link: "/working-together/"
 
 ---

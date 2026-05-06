@@ -1,0 +1,146 @@
+/* =============================================
+   Open Tools page — component styles
+   Loaded only on /open-tools/ via baseof.html
+   Structural layout from styles.css
+   Color identity: forest green / tools palette
+============================================= */
+
+:root {
+  --ot-deep:   #2E4A2A;
+  --ot-mid:    #4A7A42;
+  --ot-light:  #7AA870;
+  --ot-bg:     #DCE8D8;
+}
+
+/* ── HERO ── */
+/* .page-hero background/border/texture from styles.css */
+
+.ot-hero .hero-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 5.5rem 1.25rem 5rem;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 3.5rem;
+  align-items: center;
+  position: relative;
+}
+
+.ot-hero h1 { color: var(--ot-deep); }
+
+.ot-hero .hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ot-hero-botanical {
+  width: 72%;
+  max-width: 360px;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+@media (max-width: 768px) {
+  .ot-hero .hero-inner {
+    grid-template-columns: 1fr;
+    padding: 3.5rem 1.25rem 2rem;
+  }
+  .ot-hero .hero-visual { display: none; }
+}
+
+/* ── SHARED STRIPE ── */
+.ot-stripe {
+  background: var(--ot-mid);
+}
+
+/* ── SECTION EYEBROW COLORS ── */
+.ot-philosophy .eyebrow,
+.ot-tool .eyebrow,
+.ot-more .eyebrow { color: var(--ot-mid); }
+
+/* ── SECTION BACKGROUNDS ── */
+.ot-philosophy { background: var(--bg-light, #F0EAD8); }
+.ot-tool--one  { background: var(--bg-main, #F6F2E7); }
+.ot-tool--two  { background: var(--bg-light, #F0EAD8); }
+.ot-more       { background: var(--bg-warm, #EAE0CA); }
+
+.ot-tool {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* ── TOOL ILLUSTRATION ── */
+.tool-page-illustration {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 1rem 0 1.25rem;
+  display: block;
+}
+
+/* ── TOOL LEAD ── */
+.tool-lead {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--text, #3E3B35);
+  margin-bottom: 1.25rem;
+  max-width: 520px;
+}
+
+/* ── TOOL TAGS ── */
+.tool-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.tool-tag {
+  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--ot-deep);
+  background: var(--ot-bg, #DCE8D8);
+  padding: 0.3rem 0.7rem;
+  border-radius: 3px;
+}
+
+/* ── TOOL LINKS ── */
+.tool-page-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+/* ── CTA ── */
+.ot-cta {
+  background: var(--bg-cta, #E3D7BE);
+  padding: 4.5rem 2rem;
+  text-align: center;
+}
+
+.ot-cta .cta-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ot-cta h2 {
+  margin: 0.75rem auto 1.25rem;
+  max-width: 520px;
+  text-align: center;
+}
+
+.ot-cta p {
+  color: var(--text-muted, #6b6760);
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -170,9 +170,9 @@ cet_formula_vars:
     desc: "Cascade score: partners, people served, and students involved (weight: 0.1)"
 
 cet_f1_title: "Intent as the condition of possibility"
-cet_f1_body: "$ℵ$, the Intentionality Factor, scales the entire engagement snapshot. A project with high activity but low intentionality scores accordingly. Genuine purpose is not just one variable among equals."
+cet_f1_body: "ℵ, the Intentionality Factor, scales the entire engagement snapshot. A project with high activity but low intentionality scores accordingly. Genuine purpose is not just one variable among equals."
 cet_f2_title: "Longitudinal, not just snapshots"
-cet_f2_body: "The CET tracks how an institution's engagement changes over time — $ΔI = I_2 - I_1$ — revealing patterns, growth, and gaps that single-project evaluations cannot show."
+cet_f2_body: "The CET tracks how an institution's engagement changes over time. revealing patterns, growth, and gaps that single-project evaluations cannot show."
 cet_f3_title: "Strategic planning support"
 cet_f3_body: "For administrators making the case for community engagement — to legislators, accreditors, and funders — the CET provides longitudinal evidence of institutional commitment, not just activity counts."
 

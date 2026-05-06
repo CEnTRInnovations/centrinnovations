@@ -1,7 +1,19 @@
-<section id="contact" class="cta">
+<section id="contact" class="cta cta--dark">
+  <!--<div class="cta-fern cta-fern--left" aria-hidden="true">
+    <img src="/assets/fern-left.png" alt="" />
+  </div>-->
   <div class="cta-inner">
+    {{ if .pre }}<p class="cta-pre">{{ .pre }}</p>{{ end }}
     <h2>{{ .title }}</h2>
     <p>{{ .body }}</p>
-    <a href="{{ .button_link }}" class="button primary" target="_blank" rel="noopener">{{ .button_text }}</a>
+    <div class="cta-buttons">
+      <a href="{{ .button_link }}" class="button cta-primary" target="_blank" rel="noopener">{{ .button_text }}</a>
+      {{ if .secondary_text }}
+      <a href="{{ .secondary_link }}" class="button cta-secondary">{{ .secondary_text }}</a>
+      {{ end }}
+    </div>
   </div>
+  <!--<div class="cta-fern cta-fern--right" aria-hidden="true">
+    <img src="/assets/fern-right.png" alt="" />
+  </div>-->
 </section>

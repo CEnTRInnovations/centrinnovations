@@ -134,7 +134,7 @@ field_quote: "When institutions can see their own engagement clearly, the field 
 cta_title: "Ready to see what's already there?"
 cta_body: "CEnTR*SEEK is in active development. If your institution is interested in piloting the system or contributing to its design, we'd like to talk."
 cta_primary_text: "Book Time with Jeremy"
-cta_primary_url: "https://outlook.office.com/bookwithme/user/93badc8cbff54115aab9a542fbea0fdf@iu.edu?anonymous&ismsaljsauthenabled&ep=pcard"
+cta_primary_url: "https://calendly.com/centrinnovations/45min"
 cta_secondary_text: "Learn About CEnTR*IMPACT"
 cta_secondary_url: "/centr-impact/"
 ---

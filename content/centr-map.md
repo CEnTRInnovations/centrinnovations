@@ -162,7 +162,7 @@ field_quote: "The shared vocabulary is the infrastructure. Not a reporting syste
 cta_title: "Ready to map what communities actually bring, and how their ecosystems work?"
 cta_body: "CEnTR*MAP is in active development. If your institution is working to move from deficit-based documentation to living, relationship-centered ecosystem mapping, we'd like to talk about what that could look like in your context."
 cta_primary_text: "Book Time with Jeremy"
-cta_primary_url: "https://outlook.office.com/bookwithme/user/93badc8cbff54115aab9a542fbea0fdf@iu.edu?anonymous&ismsaljsauthenabled&ep=pcard"
+cta_primary_url: "https://calendly.com/centrinnovations/45min"
 cta_secondary_text: "Explore CEnTR*SEEK"
 cta_secondary_url: "/centr-seek/"
 ---

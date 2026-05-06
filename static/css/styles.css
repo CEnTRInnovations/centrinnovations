@@ -865,3 +865,584 @@ a:hover { opacity: 0.7; }
 .hero-botanical-frame {
   display: contents; /* inert wrapper — no visual treatment */
 }
+
+/* ── 1. CENTERED HERO VARIANT ── */
+
+.hero-inner--centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5.5rem 1.25rem 4.5rem;
+  max-width: 860px;
+  gap: 0;
+}
+
+.hero-text--centered h1 {
+  max-width: none;
+  font-size: 3.4rem;
+  margin-bottom: 1.1rem;
+}
+
+.hero-text--centered .lead {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.actions--centered {
+  justify-content: center;
+}
+
+/* Inline quote sits below buttons, centered, no absolute positioning */
+.hero-quote--inline {
+  position: static;
+  max-width: 480px;
+  background: transparent;
+  border-left: none;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding: 1.25rem 0 0;
+  margin-top: 2rem;
+  border-radius: 0;
+  text-align: center;
+}
+
+.hero-quote--inline p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-style: italic;
+  text-shadow: none;
+  max-width: none;
+}
+
+@media (max-width: 960px) {
+  .hero-inner--centered {
+    padding: 3.5rem 1.25rem 3rem;
+  }
+  .hero-text--centered h1 {
+    font-size: 2.4rem;
+  }
+}
+
+
+/* ── 2. SERVE / AUDIENCE CARDS ── */
+
+.serve {
+  background: var(--bg-light);
+  border-bottom: 1px solid rgba(0,0,0,0.055);
+}
+
+.serve-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 4.5rem 1.25rem 5rem;
+}
+
+.serve-header {
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+
+.serve-header h2 {
+  max-width: none;
+  font-size: 1.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.serve-subtitle {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0.5rem auto 0;
+  line-height: 1.6;
+}
+
+.serve-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.serve-card {
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 8px;
+  padding: 1.35rem 1.35rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: default;
+}
+
+.serve-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.09);
+  transform: translateY(-2px);
+}
+
+.serve-card-role {
+  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--serve-color, #7A4A62);
+  font-weight: 500;
+}
+
+.serve-card-body {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: none;
+  margin: 0;
+  flex: 1;
+}
+
+.serve-card-arrow {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  align-self: flex-end;
+  margin-top: 0.25rem;
+  transition: transform 0.2s ease;
+}
+
+.serve-card:hover .serve-card-arrow {
+  transform: translateX(3px);
+}
+
+.serve-fallback {
+  text-align: center;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin-top: 2rem;
+  max-width: none;
+}
+
+.serve-fallback a {
+  color: var(--primary);
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 960px) {
+  .serve-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .serve-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ── 3. DARK GREEN CTA WITH FERNS ── */
+
+.cta--dark {
+  background: #2A4A2E;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-bottom: none;
+}
+
+/* Override the beige CTA background */
+.cta--dark.cta {
+  background: #2A4A2E;
+}
+
+.cta--dark .cta-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 5.5rem 1.25rem;
+}
+
+.cta--dark .cta-pre {
+  color: rgba(255,255,255,0.55);
+  opacity: 1;
+}
+
+.cta--dark h2 {
+  color: #F0EBDC;
+  max-width: none;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta--dark p {
+  color: rgba(240,235,220,0.75);
+  font-size: 0.82rem;
+  max-width: 460px;
+  margin: 0 auto 1.75rem;
+  line-height: 1.7;
+}
+
+/* Fern flanks */
+.cta-fern {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  display: flex;
+  align-items: flex-end;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.cta-fern--left {
+  left: -60px;
+}
+
+.cta-fern--right {
+  right: -60px;
+  transform: scaleX(-1); /* mirror the same fern image */
+}
+
+.cta-fern img {
+  width: 100%;
+  height: auto;
+  mix-blend-mode: screen;
+  opacity: 0.55;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* CTA buttons on dark background */
+.cta-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+
+.button.cta-primary {
+  background: #F0EBDC;
+  color: #2A4A2E;
+  font-weight: 500;
+}
+
+.button.cta-primary:hover {
+  opacity: 0.9;
+}
+
+.button.cta-secondary {
+  border: 1px solid rgba(240,235,220,0.45);
+  color: rgba(240,235,220,0.85);
+  background: transparent;
+}
+
+.button.cta-secondary:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 960px) {
+  .cta-fern { width: 200px; }
+  .cta-fern--left { left: -40px; }
+  .cta-fern--right { right: -40px; }
+}
+
+@media (max-width: 600px) {
+  .cta-fern { display: none; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+}
+
+/* =====================================================
+   ADDITIONS TO styles.css
+   1. Centered hero variant
+   2. Serve / audience cards (full-width, centered header)
+   3. Dark green CTA with flanking ferns
+   ===================================================== */
+
+
+/* ── 1. CENTERED HERO VARIANT ── */
+
+.hero-inner--centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5.5rem 1.25rem 4.5rem;
+  max-width: 860px;
+  gap: 0;
+}
+
+.hero-text--centered h1 {
+  max-width: none;
+  font-size: 3.4rem;
+  margin-bottom: 1.1rem;
+}
+
+.hero-text--centered .lead {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.actions--centered {
+  justify-content: center;
+}
+
+/* Inline quote sits below buttons, centered, no absolute positioning */
+.hero-quote--inline {
+  position: static;
+  max-width: 480px;
+  background: transparent;
+  border-left: none;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding: 1.25rem 0 0;
+  margin-top: 2rem;
+  border-radius: 0;
+  text-align: center;
+}
+
+.hero-quote--inline p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-style: italic;
+  text-shadow: none;
+  max-width: none;
+}
+
+@media (max-width: 960px) {
+  .hero-inner--centered {
+    padding: 3.5rem 1.25rem 3rem;
+  }
+  .hero-text--centered h1 {
+    font-size: 2.4rem;
+  }
+}
+
+
+/* ── 2. SERVE / AUDIENCE CARDS ── */
+
+.serve {
+  background: var(--bg-light);
+  border-bottom: 1px solid rgba(0,0,0,0.055);
+}
+
+.serve-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 4.5rem 1.25rem 5rem;
+}
+
+.serve-header {
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+
+.serve-header h2 {
+  max-width: none;
+  font-size: 1.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.serve-subtitle {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0.5rem auto 0;
+  line-height: 1.6;
+}
+
+.serve-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.serve-card {
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 8px;
+  padding: 1.35rem 1.35rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: default;
+}
+
+.serve-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.09);
+  transform: translateY(-2px);
+}
+
+.serve-card-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  margin-bottom: 0.25rem;
+}
+
+.serve-card-role {
+  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--serve-color, #7A4A62);
+  font-weight: 500;
+}
+
+.serve-card-body {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: none;
+  margin: 0;
+  flex: 1;
+}
+
+.serve-card-arrow {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  align-self: flex-end;
+  margin-top: 0.25rem;
+  transition: transform 0.2s ease;
+}
+
+.serve-card:hover .serve-card-arrow {
+  transform: translateX(3px);
+}
+
+.serve-fallback {
+  text-align: center;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin-top: 2rem;
+  max-width: none;
+}
+
+.serve-fallback a {
+  color: var(--primary);
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 960px) {
+  .serve-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .serve-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ── 3. DARK GREEN CTA WITH FERNS ── */
+
+.cta--dark {
+  background: #2A4A2E;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-bottom: none;
+}
+
+/* Override the beige CTA background */
+.cta--dark.cta {
+  background: #2A4A2E;
+}
+
+.cta--dark .cta-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 5.5rem 1.25rem;
+}
+
+.cta--dark .cta-pre {
+  color: rgba(255,255,255,0.55);
+  opacity: 1;
+}
+
+.cta--dark h2 {
+  color: #F0EBDC;
+  max-width: none;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta--dark p {
+  color: rgba(240,235,220,0.75);
+  font-size: 0.82rem;
+  max-width: 460px;
+  margin: 0 auto 1.75rem;
+  line-height: 1.7;
+}
+
+/* Fern flanks */
+.cta-fern {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  display: flex;
+  align-items: flex-end;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+  overflow: hidden;
+}
+
+.cta-fern--left {
+  left: -90px;
+}
+
+.cta-fern--right {
+  right: -60px;
+  transform: scaleX(-1); /* mirror the same fern image */
+}
+
+.cta-fern img {
+  width: 100%;
+  height: auto;
+  mix-blend-mode: screen;
+  opacity: 0.55;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* CTA buttons on dark background */
+.cta-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+
+.button.cta-primary {
+  background: #F0EBDC;
+  color: #2A4A2E;
+  font-weight: 500;
+}
+
+.button.cta-primary:hover {
+  opacity: 0.9;
+}
+
+.button.cta-secondary {
+  border: 1px solid rgba(240,235,220,0.45);
+  color: rgba(240,235,220,0.85);
+  background: transparent;
+}
+
+.button.cta-secondary:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 960px) {
+  .cta-fern { width: 200px; }
+  .cta-fern--left { left: -40px; }
+  .cta-fern--right { right: -40px; }
+}
+
+@media (max-width: 600px) {
+  .cta-fern { display: none; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+}

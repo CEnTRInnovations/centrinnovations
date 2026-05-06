@@ -1,0 +1,471 @@
+/* =============================================
+   CEnTR*SEEK page — component styles
+   Loaded only on /centr-seek/ via baseof.html
+============================================= */
+
+:root {
+  /* SEEK — slate teal */
+  --seek-deep:   #1D3A3F;
+  --seek-mid:    #2E6E78;
+  --seek-light:  #5A9EA8;
+  --seek-bg:     #DBE9EB;
+
+  /* Pipeline stage accents — one per Sources·Signals·Patterns·Understanding */
+  --sources-color:    #3F5E78;   /* steel blue   — Sources */
+  --signals-color:    #2E6E78;   /* seek teal    — Signals */
+  --patterns-color:   #5C6B3A;   /* olive green  — Patterns */
+  --understand-color: #4A6B42;   /* forest green — Understanding */
+
+  /* Legacy aliases (used by output cards) */
+  --ingest-color:  #3F5E78;
+  --analyze-color: #2E6E78;
+  --surface-color: #4A6B42;
+}
+
+/* SEEK hero — page-specific color and botanical treatment only.
+   Structural layout lives in styles.css (.page-hero, .hero-strip etc.) */
+
+.seek-hero h1 em { color: var(--seek-mid); }
+
+/* Botanical: fern has dark background, blend it away */
+.seek-hero .hero-botanical {
+  width: 72%;
+  max-width: 400px;
+  mix-blend-mode: multiply;
+  transform: translateX(-4%) translateY(-4%);
+}
+
+/* Quote border color matches seek palette */
+.seek-hero .hero-quote {
+  border-left-color: var(--seek-mid);
+}
+
+.seek-hero .hero-quote p {
+  color: var(--seek-deep);
+}
+
+/* Icon circle backgrounds — one per pipeline stage */
+.seek-icon--ingest  { background: #D4DCE4; }
+.seek-icon--analyze { background: #C8DDE0; }
+.seek-icon--pattern { background: #D8DACE; }
+.seek-icon--surface { background: #D0DDD0; }
+
+/* Mobile overrides */
+@media (max-width: 960px) {
+  .seek-hero .hero-botanical {
+    width: 55%;
+    max-width: 280px;
+    transform: none;
+  }
+  .seek-hero .hero-quote {
+    position: static;
+    max-width: none;
+    margin-top: 1rem;
+  }
+}
+
+/* ── SEEK ICON STRIP — matches MAP/Framework pattern ── */
+.seek-icon-strip {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 2.5rem;
+}
+
+.seek-strip-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+
+.seek-strip-item:hover { opacity: 0.75; }
+
+.seek-strip-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.seek-strip-icon img {
+  width: auto;
+  height: 55%;
+  object-fit: contain;
+}
+
+/* Icon circle backgrounds — muted teal/blue tones for each stage */
+.seek-icon--ingest  { background: #D4DCE4; }  /* steel blue wash */
+.seek-icon--analyze { background: #C8DDE0; }  /* teal wash */
+.seek-icon--pattern { background: #D8DACE; }  /* warm slate wash */
+.seek-icon--surface { background: #D0DDD0; }  /* green wash */
+
+.seek-strip-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+
+.seek-strip-label strong {
+  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--text, #3E3B35);
+}
+
+.seek-strip-label span {
+  font-size: 0.68rem;
+  color: var(--text-muted, #6b6760);
+  line-height: 1.3;
+}
+
+.seek-strip-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(0,0,0,0.12);
+  margin: 0 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ── SHARED SEEK STRIPE ── */
+.seek-stripe { background: var(--seek-mid); }
+
+/* ── CONTEXT ── */
+.seek-context {
+  background: var(--bg-light, #F4EFE2);
+}
+
+.seek-callout {
+  border-left: 3px solid var(--seek-mid);
+  padding: 0.85rem 1.25rem;
+  background: rgba(46,110,120,0.05);
+  border-radius: 0 4px 4px 0;
+  margin: 0 0 1.5rem;
+  font-family: "Alegreya", serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--seek-deep);
+  line-height: 1.5;
+}
+
+.seek-callout p { max-width: none; margin: 0; }
+
+.context-content p {
+  font-size: 0.98rem;
+  color: var(--text-muted, #6b6760);
+  max-width: 560px;
+  margin-bottom: 1.25rem;
+}
+
+/* ── PIPELINE ── */
+.seek-pipeline {
+  background: var(--seek-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.055);
+}
+
+.pipeline-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.pipeline-step {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 1.1rem;
+  align-items: start;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  position: relative;
+}
+
+.pipeline-step:last-child { border-bottom: none; }
+
+/* Connecting line between steps */
+.pipeline-step + .pipeline-step::before {
+  content: "";
+  position: absolute;
+  left: 19px;
+  top: -1px;
+  width: 1px;
+  height: 1px;
+  background: rgba(0,0,0,0.12);
+}
+
+/* Icon circle — reuses hero strip icon sizing */
+.step-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-icon img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* No circle background on pipeline icons — bare icons only */
+.step-sources    .step-icon,
+.step-signals    .step-icon,
+.step-patterns   .step-icon,
+.step-understand .step-icon { background: none; }
+
+.step-body strong {
+  display: block;
+  font-family: "Alegreya", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  color: var(--text, #3E3B35);
+}
+
+.step-body p {
+  font-size: 0.92rem;
+  color: var(--text-muted, #6b6760);
+  max-width: none !important;
+  width: 100%;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.step-body {
+  min-width: 0;
+  width: 100%;
+}
+
+/* Left accent bars — one color per stage */
+.step-sources    { border-left: 3px solid var(--sources-color);    padding-left: 1rem; }
+.step-signals    { border-left: 3px solid var(--signals-color);    padding-left: 1rem; }
+.step-patterns   { border-left: 3px solid var(--patterns-color);   padding-left: 1rem; }
+.step-understand { border-left: 3px solid var(--understand-color); padding-left: 1rem; }
+
+/* Strong label color per stage */
+.step-sources    .step-body strong { color: var(--sources-color); }
+.step-signals    .step-body strong { color: var(--signals-color); }
+.step-patterns   .step-body strong { color: var(--patterns-color); }
+.step-understand .step-body strong { color: var(--understand-color); }
+
+/* ── TRANSPARENCY ── */
+.seek-transparency {
+  background: var(--bg-main, #F6F2E7);
+  border-bottom: 1px solid rgba(0,0,0,0.055);
+}
+
+.seek-quote {
+  border-left: 3px solid var(--seek-mid);
+  padding: 0.75rem 1.25rem;
+  font-family: "Alegreya", serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  border-radius: 0 4px 4px 0;
+  background: rgba(46,110,120,0.04);
+  color: var(--seek-deep);
+  margin-bottom: 2rem;
+}
+
+.seek-quote p { max-width: none; margin: 0; }
+
+.seek-dimensions {
+  padding: 1.25rem 1.5rem;
+  background: var(--seek-bg);
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.dimension-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.dimension-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  color: var(--text, #3E3B35);
+}
+
+.dim-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--seek-mid);
+  flex-shrink: 0;
+}
+
+/* ── OUTPUTS ── */
+.seek-outputs {
+  background: var(--bg-light, #F4EFE2);
+  border-bottom: 1px solid rgba(0,0,0,0.055);
+}
+
+.section-inner-wide {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 5.5rem 1.25rem;
+  border-bottom: 1px solid rgba(0,0,0,0.055);
+}
+
+.outputs-header {
+  margin-bottom: 2.5rem;
+}
+
+.outputs-header h2 { max-width: 560px; }
+
+.outputs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.output-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-top: 3px solid transparent;
+}
+
+.output-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.output-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted, #6b6760);
+  max-width: none;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.card-ingest  { border-top-color: var(--ingest-color); }
+.card-analyze { border-top-color: var(--analyze-color); }
+.card-surface { border-top-color: var(--surface-color); }
+
+/* ── FIELD INFRASTRUCTURE ── */
+.seek-field {
+  background: var(--bg-main, #F6F2E7);
+  border-bottom: 1px solid rgba(0,0,0,0.055);
+}
+
+/* System chain */
+.seek-system-links {
+  padding: 1.25rem 1.5rem;
+  background: var(--seek-bg);
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.system-chain {
+  display: flex;
+  align-items: stretch;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.chain-item {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.85rem 1rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.chain-item strong {
+  font-family: "Alegreya", serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.chain-item span {
+  font-size: 0.78rem;
+  color: var(--text-muted, #6b6760);
+}
+
+.chain-seek   { background: rgba(46,110,120,0.1);  border-left: 3px solid var(--seek-mid); }
+.chain-map    { background: rgba(140,110,69,0.08); border-left: 3px solid #8C6E45; }
+.chain-impact { background: rgba(74,107,66,0.08);  border-left: 3px solid #4A6B42; }
+
+.chain-arrow {
+  display: flex;
+  align-items: center;
+  color: rgba(0,0,0,0.25);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .seek-hero-inner {
+    grid-template-columns: 1fr;
+    padding: 4rem 1.25rem 3rem;
+    gap: 2.5rem;
+  }
+
+  .seek-hero-visual {
+    justify-content: center;
+  }
+
+  .seek-hero-botanical {
+    width: 55%;
+    max-width: 280px;
+    transform: none;
+  }
+
+  .seek-hero-quote {
+    position: static;
+    max-width: none;
+    margin-top: 1rem;
+  }
+
+  .seek-icon-strip {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .seek-strip-divider { display: none; }
+
+  .outputs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .system-chain {
+    flex-direction: column;
+  }
+
+  .chain-arrow {
+    transform: rotate(90deg);
+    align-self: flex-start;
+    padding-left: 1rem;
+  }
+}
+
+/* ── PIPELINE GRID FIX ──────────────────────────────────────────────────
+   styles.css sets .step-num { position: absolute } for the homepage
+   system section's circular badges. Pipeline steps now use .step-icon
+   (a 40px flex circle) instead of .step-num, so the bleed no longer
+   applies. Keeping this comment as a reminder in case step-num is
+   reintroduced elsewhere.
+─────────────────────────────────────────────────────────────────────── */
