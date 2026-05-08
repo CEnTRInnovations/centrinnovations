@@ -100,7 +100,7 @@ cip_scores:
     desc: "Draws on social network analysis to map and measure the potential for information and impact to spread, illuminating clear pathways and bottlenecks."
 
 cip_primary_text: "Try CEnTR*IMPACT →"
-cip_primary_url: "https://connect.posit.iu.edu/centrimpact/"
+cip_primary_url: "https://app.centrinnovations.com/centrimpact"
 cip_secondary_text: "Read the Report"
 cip_secondary_url: "https://cumuonline.org/wp-content/uploads/2024-CUMU-Collaboratory-Fellowship-Report.pdf"
 
@@ -206,7 +206,7 @@ integration_cards:
 cta_title: "Let's make the work visible, and the trust possible."
 cta_body: "CEnTR*IMPACT works best when it's applied to your specific context. Let's talk about how the system can support your researchers, your institution, and your community partners."
 cta_primary_text: "Book Time with Jeremy"
-cta_primary_url: "https://outlook.office.com/bookwithme/user/93badc8cbff54115aab9a542fbea0fdf@iu.edu?anonymous&ismsaljsauthenabled&ep=pcard"
+cta_primary_url: "https://calendly.com/centrinnovations/45min"
 cta_secondary_text: "Try the Tool"
-cta_secondary_url: "https://connect.posit.iu.edu/centrimpact/"
+cta_secondary_url: "https://app.centrinnovations.com/centrimpact"
 ---
