@@ -12,8 +12,6 @@ hero:
   secondary_text: "View the Framework"
   secondary_link: "framework"
 
-  image: "/assets/system.png"
-
   quote: "Like common milkweed in an ecosystem, community-engaged scholarship is often overlooked but essential to the systems it sustains."
 
 challenge:
