@@ -11,5 +11,8 @@
     <blockquote class="hero-quote hero-quote--inline">
       <p>{{ .quote }}</p>
     </blockquote>
+    {{ if .image }}
+    <img src="{{ .image }}" alt="" class="hero-ecosystem" />
+    {{ end }}
   </div>
 </section>

@@ -2,47 +2,14 @@
 
 <!-- Hero -->
 <section class="system-page-hero">
-  <div class="system-page-inner">
-    <span class="eyebrow">{{ .Params.hero.eyebrow }}</span>
-    <h1>{{ .Params.hero.title }}</h1>
-    <p class="system-page-lead">{{ .Params.hero.body | safeHTML }}</p>
-  </div>
-</section>
-
-<!-- MAP: spans every layer -->
-<section class="map-spotlight">
-  <div class="system-page-inner">
-    <span class="eyebrow">{{ .Params.map_spotlight.eyebrow }}</span>
-    <h2>{{ .Params.map_spotlight.title }}</h2>
-    <p class="map-spotlight-intro">{{ .Params.map_spotlight.body }}</p>
-
-    <div class="map-spotlight-card reveal">
-      <div class="map-spotlight-icon-col">
-        <div class="map-spotlight-icon">
-          <img src="{{ .Params.map_spotlight.image }}" alt="">
-        </div>
-        <svg class="strata-icon" width="22" height="40" viewBox="0 0 22 40">
-          <rect x="0" y="0"  width="22" height="8" rx="1.5" fill="var(--arch-mid)"/>
-          <rect x="0" y="10" width="22" height="8" rx="1.5" fill="var(--infra-mid)"/>
-          <rect x="0" y="20" width="22" height="8" rx="1.5" fill="var(--topo-mid)"/>
-          <rect x="0" y="30" width="22" height="8" rx="1.5" fill="var(--strat-mid)"/>
-        </svg>
-      </div>
-      <div class="map-spotlight-body">
-        <div class="map-spotlight-header">
-          <h3>CEnTR*MAP</h3>
-          <span class="status-badge {{ .Params.map_spotlight.status_class }}">{{ .Params.map_spotlight.status_text }}</span>
-        </div>
-        <p class="map-spotlight-tagline">{{ .Params.map_spotlight.tagline }}</p>
-        <p class="map-spotlight-desc">{{ .Params.map_spotlight.description }}</p>
-        <span class="eyebrow">{{ .Params.map_spotlight.outputs_label }}</span>
-        <ul class="outputs-list">
-          {{ range .Params.map_spotlight.outputs }}
-          <li>{{ . }}</li>
-          {{ end }}
-        </ul>
-        <a class="tool-page-link" href="{{ .Params.map_spotlight.link | relURL }}">{{ .Params.map_spotlight.link_text }}</a>
-      </div>
+  <div class="system-page-inner system-page-hero-inner">
+    <div class="system-hero-text">
+      <span class="eyebrow">{{ .Params.hero.eyebrow }}</span>
+      <h1>{{ .Params.hero.title }}</h1>
+      <p class="system-page-lead">{{ .Params.hero.body | safeHTML }}</p>
+    </div>
+    <div class="system-hero-visual">
+      <img src="/assets/system.png" alt="" />
     </div>
   </div>
 </section>
@@ -58,11 +25,18 @@
       {{ range .Params.toolkit.rows }}
       <div class="toolkit-row {{ .layer_class }}{{ if .dashed }} toolkit-row--dashed{{ end }} reveal">
         <div class="toolkit-layer-block">
-          <svg width="22" height="40" viewBox="0 0 22 40">
+          <svg class="strata-icon" width="22" height="40" viewBox="0 0 22 40">
+            {{ if .spans_all }}
+            <rect x="0" y="0"  width="22" height="8" rx="1.5" fill="var(--arch-mid)"/>
+            <rect x="0" y="10" width="22" height="8" rx="1.5" fill="var(--infra-mid)"/>
+            <rect x="0" y="20" width="22" height="8" rx="1.5" fill="var(--topo-mid)"/>
+            <rect x="0" y="30" width="22" height="8" rx="1.5" fill="var(--strat-mid)"/>
+            {{ else }}
             <rect x="0" y="0"  width="22" height="8" rx="1.5" fill="{{ if eq .layer_class "arch"  }}var(--arch-mid){{ else }}#e5ded0{{ end }}"/>
             <rect x="0" y="10" width="22" height="8" rx="1.5" fill="{{ if eq .layer_class "infra" }}var(--infra-mid){{ else }}#e5ded0{{ end }}"/>
             <rect x="0" y="20" width="22" height="8" rx="1.5" fill="{{ if eq .layer_class "topo"  }}var(--topo-mid){{ else }}#e5ded0{{ end }}"/>
             <rect x="0" y="30" width="22" height="8" rx="1.5" fill="{{ if eq .layer_class "strat" }}var(--strat-mid){{ else }}#e5ded0{{ end }}"/>
+            {{ end }}
           </svg>
           <div>
             <div class="toolkit-layer-label">Layer</div>
@@ -73,7 +47,7 @@
 
         <div class="toolkit-divider"></div>
 
-        <div class="toolkit-tool-icon" style="background:var(--{{ .layer_class }}-bg);">
+        <div class="toolkit-tool-icon" style="background:{{ if .spans_all }}var(--map-tint){{ else }}var(--{{ .layer_class }}-bg){{ end }};">
           <img src="{{ .image }}" alt="">
         </div>
 

@@ -3,8 +3,9 @@
 /resources/_gen/
 /assets/jsconfig.json
 hugo_stats.json
-.DS_Store 
+.DS_Store
 cache/filecache/_gen/
 claude.md
 REFACTOR.md
 recommendations.md
+/design_handoff_tools_reorganization/

@@ -87,100 +87,13 @@
   line-height: 1.65;
 }
 
-/* ── MAP SPOTLIGHT (spans every layer) ── */
-.map-spotlight {
-  background: var(--bg-main, #F6F2E7);
-}
-
-.map-spotlight .system-page-inner {
-  padding-top: 1.5rem;
-  padding-bottom: 4.5rem;
-}
-
-.map-spotlight h2 {
-  max-width: 640px;
-  font-size: 1.5rem;
-  margin-bottom: 0.6rem;
-}
-
-.map-spotlight-intro {
-  font-size: 0.92rem;
-  color: var(--text-muted, #6b6760);
-  max-width: 680px;
-  margin-bottom: 2rem;
-  line-height: 1.65;
-}
-
-.map-spotlight-card {
-  background: white;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 8px;
-  padding: 2rem;
-  display: flex;
-  gap: 1.5rem;
-  max-width: 1180px;
-  margin: 0 auto;
-}
-
-.map-spotlight-icon-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.65rem;
-  flex-shrink: 0;
-}
-
-.map-spotlight-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: var(--map-tint, #EADFD3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.map-spotlight-icon img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
-
-.map-spotlight-body { flex: 1; }
-
-.map-spotlight-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 0.4rem;
-}
-
-.map-spotlight-header h3 {
-  font-family: "Alegreya", serif;
-  font-size: 1.35rem;
-  font-weight: 500;
-  margin: 0;
-  max-width: none;
-}
-
-.map-spotlight-tagline {
-  font-family: "Alegreya", serif;
-  font-style: italic;
-  font-size: 0.9rem;
-  color: var(--text-muted, #6b6760);
-  margin-bottom: 0.9rem;
-}
-
-.map-spotlight-desc {
-  font-size: 0.92rem;
-  line-height: 1.65;
-  color: var(--text, #3E3B35);
-  max-width: none;
-  margin-bottom: 1rem;
-}
-
-/* ── STRATA ICON (used by map-spotlight and each toolkit row) ── */
+/* ── STRATA ICON (used by each toolkit row) ── */
 .strata-icon rect { transition: none; }
+.strata-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 40px;
+}
 
 /* ── FRAMEWORK-ALIGNED TOOLKIT ── */
 .toolkit-section {
@@ -233,7 +146,7 @@
 }
 
 .toolkit-layer-label {
-  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
+  font-family: var(--font-mono);
   font-size: 0.62rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -332,14 +245,6 @@
 
   .system-page-hero h1 {
     font-size: 2.2rem;
-  }
-
-  .map-spotlight-card {
-    flex-direction: column;
-  }
-
-  .map-spotlight-icon-col {
-    flex-direction: row;
   }
 
   .toolkit-row {

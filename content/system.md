@@ -10,23 +10,6 @@ hero:
   title: "One system, a growing set of tools."
   body: "The CEnTR* System helps institutions discover engagement, represent community assets with integrity, and understand how that work moves through the deeper layers <a href=\"/framework/\">the Framework</a> describes: culture, systems, and the structures that make it legible. It's one ecosystem, made of tools built for different jobs."
 
-map_spotlight:
-  eyebrow: "Spans Every Layer"
-  title: "CEnTR*MAP doesn't sit in one layer — it draws on all four."
-  body: "Community assets show up everywhere: in the histories a place carries, the culture partners bring, the systems that document contributions, and the representations institutions recognize. MAP traces assets across all of it."
-  status_text: "In development"
-  status_class: "badge-dev"
-  tagline: "Understand and represent engagement with integrity."
-  image: "/assets/goldenrod.png"
-  description: "Conventional documentation asks what communities lack. MAP asks what they have. Grounded in Asset-Based Community Development, Community Cultural Wealth, and ecological systems thinking, it identifies references to community contributions and maps them to a capital taxonomy — without replacing human interpretation."
-  outputs_label: "What MAP produces"
-  outputs:
-    - "Asset-tagged project records organized by capital type and ecological system level"
-    - "Deficit-language flags — where documentation frames communities by need rather than strength"
-    - "Asset-centered narrative summaries for funders, accreditors, and leadership"
-  link: "centr-map"
-  link_text: "Explore CEnTR*MAP →"
-
 toolkit:
   eyebrow: "Framework-Aligned Toolkit"
   title: "Organized by the layer of the work each tool serves."
@@ -42,8 +25,8 @@ toolkit:
       status_class: "badge-open"
       dashed: true
       description: "A multi-layer temporal canvas for mapping how policy, community, and institutional histories have unfolded and intersected — free and open, in <a href=\"/open-tools/\">The Commons</a>."
-      link: "https://github.com/CEnTRInnovations/complexity_timeline"
-      link_text: "View on GitHub ↗"
+      link: "https://understory.centrinnovations.com/"
+      link_text: "Try the app →"
       external: true
 
     - layer_name: "Topography"
@@ -108,6 +91,20 @@ toolkit:
       dashed: false
       description: "An ensemble of four complementary score types that make community-engaged value legible to promotion & tenure committees, funders, and accreditors — a fuller story than any single metric."
       link: "centr-impact"
+      link_text: "Explore →"
+      external: false
+
+    - layer_name: "All Layers"
+      layer_subtitle: "Every layer"
+      layer_class: "cross"
+      tool_name: "CEnTR*MAP"
+      image: "/assets/goldenrod.png"
+      status_text: "in development"
+      status_class: "badge-dev"
+      dashed: false
+      spans_all: true
+      description: "Traces community assets across all four layers — from the histories a place carries to the systems that make institutional contributions legible."
+      link: "centr-map"
       link_text: "Explore →"
       external: false
 

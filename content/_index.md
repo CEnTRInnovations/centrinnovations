@@ -12,7 +12,7 @@ hero:
   secondary_text: "View the Framework"
   secondary_link: "framework"
 
-  image: "/assets/milkweed.png"
+  image: "/assets/system.png"
 
   quote: "Like common milkweed in an ecosystem, community-engaged scholarship is often overlooked but essential to the systems it sustains."
 
@@ -163,8 +163,11 @@ open_tools:
         - "Multi-layer analysis"
         - "Partnership history"
 
-      primary_link: "https://github.com/CEnTRInnovations/complexity_timeline"
-      primary_text: "View on GitHub →"
+      primary_link: "https://understory.centrinnovations.com/"
+      primary_text: "Try the app →"
+
+      secondary_link: "https://github.com/CEnTRInnovations/complexity_timeline"
+      secondary_text: "View on GitHub"
 
     - name: "Apiary Hive"
       image: "/assets/apiary-hive-logo.png"
