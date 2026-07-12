@@ -61,6 +61,26 @@ t2_primary_text: "View on GitHub →"
 t2_primary_link: "https://github.com/CEnTRInnovations/complexity_timeline"
 
 # ─────────────────────────────────────────
+# TOOL THREE — APIARY HIVE
+# ─────────────────────────────────────────
+t3_eyebrow: "Tool Three"
+t3_title: "Apiary Hive: Many Hexagons, One Hive"
+t3_image: "/assets/hive-color.png"
+t3_lead: "One group's shared vocabulary is a starting point. What happens when five groups each built their own?"
+t3_sidebar_1: "Apiary Hive treats scattered hexagonal thinking as raw forage, not competing claims to be settled by decree. Three passes, each borrowed from the discipline of the hive, carry a set of Apiary term maps from many hands to one shared vocabulary."
+t3_sidebar_2: "It exists for the moment when sensemaking scales past a single room: a cohort of workshops, a multi-site research team, a course where every section built its own map. The hive doesn't erase what each group found. It gives it structure."
+t3_body_1: "Each contributing group uploads its own Apiary export — the causal term map it built by working through hexagonal thinking together. Apiary Hive validates and stages that raw vocabulary, then proposes Word Bundles: terms that different groups named differently but meant the same thing. The group works the comb — accepting, splitting, merging, and renaming — until the cells hold a settled, canonical vocabulary."
+t3_body_2: "What comes out the other side is a portable provenance file: canonical terms, recoded edges, and a full record of every decision that produced them. Ready to carry into CEnTR*CANON, or to keep as its own account of how a cohort arrived at shared language."
+t3_tags:
+  - "Vocabulary consolidation"
+  - "Cross-group synthesis"
+  - "Provenance tracking"
+t3_primary_text: "Try the app →"
+t3_primary_link: "https://hive.centrinnovations.com/"
+t3_secondary_text: "View on GitHub"
+t3_secondary_link: "https://github.com/CEnTRInnovations/apiary-hive"
+
+# ─────────────────────────────────────────
 # MORE COMING
 # ─────────────────────────────────────────
 more_eyebrow: "What's Next"
