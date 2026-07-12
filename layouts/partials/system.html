@@ -14,7 +14,7 @@
           <img src="{{ .image }}" alt="" />
         </div>
         <h3>{{ .name }}</h3>
-        <p class="our-tool-desc">{{ .description | safeHTML }}</p>
+        <p class="our-tool-desc">{{ .description }}</p>
         <span class="status-badge {{ .status_class }}">{{ .status_text }}</span>
       </div>
       {{ end }}
