@@ -28,9 +28,9 @@
   --tools-color:     #5A7A46;
 
   /* Tool icon tints — homepage "Our Tools" grid */
-  --seek-tint:   #DCE4D6; /* matches existing .tool-mascot--seek */
-  --map-tint:    #EADFD3; /* matches existing .tool-mascot--map */
-  --impact-tint: #E7DADF; /* matches existing .tool-mascot--impact */
+  --seek-tint:   #DCE4D6; /* SEEK's individual brand tint */
+  --map-tint:    #EADFD3; /* MAP's individual brand tint */
+  --impact-tint: #E7DADF; /* IMPACT's individual brand tint */
   --canon-tint:  #E4EDDB; /* Topography layer tint */
   --flow-tint:   #D8E4EE; /* Infrastructure layer tint */
   --frame-tint:  #EEDAD7; /* Architecture layer tint */
@@ -123,7 +123,6 @@ a:hover { opacity: 0.7; }
   margin: 1.1rem 0 1.1rem;
 }
 .challenge-stripe { background: var(--challenge-color); }
-.system-stripe    { background: var(--system-color); }
 .outcomes-stripe  { background: var(--outcomes-color); }
 .serve-stripe     { background: var(--serve-color); }
 .tools-stripe     { background: var(--tools-color); }
@@ -379,46 +378,10 @@ a:hover { opacity: 0.7; }
 }
 
 /* ── SYSTEM ── */
-.system-flow {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
-.system-step {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  align-self: stretch;
-}
-
 .step-header {
   position: relative;
   margin-bottom: 0.85rem;
 }
-
-.step-num {
-  position: absolute;
-  top: -8px;
-  left: -8px;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Alegreya", serif;
-  font-style: italic;
-  font-size: 0.8rem;
-  color: white;
-  z-index: 1;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.18);
-}
-.step-num-green  { background: #5A7A46; }
-.step-num-tan    { background: #8C6E45; }
-.step-num-purple { background: #7A4A62; }
 
 .circle {
   width: 132px;
@@ -430,58 +393,6 @@ a:hover { opacity: 0.7; }
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 .circle img { max-height: 82%; width: auto; }
-.circle-green  { background: #DCE4D6; }
-.circle-tan    { background: #EADFD3; }
-.circle-purple { background: #E7DADF; }
-
-.system-step h3 {
-  margin: 0 0 0.2rem;
-  font-size: 0.92rem;
-}
-
-.system-lead {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  font-style: italic;
-  max-width: 160px;
-  margin: 0 0 0.5rem;
-  line-height: 1.4;
-}
-
-.system-bullets {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 190px;
-  text-align: left;
-}
-
-.system-bullets li {
-  position: relative;
-  padding-left: 1rem;
-  font-size: 0.68rem;
-  line-height: 1.4;
-  margin-bottom: 0.35rem;
-  color: var(--text-muted);
-}
-
-.system-bullets li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: var(--text-muted);
-}
-
-.system-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 132px;
-  font-size: 1.2rem;
-  color: #ccc;
-  flex-shrink: 0;
-  padding-bottom: 3rem;
-}
 
 .learn-link {
   display: inline-block;
@@ -866,9 +777,6 @@ a:hover { opacity: 0.7; }
 
   .hero-quote { position: static; margin-top: 1.5rem; max-width: none; }
   .hero-botanical { width: 55%; margin: 0 auto; display: block; transform: none; }
-
-  .system-flow { flex-direction: column; align-items: center; }
-  .system-arrow { height: auto; padding-bottom: 0; transform: rotate(90deg); }
 
   .outcomes-grid { grid-template-columns: 1fr; }
   .serve-cards   { grid-template-columns: 1fr; }

@@ -10,19 +10,15 @@
 
   /* Framework layer colors — copied from framework.css; duplicated because
      system.css and framework.css never load on the same page. */
-  --strat-deep:  #2C2417;
   --strat-mid:   #5C4A2A;
   --strat-bg:    #EDE0CC;
 
-  --topo-deep:   #3A4D2A;
   --topo-mid:    #5A7A46;
   --topo-bg:     #E4EDDB;
 
-  --infra-deep:  #2A3D52;
   --infra-mid:   #3F5E78;
   --infra-bg:    #D8E4EE;
 
-  --arch-deep:   #4A2A3A;
   --arch-mid:    #7A4A62;
   --arch-bg:     #EEDAD7;
 }
@@ -90,71 +86,6 @@
   margin-bottom: 1rem;
   line-height: 1.65;
 }
-
-/* ── STATUS BADGES ── */
-.status-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  padding: 0.3rem 0.75rem;
-  border-radius: 20px;
-  margin-top: 1rem;
-}
-
-.status-badge::before {
-  content: "";
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.badge-active {
-  background: rgba(74,107,66,0.1);
-  color: #2C3A2A;
-  border: 1px solid rgba(74,107,66,0.2);
-}
-
-.badge-active::before {
-  background: #4A6B42;
-  box-shadow: 0 0 0 2px rgba(74,107,66,0.15);
-}
-
-.badge-dev {
-  background: rgba(140,110,69,0.1);
-  color: #4A3A1A;
-  border: 1px solid rgba(140,110,69,0.2);
-}
-
-.badge-dev::before {
-  background: #8C6E45;
-  box-shadow: 0 0 0 2px rgba(140,110,69,0.15);
-}
-
-.badge-concept {
-  background: rgba(107,103,96,0.08);
-  color: #6b6760;
-  border: 1px solid rgba(107,103,96,0.18);
-}
-.badge-concept::before { background: #8A867E; box-shadow: 0 0 0 2px rgba(107,103,96,0.12); }
-
-.badge-open {
-  background: rgba(107,103,96,0.08);
-  color: #6b6760;
-  border: 1px dashed rgba(107,103,96,0.3);
-}
-.badge-open::before { background: #8A867E; box-shadow: 0 0 0 2px rgba(107,103,96,0.12); }
-
-.badge-almost {
-  background: rgba(107,103,96,0.08);
-  color: #6b6760;
-  border: 1px solid rgba(107,103,96,0.18);
-}
-.badge-almost::before { background: #8A867E; box-shadow: 0 0 0 2px rgba(107,103,96,0.12); }
 
 /* ── MAP SPOTLIGHT (spans every layer) ── */
 .map-spotlight {
