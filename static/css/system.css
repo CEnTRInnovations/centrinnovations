@@ -7,6 +7,24 @@
   --seek-mid:    #2E6E78;
   --map-mid:     #7A5C1E;
   --impact-mid:  #3F5E78;
+
+  /* Framework layer colors — copied from framework.css; duplicated because
+     system.css and framework.css never load on the same page. */
+  --strat-deep:  #2C2417;
+  --strat-mid:   #5C4A2A;
+  --strat-bg:    #EDE0CC;
+
+  --topo-deep:   #3A4D2A;
+  --topo-mid:    #5A7A46;
+  --topo-bg:     #E4EDDB;
+
+  --infra-deep:  #2A3D52;
+  --infra-mid:   #3F5E78;
+  --infra-bg:    #D8E4EE;
+
+  --arch-deep:   #4A2A3A;
+  --arch-mid:    #7A4A62;
+  --arch-bg:     #EEDAD7;
 }
 
 /* ── HERO ── */
@@ -73,144 +91,6 @@
   line-height: 1.65;
 }
 
-/* ── SHARED TOOL SECTION LAYOUT ── */
-.system-tool-section {
-  border-bottom: 1px solid rgba(0,0,0,0.055);
-}
-
-.system-section-inner {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 5.5rem 1.25rem;
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 5.5rem;
-  align-items: start;
-}
-
-.system-section-inner--reverse {
-  grid-template-columns: 1fr 300px;
-}
-
-/* Sidebar */
-.system-tool-sidebar {
-  position: sticky;
-  top: 80px;
-}
-
-.tool-num {
-  display: block;
-  font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  color: var(--text-muted, #6b6760);
-  margin-bottom: 0.4rem;
-}
-
-.system-tool-sidebar h2 {
-  font-size: 2rem;
-  margin-bottom: 0.35rem;
-  max-width: none;
-}
-
-.tool-lead {
-  font-family: "Alegreya", serif;
-  font-style: italic;
-  font-size: 1rem;
-  color: var(--text, #3E3B35);
-  margin-bottom: 0.75rem;
-  max-width: none;
-}
-
-.tool-stripe {
-  height: 3px;
-  width: 48px;
-  border-radius: 2px;
-  margin: 1rem 0;
-}
-
-.seek-stripe   { background: var(--seek-mid); }
-.map-stripe    { background: var(--map-mid); }
-.impact-stripe { background: var(--impact-mid); }
-
-.sidebar-body {
-  font-size: 0.92rem;
-  color: var(--text-muted, #6b6760);
-  line-height: 1.6;
-  margin-bottom: 0.85rem;
-  max-width: 260px;
-}
-
-/* Content */
-.system-tool-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.tool-body {
-  font-size: 0.98rem;
-  color: var(--text-muted, #6b6760);
-  line-height: 1.65;
-  max-width: 580px;
-  margin: 0;
-}
-
-/* Outputs list */
-.tool-outputs {
-  margin-top: 0.5rem;
-}
-
-.outputs-label {
-  display: block;
-  margin-bottom: 0.75rem;
-}
-
-.outputs-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.outputs-list li {
-  position: relative;
-  padding-left: 1rem;
-  font-size: 0.92rem;
-  color: var(--text, #3E3B35);
-  line-height: 1.5;
-}
-
-.outputs-list li::before {
-  content: "→";
-  position: absolute;
-  left: 0;
-  color: var(--text-muted, #6b6760);
-  font-size: 0.8rem;
-  top: 0.1rem;
-}
-
-/* Tool page links */
-.tool-page-link {
-  display: inline-block;
-  font-size: 0.88rem;
-  text-decoration: none;
-  margin-top: 0.25rem;
-  padding-bottom: 1px;
-  border-bottom: 1px solid;
-}
-
-.seek-link   { color: var(--seek-mid);   border-color: rgba(46,110,120,0.3); }
-.map-link    { color: var(--map-mid);    border-color: rgba(122,92,30,0.3); }
-.impact-link { color: var(--impact-mid); border-color: rgba(63,94,120,0.3); }
-
-/* ── SECTION BACKGROUNDS ── */
-.system-seek   { background: #E8F0F1; }
-.system-map    { background: var(--bg-light, #F4EFE2); }
-.system-impact { background: #E4ECF2; }
-
 /* ── STATUS BADGES ── */
 .status-badge {
   display: inline-flex;
@@ -255,306 +135,257 @@
   box-shadow: 0 0 0 2px rgba(140,110,69,0.15);
 }
 
-/* ── TRANSITION STRIPS ── */
-.system-transition {
+.badge-concept {
+  background: rgba(107,103,96,0.08);
+  color: #6b6760;
+  border: 1px solid rgba(107,103,96,0.18);
+}
+.badge-concept::before { background: #8A867E; box-shadow: 0 0 0 2px rgba(107,103,96,0.12); }
+
+.badge-open {
+  background: rgba(107,103,96,0.08);
+  color: #6b6760;
+  border: 1px dashed rgba(107,103,96,0.3);
+}
+.badge-open::before { background: #8A867E; box-shadow: 0 0 0 2px rgba(107,103,96,0.12); }
+
+.badge-almost {
+  background: rgba(107,103,96,0.08);
+  color: #6b6760;
+  border: 1px solid rgba(107,103,96,0.18);
+}
+.badge-almost::before { background: #8A867E; box-shadow: 0 0 0 2px rgba(107,103,96,0.12); }
+
+/* ── MAP SPOTLIGHT (spans every layer) ── */
+.map-spotlight {
   background: var(--bg-main, #F6F2E7);
-  border-bottom: 1px solid rgba(0,0,0,0.055);
 }
 
-.system-transition .system-page-inner {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+.map-spotlight .system-page-inner {
+  padding-top: 1.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.map-spotlight h2 {
+  max-width: 640px;
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.map-spotlight-intro {
+  font-size: 0.92rem;
+  color: var(--text-muted, #6b6760);
+  max-width: 680px;
+  margin-bottom: 2rem;
+  line-height: 1.65;
+}
+
+.map-spotlight-card {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+  padding: 2rem;
   display: flex;
   gap: 1.5rem;
-  align-items: flex-start;
-}
-
-.transition-arrow {
-  font-size: 1.5rem;
-  line-height: 1;
-  flex-shrink: 0;
-  margin-top: 0.15rem;
-  opacity: 0.35;
-}
-
-.seek-transition-arrow { color: var(--seek-mid); }
-.map-transition-arrow  { color: var(--map-mid); }
-
-.transition-body {
-  font-family: "Alegreya", serif;
-  font-style: italic;
-  font-size: 1rem;
-  color: var(--text, #3E3B35);
-  line-height: 1.6;
-  max-width: 620px;
-  margin: 0;
-}
-
-/* ── IMPACT COLLAGE ── */
-.impact-collage {
-  margin-top: 0.75rem;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.07);
-}
-
-.impact-collage img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ── COMBINED IMPACT SCORE + VIZ CARDS ── */
-.impact-scores-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-top: 0.75rem;
-}
-
-.impact-score-card {
-  background: white;
-  border: 1px solid rgba(0,0,0,0.07);
-  border-radius: 8px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  cursor: zoom-in;
-  transition: box-shadow 0.2s ease;
-}
-
-.impact-score-card:hover {
-  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-}
-
-.score-viz-thumb {
-  width: 100%;
-  height: 140px;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-  background: #f8f8f8;
-}
-
-.score-viz-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-  transition: transform 0.25s ease;
-}
-
-.impact-score-card:hover .score-viz-thumb img {
-  transform: scale(1.04);
-}
-
-.score-card-body {
-  padding: 0.9rem 1.1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.score-sym {
-  font-family: "Alegreya", serif;
-  font-style: italic;
-  font-size: 1.05rem;
-  color: var(--impact-mid);
-  display: block;
-}
-
-.impact-score-card strong {
-  font-family: "Alegreya", serif;
-  font-size: 0.92rem;
-  font-weight: 500;
-  color: var(--text, #3E3B35);
-}
-
-.impact-score-card p {
-  font-size: 0.8rem;
-  color: var(--text-muted, #6b6760);
-  line-height: 1.5;
-  max-width: none;
-  margin: 0;
-}
-
-.viz-note {
-  font-size: 0.78rem;
-  color: var(--text-muted, #6b6760);
-  font-style: italic;
-  margin: 0;
-  max-width: none;
-}
-
-/* ── LIGHTBOX ── */
-.viz-lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.8);
-  z-index: 1000;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  cursor: zoom-out;
-}
-
-.viz-lightbox.open {
-  display: flex;
-}
-
-.viz-lightbox img {
-  max-width: 90vw;
-  max-height: 88vh;
-  border-radius: 6px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
-  object-fit: contain;
-  background: white;
-}
-
-.viz-lightbox-close {
-  position: fixed;
-  top: 1.25rem;
-  right: 1.5rem;
-  color: white;
-  font-size: 1.5rem;
-  line-height: 1;
-  cursor: pointer;
-  opacity: 0.7;
-  font-family: "Alegreya Sans", sans-serif;
-  background: none;
-  border: none;
-  padding: 0.25rem;
-}
-
-.viz-lightbox-close:hover { opacity: 1; }
-
-/* ── BOTANICAL FLOW DIAGRAM ── */
-.system-flow-diagram {
-  background: var(--bg-main, #F6F2E7);
-  border-top: 1px solid rgba(0,0,0,0.055);
-  padding: 3.5rem 1.25rem 4rem;
-}
-
-.system-flow-inner {
-  max-width: 900px;
+  max-width: 1180px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
 }
 
-.flow-node {
+.map-spotlight-icon-col {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  flex: 0 0 auto;
+  gap: 0.65rem;
+  flex-shrink: 0;
 }
 
-.flow-node strong {
-  font-family: "Alegreya", serif;
-  font-size: 1rem;
-  font-weight: 400;
-  margin-top: 1rem;
-  display: block;
-}
-
-.flow-node em {
-  font-family: "Alegreya", serif;
-  font-style: italic;
-  font-size: 0.82rem;
-  color: var(--text-muted, #6b6760);
-  margin-top: 0.2rem;
-  display: block;
-  max-width: 160px;
-  line-height: 1.4;
-}
-
-.flow-circle {
-  width: 180px;
-  height: 180px;
+.map-spotlight-icon {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
+  background: var(--map-tint, #EADFD3);
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
-.flow-circle--seek   { background: #DCE4D6; }
-.flow-circle--map    { background: #EADFD3; }
-.flow-circle--impact { background: #E7DADF; }
-
-.flow-circle img {
-  width: 62%;
-  height: auto;
+.map-spotlight-icon img {
+  width: 40px;
+  height: 40px;
   object-fit: contain;
 }
 
-.flow-roman {
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
+.map-spotlight-body { flex: 1; }
+
+.map-spotlight-header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.map-spotlight-header h3 {
+  font-family: "Alegreya", serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin: 0;
+  max-width: none;
+}
+
+.map-spotlight-tagline {
   font-family: "Alegreya", serif;
   font-style: italic;
   font-size: 0.9rem;
-  color: white;
+  color: var(--text-muted, #6b6760);
+  margin-bottom: 0.9rem;
 }
 
-.flow-circle--seek   .flow-roman { background: #4A6B42; }
-.flow-circle--map    .flow-roman { background: #7A5C1E; }
-.flow-circle--impact .flow-roman { background: #6B4E7D; }
+.map-spotlight-desc {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text, #3E3B35);
+  max-width: none;
+  margin-bottom: 1rem;
+}
 
-.flow-connector {
+/* ── STRATA ICON (used by map-spotlight and each toolkit row) ── */
+.strata-icon rect { transition: none; }
+
+/* ── FRAMEWORK-ALIGNED TOOLKIT ── */
+.toolkit-section {
+  background: var(--bg-light, #F4EFE2);
+}
+
+.toolkit-section h2 {
+  max-width: 700px;
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.toolkit-intro {
+  font-size: 0.92rem;
+  color: var(--text-muted, #6b6760);
+  max-width: 700px;
+  margin-bottom: 2.5rem;
+  line-height: 1.65;
+}
+
+.toolkit-rows {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.toolkit-row {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  display: flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0 1.5rem;
-  padding-bottom: 3rem;
+  gap: 1.75rem;
 }
 
-.flow-arrow {
-  font-size: 1.4rem;
-  color: rgba(0,0,0,0.2);
-  line-height: 1;
+.toolkit-row--dashed {
+  border-style: dashed;
+  background: rgba(255,255,255,0.5);
 }
 
-.flow-transfers {
-  font-size: 0.7rem;
+.toolkit-layer-block {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.toolkit-layer-label {
   font-family: "Alegreya Sans SC", "Alegreya Sans", sans-serif;
-  letter-spacing: 0.06em;
-  color: var(--text-muted, #6b6760);
-  text-align: center;
-  line-height: 1.4;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-/* ── TOOL MASCOTS ── */
-.tool-mascot {
-  width: 120px;
-  height: 120px;
+.toolkit-layer-name {
+  font-family: "Alegreya", serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.toolkit-layer-subtitle {
+  font-size: 0.72rem;
+  color: var(--text-muted, #6b6760);
+}
+
+.toolkit-row.strat .toolkit-layer-label,
+.toolkit-row.strat .toolkit-layer-name { color: var(--strat-mid); }
+.toolkit-row.topo .toolkit-layer-label,
+.toolkit-row.topo .toolkit-layer-name { color: var(--topo-mid); }
+.toolkit-row.infra .toolkit-layer-label,
+.toolkit-row.infra .toolkit-layer-name { color: var(--infra-mid); }
+.toolkit-row.arch .toolkit-layer-label,
+.toolkit-row.arch .toolkit-layer-name { color: var(--arch-mid); }
+
+.toolkit-divider {
+  width: 1px;
+  align-self: stretch;
+  background: rgba(0,0,0,0.08);
+  flex-shrink: 0;
+}
+
+.toolkit-tool-icon {
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.25rem;
+  flex-shrink: 0;
 }
 
-.tool-mascot--seek   { background: #DCE4D6; }
-.tool-mascot--map    { background: #EADFD3; }
-.tool-mascot--impact { background: #E7DADF; }
-
-.tool-mascot img {
-  width: 65%;
-  height: auto;
+.toolkit-tool-icon img {
+  width: 36px;
+  height: 36px;
   object-fit: contain;
+}
+
+.toolkit-tool-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.toolkit-tool-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.toolkit-tool-header strong {
+  font-family: "Alegreya", serif;
+  font-size: 1.02rem;
+  font-weight: 500;
+}
+
+.toolkit-tool-desc {
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--text-muted, #6b6760);
+  max-width: none;
+  margin: 0;
+}
+
+.toolkit-link {
+  font-size: 0.82rem;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.toolkit-link--muted {
+  color: var(--text-light, #8A867E);
 }
 
 /* ── RESPONSIVE ── */
@@ -572,56 +403,29 @@
     font-size: 2.2rem;
   }
 
-  .system-section-inner,
-  .system-section-inner--reverse {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding: 3.5rem 1.25rem;
-  }
-
-  .system-section-inner--reverse .system-tool-sidebar {
-    order: -1;
-  }
-
-  .system-tool-sidebar {
-    position: static;
-  }
-
-  .sidebar-body {
-    max-width: none;
-  }
-
-  .impact-scores-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .system-flow-inner {
+  .map-spotlight-card {
     flex-direction: column;
-    gap: 1.5rem;
   }
 
-  .flow-connector {
-    padding: 0;
-    padding-right: 3rem;
+  .map-spotlight-icon-col {
     flex-direction: row;
-    gap: 0.75rem;
   }
 
-  .flow-arrow {
-    transform: rotate(90deg);
-  }
-
-  .tool-mascot {
-    width: 90px;
-    height: 90px;
-  }
-
-  .system-transition .system-page-inner {
+  .toolkit-row {
     flex-direction: column;
-    gap: 0.75rem;
+    align-items: flex-start;
+    gap: 1rem;
   }
 
-  .transition-arrow {
-    transform: none;
+  .toolkit-layer-block {
+    width: auto;
+  }
+
+  .toolkit-divider {
+    display: none;
+  }
+
+  .toolkit-link {
+    align-self: flex-start;
   }
 }
