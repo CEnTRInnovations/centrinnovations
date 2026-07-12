@@ -58,8 +58,34 @@
   </div>
 </section>
 
-<!-- ── TOOL TWO: UNDERSTORY ── -->
-<section class="ot-tool ot-tool--two" id="understory">
+<!-- ── TOOL TWO: APIARY HIVE ── -->
+<section class="ot-tool ot-tool--two" id="apiary-hive">
+  <div class="section-inner">
+    <div class="section-sidebar reveal">
+      <span class="eyebrow">{{ .Params.t3_eyebrow }}</span>
+      <h2>{{ .Params.t3_title }}</h2>
+      <div class="sidebar-stripe ot-stripe"></div>
+      <img src="{{ .Params.t3_image }}" alt="Apiary Hive illustration" class="tool-page-illustration" />
+      <p class="sidebar-body">{{ .Params.t3_sidebar_1 }}</p>
+      <p class="sidebar-body">{{ .Params.t3_sidebar_2 }}</p>
+    </div>
+    <div class="component-content reveal">
+      <p class="tool-lead">{{ .Params.t3_lead }}</p>
+      <p>{{ .Params.t3_body_1 }}</p>
+      <p>{{ .Params.t3_body_2 }}</p>
+      <div class="tool-tags">
+        {{ range .Params.t3_tags }}<span class="tool-tag">{{ . }}</span>{{ end }}
+      </div>
+      <div class="tool-page-links">
+        <a href="{{ .Params.t3_primary_link }}" class="button primary" target="_blank" rel="noopener">{{ .Params.t3_primary_text }}</a>
+        <a href="{{ .Params.t3_secondary_link }}" class="button secondary" target="_blank" rel="noopener">{{ .Params.t3_secondary_text }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TOOL THREE: UNDERSTORY ── -->
+<section class="ot-tool ot-tool--one" id="understory">
   <div class="section-inner">
     <div class="section-sidebar reveal">
       <span class="eyebrow">{{ .Params.t2_eyebrow }}</span>

@@ -43,27 +43,9 @@ t1_secondary_text: "View on GitHub"
 t1_secondary_link: "https://github.com/CEnTRInnovations/hexagons"
 
 # ─────────────────────────────────────────
-# TOOL TWO — UNDERSTORY
+# TOOL TWO — APIARY HIVE
 # ─────────────────────────────────────────
-t2_eyebrow: "Tool Two"
-t2_title: "Understory: The Living Timeline"
-t2_image: "/assets/log-color.png"
-t2_lead: "Community-engaged work doesn't happen in a vacuum. It happens inside histories of places, institutions, relationships, and power."
-t2_sidebar_1: "Understory is grounded in Peter Taylor's framework for unruly complexity: the idea that the factors shaping any situation are layered, tangled, and unfolding across different timescales simultaneously."
-t2_sidebar_2: "A single timeline flattens that complexity. Understory holds multiple layers at once — policy, community history, institutional decisions, partnership development — and lets you see how they've intersected and diverged over time."
-t2_body_1: "The canvas is temporal and multi-layered. Each layer represents a domain; each entry marks a moment or period of significance. As the timeline fills in, it becomes possible to see not just what happened, but what was happening at the same time and how forces in one domain shaped conditions in another."
-t2_body_2: "It is especially useful for partnership history work, community asset documentation, and any context where understanding the present requires making sense of how the past unfolded."
-t2_tags:
-  - "Historical structure"
-  - "Multi-layer analysis"
-  - "Partnership history"
-t2_primary_text: "View on GitHub →"
-t2_primary_link: "https://github.com/CEnTRInnovations/complexity_timeline"
-
-# ─────────────────────────────────────────
-# TOOL THREE — APIARY HIVE
-# ─────────────────────────────────────────
-t3_eyebrow: "Tool Three"
+t3_eyebrow: "Tool Two"
 t3_title: "Apiary Hive: Many Hexagons, One Hive"
 t3_image: "/assets/hive-color.png"
 t3_lead: "One group's shared vocabulary is a starting point. What happens when five groups each built their own?"
@@ -79,6 +61,24 @@ t3_primary_text: "Try the app →"
 t3_primary_link: "https://hive.centrinnovations.com/"
 t3_secondary_text: "View on GitHub"
 t3_secondary_link: "https://github.com/CEnTRInnovations/apiary-hive"
+
+# ─────────────────────────────────────────
+# TOOL THREE — UNDERSTORY
+# ─────────────────────────────────────────
+t2_eyebrow: "Tool Three"
+t2_title: "Understory: The Living Timeline"
+t2_image: "/assets/log-color.png"
+t2_lead: "Community-engaged work doesn't happen in a vacuum. It happens inside histories of places, institutions, relationships, and power."
+t2_sidebar_1: "Understory is grounded in Peter Taylor's framework for unruly complexity: the idea that the factors shaping any situation are layered, tangled, and unfolding across different timescales simultaneously."
+t2_sidebar_2: "A single timeline flattens that complexity. Understory holds multiple layers at once — policy, community history, institutional decisions, partnership development — and lets you see how they've intersected and diverged over time."
+t2_body_1: "The canvas is temporal and multi-layered. Each layer represents a domain; each entry marks a moment or period of significance. As the timeline fills in, it becomes possible to see not just what happened, but what was happening at the same time and how forces in one domain shaped conditions in another."
+t2_body_2: "It is especially useful for partnership history work, community asset documentation, and any context where understanding the present requires making sense of how the past unfolded."
+t2_tags:
+  - "Historical structure"
+  - "Multi-layer analysis"
+  - "Partnership history"
+t2_primary_text: "View on GitHub →"
+t2_primary_link: "https://github.com/CEnTRInnovations/complexity_timeline"
 
 # ─────────────────────────────────────────
 # MORE COMING
