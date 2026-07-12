@@ -166,6 +166,19 @@ open_tools:
       primary_link: "https://github.com/CEnTRInnovations/complexity_timeline"
       primary_text: "View on GitHub →"
 
+    - name: "Apiary Hive"
+      image: "/assets/apiary-hive-logo.png"
+      description: "Gathers Apiary term maps from multiple contributor groups and consolidates them into one canonical vocabulary — the shared input CEnTR*CANON and CEnTR*FLOW both build on."
+
+      tags:
+        - "Vocabulary consolidation"
+        - "Multi-group aggregation"
+
+      # NOTE: GitHub repo not yet confirmed public as of this reorg — fill in
+      # primary_link once available. Do not guess the URL.
+      primary_link: ""
+      primary_text: "Almost complete →"
+
 bridge:
   text: "Making engagement visible is only the beginning.<br><br>Turning it into something institutions can trust, support, and sustain—that’s the work we do together."
 
